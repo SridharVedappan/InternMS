@@ -1,0 +1,127 @@
+.features-container {
+  padding: 60px 80px;
+  text-align: center;
+
+  padding: 60px 80px;
+  background: rgba(248, 249, 255, 1);
+}
+
+.features-header {
+  max-width: 1280px;
+  margin: 0 auto 50px auto;
+  text-align: left;
+  margin-top: 40px;
+}
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+
+.features-title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 10px;
+  color: #111;
+  width: 570.45px;
+  height: 48px;
+}
+
+.features-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  margin-left: auto; /* pushes button to the right */
+
+  font-size: 16px;
+  font-weight: 600;
+  color: #2563eb;
+}
+
+.features-subtitle {
+  font-size: 16px;
+  color: #666;
+  line-height: 24px;
+  width: 611.83px;
+  height: 48px;
+}
+
+/* GRID */
+.features-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start; /* cards start from left */
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* CARD */
+.feature-card {
+  width: 280px;
+  padding: 25px;
+  border-radius: 12px;
+  background: #f6f8ff;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.feature-icon {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+}
+
+.feature-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.feature-card p {
+  width: 290.6px;
+  height: 104px;
+  font-size: 16px;
+  color: #555;
+  line-height: 20px;
+}
+
+.feature-card {
+  width: 394.66px;
+  min-height: 318px;
+  border-radius: 16px;
+  margin-bottom: 128px;
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  box-shadow: 0px 8px 32px 0px rgba(31, 38, 135, 0.05);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition: all 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}

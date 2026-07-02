@@ -1,0 +1,153 @@
+.stack-wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+}
+
+.stack-container-1 {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.stk-1 {
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 56px;
+  width: 568px;
+  margin-bottom: 48px;
+  color: #0b1c30;
+}
+
+.highlight {
+  color: #0058be;
+}
+
+.list-for-points {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+.points {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.tick {
+  width: 24px;
+  height: 24px;
+  border-radius: 9999px;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.point-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.points h2 {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #0b1c30;
+  margin: 0;
+}
+
+.points p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #45464d;
+  margin: 0;
+  max-width: 500px;
+}
+
+/* Buttons */
+
+.button-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.btn-1 {
+  width: 167px;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #0058be;
+  border-radius: 12px;
+
+  background: #ffffff;
+  color: #0058be;
+
+  cursor: pointer;
+
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  transition: all 0.3s ease;
+
+  box-shadow:
+    0 8px 10px -6px rgba(0, 88, 190, 0.1),
+    0 20px 25px -5px rgba(0, 88, 190, 0.1);
+}
+
+.btn-1:hover {
+  background: #0058be;
+  color: #ffffff;
+
+  box-shadow:
+    0 8px 10px -6px rgba(0, 88, 190, 0.2),
+    0 20px 25px -5px rgba(0, 88, 190, 0.2);
+}
+
+/* Active button */
+
+.btn-active {
+  background: #0058be;
+  color: #ffffff;
+  border: 1px solid #0058be;
+}
+
+.stack-container-1 {
+  flex: 1;
+}
+
+.office-image-card {
+  width: 600px;
+  height: 742px;
+  border-radius: 40px;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0px 20px 50px -12px #00000014;
+}
+
+.card-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.office-image-card:hover .card-image {
+  transform: scale(1.08);
+}
+
+.stack-container {
+  padding: 128px 0;
+}
