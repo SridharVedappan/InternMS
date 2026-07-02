@@ -1,31 +1,33 @@
 .features-container {
-  padding: 60px 80px;
-  text-align: center;
-
-  padding: 60px 80px;
+  padding: 80px 60px;
   background: rgba(248, 249, 255, 1);
 }
 
 .features-header {
   max-width: 1280px;
-  margin: 0 auto 50px auto;
-  text-align: left;
-  margin-top: 40px;
-}
-.arrow-icon {
-  width: 16px;
-  height: 16px;
-  object-fit: contain;
+  margin: 0 auto 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  animation: fadeUp 0.8s ease;
 }
 
 .features-title {
   font-weight: 400;
   font-size: 48px;
-  line-height: 48px;
-  margin-bottom: 10px;
+  line-height: 56px;
   color: #111;
-  width: 570.45px;
-  height: 48px;
+  margin-bottom: 12px;
+  animation: slideLeft 0.8s ease;
+}
+
+.features-subtitle {
+  font-size: 16px;
+  line-height: 24px;
+  color: #666;
+  max-width: 612px;
+  animation: slideLeft 1s ease;
 }
 
 .features-btn {
@@ -36,92 +38,183 @@
   border: none;
   background: transparent;
   cursor: pointer;
-
-  margin-left: auto; /* pushes button to the right */
-
   font-size: 16px;
   font-weight: 600;
   color: #2563eb;
+  transition: all 0.3s ease;
+  animation: slideRight 0.8s ease;
 }
 
-.features-subtitle {
-  font-size: 16px;
-  color: #666;
-  line-height: 24px;
-  width: 611.83px;
-  height: 48px;
+.features-btn:hover {
+  transform: translateX(5px);
 }
 
-/* GRID */
+.arrow-icon {
+  width: 16px;
+  height: 16px;
+}
+
 .features-grid {
   max-width: 1280px;
   margin: 0 auto;
-  display: flex;
-  justify-content: flex-start; /* cards start from left */
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
-  flex-wrap: wrap;
 }
 
-/* CARD */
 .feature-card {
-  width: 280px;
-  padding: 25px;
-  border-radius: 12px;
-  background: #f6f8ff;
-  text-align: left;
-  transition: 0.3s ease;
+  min-height: 318px;
+  padding: 48px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0px 8px 32px rgba(31, 38, 135, 0.05);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.3s ease;
+  animation: fadeUp 0.8s ease;
+}
+
+.feature-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.feature-card:nth-child(3) {
+  animation-delay: 0.4s;
 }
 
 .feature-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-8px);
+  box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.08);
 }
 
 .icon-box {
   display: flex;
   align-items: center;
-  justify-content: start;
 }
 
 .feature-icon {
   width: 56px;
   height: 56px;
-  object-fit: contain;
+
+  transition: transform 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+  transform: scale(1.1);
 }
 
 .feature-card h3 {
   font-size: 20px;
   font-weight: 600;
-  margin-bottom: 5px;
+  margin: 0;
 }
 
 .feature-card p {
-  width: 290.6px;
-  height: 104px;
   font-size: 16px;
+  line-height: 26px;
   color: #555;
-  line-height: 20px;
+  margin: 0;
 }
 
-.feature-card {
-  width: 394.66px;
-  min-height: 318px;
-  border-radius: 16px;
-  margin-bottom: 128px;
-  padding: 48px;
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
 
-  background: rgba(255, 255, 255, 0.8);
-
-  box-shadow: 0px 8px 32px 0px rgba(31, 38, 135, 0.05);
-
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-
-  transition: all 0.3s ease;
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-.feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 1024px) {
+  .features-container {
+    padding: 60px 30px;
+  }
+
+  .features-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .features-title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .features-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .features-subtitle {
+    max-width: 100%;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-card {
+    padding: 32px;
+    min-height: auto;
+  }
+
+  .features-btn {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .features-container {
+    padding: 50px 20px;
+  }
+
+  .features-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .feature-card {
+    padding: 24px;
+  }
+
+  .feature-icon {
+    width: 48px;
+    height: 48px;
+  }
 }

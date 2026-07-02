@@ -15,10 +15,6 @@
   height: 40px;
 }
 
-.logo h1 {
-  margin: 0;
-}
-
 .btn-container {
   display: flex;
   gap: 36px;
@@ -31,25 +27,65 @@
   color: #45464d;
   font-size: 18px;
   font-weight: 600;
-  line-height: 16px;
-  letter-spacing: 0.6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  color: #0058be;
+  transform: translateY(-2px);
 }
 
 .register-btn {
-  background-color: #000000;
-  color: aliceblue;
+  background-color: #000;
+  color: #fff;
   border-radius: 8px;
-  padding-top: 16px;
-  padding-right: 32px;
-  padding-bottom: 16px;
-  padding-left: 32px;
-  font-weight: 400;
+  padding: 16px 32px;
   font-size: 18px;
+  font-weight: 400;
   cursor: pointer;
   border: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.overlay-shadow {
-  width: 592px;
-  height: 592px;
+.register-btn:hover {
+  transform: translateY(-3px);
+  background: #1a1a1a;
+}
+
+/* ------------------RESPONSIVE ------------------*/
+
+@media (max-width: 768px) {
+  .nav-bar {
+    padding: 16px 20px;
+  }
+
+  .btn-container {
+    gap: 16px;
+  }
+
+  .login-btn {
+    font-size: 16px;
+  }
+
+  .register-btn {
+    padding: 12px 20px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-bar {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    padding: 15px;
+  }
+
+  .btn-container {
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
 }

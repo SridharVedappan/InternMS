@@ -17,28 +17,26 @@ export default function HeroSection() {
             </div>
           </div>
 
-          <div className="sub-2">
-            <h1 className="title-1">Seamless Internships.</h1>
+          <h1 className="title-1">Seamless Internships.</h1>
 
-            <div className="title-and-line">
-              <h1 className="title-2">Smarter Management.</h1>
-              <img className="line" src={Line} alt="line" />
-            </div>
+          <div className="title-and-line">
+            <h1 className="title-2">Smarter Management.</h1>
+            <img className="line" src={Line} alt="line" />
+          </div>
 
-            <p className="para-1">
-              Bridging the gap between ambitious talent and global
-              opportunities. The definitive operating system for universities,
-              students, and employers.
-            </p>
+          <p className="para-1">
+            Bridging the gap between ambitious talent and global opportunities.
+            The definitive operating system for universities, students, and
+            world-class employers.
+          </p>
 
-            <div className="sub-4">
-              <button className="btn-1">
-                Get Started
-                <img className="arrow" src={Right} alt="arrow" />
-              </button>
+          <div className="sub-4">
+            <button className="btns-1">
+              Get Started
+              <img className="arrow" src={Right} alt="arrow" />
+            </button>
 
-              <button className="btn-2">Book a Demo</button>
-            </div>
+            <button className="btns-2">Book a Demo</button>
           </div>
         </div>
 
