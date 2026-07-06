@@ -1,8 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../LoginPages/TwoStepVerification.css";
-// import { FaEnvelope, FaMobileAlt } from "react-icons/fa";
+import MailVerification from "../../assets/icons/mail-verfication-icon.png";
+import Phone from "../../assets/icons/phone-num-verfication-icon.png";
 import SecurityMark from "../../assets/icons/security-mark.png";
+import RidhtSideArrow from "../../assets/icons/right-arrow-1.png";
+import LeftSideArrow from "../../assets/icons/left-arrow-1.png";
 
 export default function TwoStepVerification() {
   const [selectedMethod, setSelectedMethod] = useState("email");
@@ -18,7 +21,13 @@ export default function TwoStepVerification() {
 
     navigate("/verify-otp");
   };
+  const handleBackToLogin = () => {
+    navigate("/login");
+  };
 
+  const handleContactSupport = () => {
+    navigate("/contactSupport");
+  };
   return (
     <div className="main-container">
       <div className="left-container">
@@ -45,57 +54,92 @@ export default function TwoStepVerification() {
 
       <div className="right-container">
         <div className="verification-options">
-          <h2>Two-Step Verification</h2>
-          <p>Choose how you'd like to verify your identity.</p>
-          <div
-            className={`verification-card ${
-              selectedMethod === "email" ? "active" : ""
-            }`}
-            onClick={() => setSelectedMethod("email")}
-          >
-            <div className="verification-left">
-              <div className="icon-box">{/* <FaEnvelope /> */}</div>
+          <h2 className="title-3">Two-Step Verification</h2>
+          <p className="verify-description">
+            Choose how you'd like to verify your identity.
+          </p>
+          <div className="verification-card-container">
+            {/* Email Verification */}
 
-              <div className="verification-content">
-                <h3>Email Verification</h3>
-                <p>j**n@g***l.com</p>
+            <div
+              className={`verification-card ${
+                selectedMethod === "email" ? "active" : ""
+              }`}
+              onClick={() => setSelectedMethod("email")}
+            >
+              <div className="verification-left">
+                <div className="icon-box">
+                  <img
+                    className="icon-1"
+                    src={MailVerification}
+                    alt="mail-icon"
+                  />
+                </div>
+
+                <div className="verification-content">
+                  <h3>Email Verification</h3>
+                  <p>j**n@g***l.com</p>
+                </div>
               </div>
+
+              <input
+                type="radio"
+                className="custom-radio"
+                checked={selectedMethod === "email"}
+                onChange={() => setSelectedMethod("email")}
+              />
             </div>
 
-            <input
-              type="radio"
-              className="custom-radio"
-              checked={selectedMethod === "email"}
-              onChange={() => setSelectedMethod("email")}
-            />
-          </div>
+            {/* Mobile Verification  */}
+            <div
+              className={`verification-card ${
+                selectedMethod === "mobile" ? "active" : ""
+              }`}
+              onClick={() => setSelectedMethod("mobile")}
+            >
+              <div className="verification-left">
+                <div className="icon-box">
+                  <img className="icon-2" src={Phone} alt="phone-icon" />
+                </div>
 
-          <div
-            className={`verification-card ${
-              selectedMethod === "mobile" ? "active" : ""
-            }`}
-            onClick={() => setSelectedMethod("mobile")}
-          >
-            <div className="verification-left">
-              <div className="icon-box">{/* <FaMobileAlt /> */}</div>
-
-              <div className="verification-content">
-                <h3>Mobile Verification</h3>
-                <p>+91 9**** *5678</p>
+                <div className="verification-content">
+                  <h3>Mobile Verification</h3>
+                  <p>+91 9**** *5678</p>
+                </div>
               </div>
-            </div>
 
-            <input
-              type="radio"
-              className="custom-radio"
-              checked={selectedMethod === "mobile"}
-              onChange={() => setSelectedMethod("mobile")}
-            />
+              <input
+                type="radio"
+                className="custom-radio"
+                checked={selectedMethod === "mobile"}
+                onChange={() => setSelectedMethod("mobile")}
+              />
+            </div>
           </div>
 
           <button className="send-code-btn" onClick={handleSendCode}>
             Send Verification Code
+            <img src={RidhtSideArrow} className="right-arrow-btn-icon" />
           </button>
+          <div className="parent-back-to-login "></div>
+          <div className="back-to-login-wrapper">
+            <p className="back-to-login" onClick={handleBackToLogin}>
+              <img
+                src={LeftSideArrow}
+                alt="left-arrow"
+                className="left-arrow-icon"
+              />
+              <span>Back to Login</span>
+            </p>
+          </div>
+          <div className="para-container">
+            <p>
+              Need help?{" "}
+              <span className="cs-blue" onClick={handleContactSupport}>
+                Contact Support
+              </span>
+            </p>
+          </div>
         </div>
       </div>
     </div>
