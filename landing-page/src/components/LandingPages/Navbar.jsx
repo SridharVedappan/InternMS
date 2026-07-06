@@ -11,7 +11,7 @@ function Nav() {
 
       <div className="btn-container">
         <Link to="/login">
-          <button className="login-btn">Login</button>
+          <button className="nav-login-btn">Login</button>
         </Link>
 
         <Link to="/register">
