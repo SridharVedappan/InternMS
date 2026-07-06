@@ -5,6 +5,7 @@ import { FiEye, FiEyeOff } from "react-icons/fi";
 import ThinLine from "../../assets/icons/horizontal-divider.png";
 import GoogleBtn from "../../assets/icons/google.png";
 import Arrow2 from "../../assets/icons/right-arrow.png";
+import { useNavigate } from "react-router-dom";
 
 import "../LoginPages/Login.css";
 
@@ -13,7 +14,7 @@ export default function Login() {
     email: "",
     password: "",
   });
-
+  const navigate = useNavigate();
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
 
@@ -46,7 +47,7 @@ export default function Login() {
 
     if (Object.keys(newErrors).length === 0) {
       console.log(formData);
-      alert("Login Successful");
+      navigate("/two-step-verification");
     }
   };
 
