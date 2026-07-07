@@ -12,7 +12,12 @@ export default function TwoStepVerification() {
   const navigate = useNavigate();
 
   const handleSendCode = () => {
-    navigate("/verify-otp");
+    navigate("/verification-code", {
+      state: {
+        method: selectedMethod,
+        value: selectedMethod === "email" ? "xyz@gmail.com" : "+91 9876543210",
+      },
+    });
   };
   const handleBackToLogin = () => {
     navigate("/login");

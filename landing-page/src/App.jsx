@@ -3,6 +3,7 @@ import LandingPage from "./components/LandingPages/LandingPage";
 import Login from "./components/LoginPages/Login";
 import Register from "./components/RegisterPages/Register";
 import TwoStepVerification from "./components/LoginPages/TwoStepVerification";
+import VerificationCode from "./components/LoginPages/VerificationCode";
 import "./App.css";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           path="/two-step-verification"
           element={<TwoStepVerification />}
         />
+        <Route path="/verification-code" element={<VerificationCode />} />
       </Routes>
     </BrowserRouter>
   );
