@@ -1,5 +1,5 @@
 .otp-outer-container {
-  height: 718px;
+  min-height: 100vh;
   background-color: WHITE;
 }
 .content-card-1 {
@@ -52,8 +52,9 @@
 }
 
 .para-details-for-otp-page {
-  width: 410px;
-  height: 112px;
+  width: 100%;
+  max-width: 410px;
+  height: auto;
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 400;
   font-size: 18px;
@@ -90,7 +91,9 @@
   display: flex;
   align-items: flex-start;
   gap: 106px;
-  margin-left: 90px;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: 80px;
 }
 
 .content-card-2 {
@@ -306,15 +309,16 @@
   line-height: 24px;
 }
 
-/* for tablet */
 @media (max-width: 1024px) {
   .otp-wrapper {
+    margin-left: 0;
     gap: 40px;
+    justify-content: center;
     padding: 20px;
   }
 
   .content-card-1 {
-    width: 420px;
+    width: 450px;
     margin-left: 0;
   }
 
@@ -322,66 +326,55 @@
     width: 100%;
     max-width: 440px;
   }
-
-  .verify-identity,
-  .verification-footer,
-  .resend-container,
-  .enter-code-title,
-  .para-for-six-digit-code {
-    width: 100%;
-  }
 }
 
-/* for mobile */
 @media (max-width: 768px) {
-  .otp-outer-container {
-    height: auto;
-    padding: 20px;
-  }
-
   .otp-wrapper {
     flex-direction: column;
-    gap: 32px;
     align-items: center;
+    gap: 32px;
+    margin-left: 0;
+  }
+
+  .content-card-1,
+  .content-card-2,
+  .right-content-container {
+    width: 100%;
+    max-width: 100%;
   }
 
   .content-card-1 {
-    width: 100%;
-    max-width: 490px;
     height: auto;
     margin: 0;
     padding: 40px 24px;
   }
 
-  .right-content-container {
+  .Security-first,
+  .para-details-for-otp-page,
+  .sub-para-for-otp-page,
+  .enter-code-title,
+  .para-for-six-digit-code,
+  .verify-identity,
+  .verification-footer,
+  .resend-container {
     width: 100%;
-    max-width: 440px;
-    margin-top: 0;
   }
 
   .Security-first {
-    width: 100%;
     font-size: 32px;
     line-height: 40px;
     height: auto;
   }
 
-  .para-details-for-otp-page {
-    width: 100%;
-    height: auto;
-  }
-
   .enter-code-title {
-    width: 100%;
     font-size: 28px;
     line-height: 36px;
     height: auto;
   }
 
+  .para-details-for-otp-page,
   .para-for-six-digit-code {
-    width: 100%;
     height: auto;
-    min-height: 48px;
   }
 
   .otp-inputs {
@@ -391,29 +384,34 @@
   }
 
   .otp-box {
-    width: 52px;
-    height: 64px;
+    width: 56px;
+    height: 70px;
     font-size: 24px;
   }
 
-  .verify-identity {
-    width: 100%;
-  }
-
-  .verification-footer {
-    width: 100%;
-  }
-
-  .resend-container {
-    width: 100%;
-    flex-wrap: wrap;
+  .overlay-card {
+    object-fit: cover;
   }
 }
 
-/* for small mobile */
 @media (max-width: 480px) {
+  .otp-outer-container {
+    padding: 16px;
+  }
+
   .content-card-1 {
-    padding: 32px 20px;
+    padding: 30px 20px;
+  }
+
+  .img-container-security-icon {
+    width: 58px;
+    height: 66px;
+    padding: 13px;
+  }
+
+  .security-img {
+    width: 28px;
+    height: 34px;
   }
 
   .Security-first {
@@ -426,17 +424,33 @@
     line-height: 32px;
   }
 
-  .otp-box {
-    width: 44px;
-    height: 56px;
-    font-size: 20px;
+  .para-details-for-otp-page,
+  .para-for-six-digit-code {
+    font-size: 14px;
+    line-height: 22px;
   }
 
   .otp-inputs {
     gap: 8px;
   }
 
+  .otp-box {
+    width: 42px;
+    height: 52px;
+    font-size: 18px;
+  }
+
+  .verify-identity {
+    height: 46px;
+  }
+
+  .resend-container {
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
   .back-to-verification-text {
     width: auto;
+    text-align: center;
   }
 }
