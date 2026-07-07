@@ -147,6 +147,8 @@
 }
 
 .verification-card {
+  width: 100%;
+  width: 443px;
   height: 92px;
   padding: 20px;
   display: flex;
@@ -373,7 +375,6 @@
 .back-to-login:hover .left-arrow-icon {
   transform: translateX(-5px);
 }
-
 .verify-description {
   width: 443px;
   height: 24px;

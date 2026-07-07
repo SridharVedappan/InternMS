@@ -1,11 +1,144 @@
 .otp-outer-container {
   height: 718px;
+  background-color: WHITE;
 }
-.content-card {
+.content-card-1 {
   width: 490px;
   height: 569px;
+  position: relative;
+  overflow: hidden;
 
-  border: 2px solid red;
   border-radius: 12px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  margin-top: 64px;
+  margin-left: 73px;
+  margin-bottom: 85px;
+
   background: linear-gradient(161.29deg, #3a6fe3 2.07%, #133767 87.35%);
+  padding-top: 95.5px;
+  padding-bottom: 95.5px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.img-container-security-icon {
+  width: 66px;
+  height: 74px;
+  padding: 16px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  background: rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  margin-bottom: 32px;
+}
+
+.security-img {
+  width: 32px;
+  height: 40px;
+}
+.Security-first {
+  width: 410px;
+  height: 48px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.8px;
+  color: #ffffff;
+  opacity: 1;
+  margin-bottom: 16px;
+}
+
+.para-details-for-otp-page {
+  width: 410px;
+  height: 112px;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+
+  color: #dad7ff;
+  opacity: 1;
+
+  margin: 0;
+  margin-bottom: 80px;
+}
+
+.sub-para-for-otp-page {
+  width: 157.27px;
+  height: 16px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #dad7ff;
+  opacity: 1;
+  margin: 0;
+}
+.overlay-card {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  z-index: 0;
+}
+
+.otp-wrapper {
+  display: flex;
+  align-items: flex-start;
+  gap: 106px;
+}
+.content-card-2 {
+  margin-top: 69px;
+}
+
+.right-content-container {
+  width: 440px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 92px;
+}
+
+.enter-code-title {
+  width: 440px;
+  height: 40px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  color: #111c2d;
+}
+
+.para-for-six-digit-code {
+  width: 440px;
+  height: 24px;
+  opacity: 1;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+}
+
+.span-gmail {
+  font-family: "Hanken Grotesk" sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0px;
 }
