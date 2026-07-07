@@ -12,13 +12,6 @@ export default function TwoStepVerification() {
   const navigate = useNavigate();
 
   const handleSendCode = () => {
-    const fakeOTP = Math.floor(100000 + Math.random() * 900000).toString();
-
-    localStorage.setItem("otp", fakeOTP);
-    localStorage.setItem("verificationMethod", selectedMethod);
-
-    alert(`Demo OTP: ${fakeOTP}`);
-
     navigate("/verify-otp");
   };
   const handleBackToLogin = () => {
