@@ -1,12 +1,80 @@
 import React, { useState, useRef, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "../LoginPages/VerificationCode.css";
 import Security from "../../assets/icons/security-mark.png";
 import Overlaycard from "../../assets/icons/overlay-1.png";
 import RightArrowForButton from "../../assets/icons/arrow-2.png";
+import ShieldProfile from "../../assets/icons/security-profile.png";
 
 export default function VerificationCode() {
+  const navigate = useNavigate();
   const location = useLocation();
+
+  const { method = "email", value = "" } = location.state || {};
+  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const inputRefs = useRef([]);
+
+  useEffect(() => {
+    if (!location.state) {
+      navigate("/login");
+    }
+  }, [location.state, navigate]);
+
+  const handleChange = (index, e) => {
+    const val = e.target.value.replace(/[^0-9]/g, "");
+
+    if (!val) return;
+
+    const newOtp = [...otp];
+    newOtp[index] = val[0];
+    setOtp(newOtp);
+
+    if (index < 5) {
+      inputRefs.current[index + 1].focus();
+    }
+  };
+
+  const handleKeyDown = (index, e) => {
+    if (e.key === "Backspace") {
+      const newOtp = [...otp];
+
+      if (otp[index]) {
+        newOtp[index] = "";
+        setOtp(newOtp);
+      } else if (index > 0) {
+        inputRefs.current[index - 1].focus();
+      }
+    }
+  };
+
+  const handleVerify = () => {
+    const enteredOtp = otp.join("");
+
+    if (enteredOtp.length !== 6) {
+      alert("Please enter a valid 6-digit OTP");
+      return;
+    }
+
+    console.log("OTP:", enteredOtp);
+
+    alert("OTP Verified Successfully!");
+
+    // Navigate to next page
+    navigate("/xyz");
+  };
+
+  const handleResend = () => {
+    alert("Verification code resent!");
+  };
+
+  const handleContactSupport = () => {
+    navigate("/contactSupport");
+  };
+
+  const handleBackToVerification = () => {
+    navigate("/two-step-verification");
+  };
+
   return (
     <div className="otp-outer-container">
       <div className="otp-wrapper">
@@ -41,12 +109,32 @@ export default function VerificationCode() {
           <div className="right-content-container">
             <h1 className="enter-code-title">Enter Verification Code</h1>
 
-            <p className="para-for-six-digit-code">
-              We've sent a 6-digit code to your email{" "}
-              <span className="span-gmail">j**n@g***l.com</span>
+            <p
+              className={`para-for-six-digit-code ${
+                method === "mobile" ? "mobile-text" : ""
+              }`}
+            >
+              We've sent a 6-digit code to your{" "}
+              {method === "email" ? "email " : "mobile number "}
+              <span className="span-gmail">{value}</span>
             </p>
 
-            <button>
+            <div className="otp-inputs">
+              {otp.map((digit, index) => (
+                <input
+                  key={index}
+                  ref={(ele) => (inputRefs.current[index] = ele)}
+                  type="text"
+                  maxLength="1"
+                  value={digit}
+                  className="otp-box"
+                  onChange={(e) => handleChange(index, e)}
+                  onKeyDown={(e) => handleKeyDown(index, e)}
+                />
+              ))}
+            </div>
+
+            <button className="verify-identity" onClick={() => handleVerify()}>
               Verify Identity
               <span>
                 <img
@@ -56,6 +144,32 @@ export default function VerificationCode() {
                 />
               </span>
             </button>
+
+            <div className="resend-container">
+              <span className="resend-text">Didn't receive the code?</span>
+
+              <span className="resend-label">Resend in</span>
+
+              <span className="resend-timer"> 00:58</span>
+            </div>
+            <div className="verification-footer">
+              <div className="back-to-verification">
+                <img
+                  src={ShieldProfile}
+                  alt="shield-profile"
+                  className="shield-profile-icon"
+                />
+                <p
+                  className="back-to-verification-text"
+                  onClick={handleBackToVerification}
+                >
+                  Back to verification options
+                </p>
+              </div>
+              <p className="contact-support" onClick={handleContactSupport}>
+                Contact Support
+              </p>
+            </div>
           </div>
         </div>
       </div>

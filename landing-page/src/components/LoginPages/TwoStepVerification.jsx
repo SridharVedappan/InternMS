@@ -15,7 +15,7 @@ export default function TwoStepVerification() {
     navigate("/verification-code", {
       state: {
         method: selectedMethod,
-        value: selectedMethod === "email" ? "xyz@gmail.com" : "+91 9876543210",
+        value: selectedMethod === "email" ? "j**n@g***l.com" : "+91 9•••• 5678",
       },
     });
   };

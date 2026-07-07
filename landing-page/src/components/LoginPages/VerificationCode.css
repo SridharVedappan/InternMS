@@ -7,16 +7,13 @@
   height: 569px;
   position: relative;
   overflow: hidden;
-
   border-radius: 12px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
-
   margin-top: 64px;
   margin-left: 73px;
   margin-bottom: 85px;
-
   background: linear-gradient(161.29deg, #3a6fe3 2.07%, #133767 87.35%);
   padding-top: 95.5px;
   padding-bottom: 95.5px;
@@ -28,12 +25,9 @@
   width: 66px;
   height: 74px;
   padding: 16px;
-
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.2);
-
   background: rgba(255, 255, 255, 0.1);
-
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   margin-bottom: 32px;
@@ -43,6 +37,7 @@
   width: 32px;
   height: 40px;
 }
+
 .Security-first {
   width: 410px;
   height: 48px;
@@ -59,16 +54,13 @@
 .para-details-for-otp-page {
   width: 410px;
   height: 112px;
-
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
   letter-spacing: 0;
-
   color: #dad7ff;
   opacity: 1;
-
   margin: 0;
   margin-bottom: 80px;
 }
@@ -88,10 +80,8 @@
 .overlay-card {
   position: absolute;
   inset: 0;
-
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   z-index: 0;
 }
@@ -100,7 +90,9 @@
   display: flex;
   align-items: flex-start;
   gap: 106px;
+  margin-left: 90px;
 }
+
 .content-card-2 {
   margin-top: 69px;
 }
@@ -121,6 +113,7 @@
   line-height: 40px;
   letter-spacing: -0.32px;
   color: #111c2d;
+  margin-bottom: 8px;
 }
 
 .para-for-six-digit-code {
@@ -133,12 +126,182 @@
   line-height: 24px;
   letter-spacing: 0px;
   vertical-align: middle;
+  color: #464555;
+  margin-bottom: 32px;
 }
 
 .span-gmail {
-  font-family: "Hanken Grotesk" sans-serif;
+  width: 440px;
+  height: 24px;
+  font-family: "Hanken Grotesk", sans-serif;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0px;
+  color: #111c2d;
+}
+
+.otp-inputs {
+  display: flex;
+  gap: 16px;
+}
+
+.otp-box {
+  width: 64px;
+  height: 80px;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  background: #f9f9ff;
+  font-size: 28px;
+  font-weight: 600;
+  text-align: center;
+  outline: none;
+  transition: all 0.1s;
+  margin-bottom: 32px;
+}
+
+.otp-box:focus {
+  border: 3px solid #4f46e5;
+  background: #f9f9ff;
+}
+
+.verify-identity {
+  width: 440px;
+  height: 48px;
+  border: none;
+  border-radius: 8px;
+  background: #3525cd;
+  box-shadow: 0px 1px 2px 0px #0000000d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  margin-bottom: 16px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.verify-identity:hover {
+  background: #2d1fb3;
+}
+
+.verify-identity:active {
+  transform: scale(0.98);
+}
+
+.Verify-identity-btn {
+  width: 12px;
+  height: 12px;
+  display: block;
+}
+
+.resend-text {
+  display: inline-block;
+  width: 153.73px;
+  height: 20px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #464555;
+  text-align: center;
+}
+
+.resend-label {
+  display: inline-block;
+  width: 64.33px;
+  height: 20px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777587;
+  text-align: center;
+  text-align: left;
+}
+.resend-timer {
+  display: inline-block;
+  width: 34.7px;
+  height: 20px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #777587;
+  text-align: center;
+  text-align: left;
+}
+
+.resend-container {
+  width: 440px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.back-to-verification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.shield-profile-icon {
+  width: 13.33px;
+  height: 16.67px;
+}
+
+.back-to-verification-text {
+  width: 192.73px;
+  height: 20px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: #464555;
+  opacity: 1;
+  margin: 0;
+}
+
+.verification-footer {
+  width: 440px;
+  height: 85px;
+  margin-top: 32px;
+  padding-top: 32px;
+  border-top: 1px solid #c7c4d8;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  opacity: 1;
+}
+
+.contact-support {
+  display: block;
+  width: 89.88px;
+  height: 16px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #777587;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.mobile-text {
+  height: 48px;
+  line-height: 24px;
 }
