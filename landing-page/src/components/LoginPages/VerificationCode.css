@@ -305,3 +305,138 @@
   height: 48px;
   line-height: 24px;
 }
+
+/* for tablet */
+@media (max-width: 1024px) {
+  .otp-wrapper {
+    gap: 40px;
+    padding: 20px;
+  }
+
+  .content-card-1 {
+    width: 420px;
+    margin-left: 0;
+  }
+
+  .right-content-container {
+    width: 100%;
+    max-width: 440px;
+  }
+
+  .verify-identity,
+  .verification-footer,
+  .resend-container,
+  .enter-code-title,
+  .para-for-six-digit-code {
+    width: 100%;
+  }
+}
+
+/* for mobile */
+@media (max-width: 768px) {
+  .otp-outer-container {
+    height: auto;
+    padding: 20px;
+  }
+
+  .otp-wrapper {
+    flex-direction: column;
+    gap: 32px;
+    align-items: center;
+  }
+
+  .content-card-1 {
+    width: 100%;
+    max-width: 490px;
+    height: auto;
+    margin: 0;
+    padding: 40px 24px;
+  }
+
+  .right-content-container {
+    width: 100%;
+    max-width: 440px;
+    margin-top: 0;
+  }
+
+  .Security-first {
+    width: 100%;
+    font-size: 32px;
+    line-height: 40px;
+    height: auto;
+  }
+
+  .para-details-for-otp-page {
+    width: 100%;
+    height: auto;
+  }
+
+  .enter-code-title {
+    width: 100%;
+    font-size: 28px;
+    line-height: 36px;
+    height: auto;
+  }
+
+  .para-for-six-digit-code {
+    width: 100%;
+    height: auto;
+    min-height: 48px;
+  }
+
+  .otp-inputs {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .otp-box {
+    width: 52px;
+    height: 64px;
+    font-size: 24px;
+  }
+
+  .verify-identity {
+    width: 100%;
+  }
+
+  .verification-footer {
+    width: 100%;
+  }
+
+  .resend-container {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+}
+
+/* for small mobile */
+@media (max-width: 480px) {
+  .content-card-1 {
+    padding: 32px 20px;
+  }
+
+  .Security-first {
+    font-size: 28px;
+    line-height: 34px;
+  }
+
+  .enter-code-title {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .otp-box {
+    width: 44px;
+    height: 56px;
+    font-size: 20px;
+  }
+
+  .otp-inputs {
+    gap: 8px;
+  }
+
+  .back-to-verification-text {
+    width: auto;
+  }
+}
