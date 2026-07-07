@@ -4,7 +4,8 @@
 .content-card {
   width: 490px;
   height: 569px;
-  border-radius: 12px;
 
+  border: 2px solid red;
+  border-radius: 12px;
   background: linear-gradient(161.29deg, #3a6fe3 2.07%, #133767 87.35%);
 }

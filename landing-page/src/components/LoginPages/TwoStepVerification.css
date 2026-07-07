@@ -147,8 +147,6 @@
 }
 
 .verification-card {
-  width: 100%;
-  width: 443px;
   height: 92px;
   padding: 20px;
   display: flex;
@@ -386,4 +384,130 @@
   letter-spacing: 0;
   color: #464555;
   opacity: 1;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .left-container {
+    width: 45%;
+    padding: 120px 30px 30px;
+  }
+
+  .right-container {
+    width: 55%;
+    padding: 80px 40px;
+  }
+
+  .verification-options,
+  .verification-card,
+  .send-code-btn,
+  .para-container,
+  .back-to-login-wrapper,
+  .verification-options h2,
+  .verify-description {
+    width: 100%;
+    max-width: 443px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .main-container {
+    flex-direction: column;
+  }
+
+  .left-container {
+    width: 100%;
+    min-height: auto;
+    padding: 60px 24px;
+    border-radius: 0;
+  }
+
+  .right-container {
+    width: 100%;
+    min-height: auto;
+    padding: 40px 24px;
+  }
+
+  .verification-options {
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .verification-options h2,
+  .verify-description,
+  .verification-card,
+  .send-code-btn,
+  .para-container,
+  .back-to-login-wrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .verification-content h3,
+  .verification-content p {
+    width: auto;
+  }
+
+  .heading-title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+
+  .verification-options h2 {
+    font-size: 28px;
+    line-height: 36px;
+    height: auto;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .left-container {
+    padding: 40px 20px;
+  }
+
+  .right-container {
+    padding: 32px 20px;
+  }
+
+  .heading-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .para-details {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .verification-card {
+    padding: 16px;
+    height: auto;
+  }
+
+  .verification-left {
+    gap: 12px;
+  }
+
+  .verification-content h3 {
+    font-size: 13px;
+  }
+
+  .verification-content p {
+    font-size: 12px;
+  }
+
+  .send-code-btn {
+    height: 48px;
+  }
+
+  .img-parent-container {
+    gap: 16px;
+  }
+
+  .circle-box {
+    width: 56px;
+    height: 56px;
+  }
 }
