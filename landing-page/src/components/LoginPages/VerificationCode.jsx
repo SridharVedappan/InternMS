@@ -8,11 +8,13 @@ import ShieldProfile from "../../assets/icons/security-profile.png";
 import { Link } from "react-router-dom";
 
 export default function VerificationCode() {
+  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+
   const navigate = useNavigate();
   const location = useLocation();
 
   const { method = "email", value = "" } = location.state || {};
-  const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+
   const inputRefs = useRef([]);
 
   useEffect(() => {
