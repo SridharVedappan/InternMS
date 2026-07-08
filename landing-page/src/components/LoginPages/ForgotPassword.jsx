@@ -15,9 +15,12 @@ export default function ForgotPassword() {
           />
         </div>
         <h1 id="forgot-password-title">Forgot Password?</h1>
-        <p>
+        <p className="para-fp">
           Choose your preferred method to receive a one-time verification code.
         </p>
+        <div>
+          <p className="parent-div-for-sub-box">Verification Method</p>
+        </div>
       </div>
     </div>
   );

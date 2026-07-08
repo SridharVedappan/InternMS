@@ -3,7 +3,7 @@ import LandingPage from "./components/LandingPages/LandingPage";
 import Login from "./components/LoginPages/Login";
 import Register from "./components/RegisterPages/Register";
 import TwoStepVerification from "./components/LoginPages/TwoStepVerification";
-import ForgotPassword from "./components/LoginPages/forgotPassword";
+import ForgotPassword from "./components/LoginPages/ForgotPassword";
 import VerificationCode from "./components/LoginPages/VerificationCode";
 import "./App.css";
 
