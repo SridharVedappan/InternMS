@@ -14,6 +14,10 @@ export default function ForgotPassword() {
             className="password-reset-icon"
           />
         </div>
+        <h1 id="forgot-password-title">Forgot Password?</h1>
+        <p>
+          Choose your preferred method to receive a one-time verification code.
+        </p>
       </div>
     </div>
   );
