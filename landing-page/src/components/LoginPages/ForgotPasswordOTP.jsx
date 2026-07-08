@@ -1,14 +1,24 @@
 import React from "react";
+import "../LoginPages/ForgotPasswordOTP.css";
+import WhiteOverlay from "../../assets/white-circle.png";
+import PurpleOverlay from "../../assets/purple-circle.png";
 
 export default function ForgotPasswordOTP() {
   return (
-    <div className="main-container-1">
-      <diV className="left-container-card">
-        <div className="content-container-for-fp"></div>
-      </diV>
-      <diV className="right-container-for-otp-fp">
-        <div className="content-container-for-fp"></div>
-      </diV>
+    <div className="left-container-card">
+      <img
+        src={WhiteOverlay}
+        alt="white-overlay"
+        className="blur-white-overlay"
+      />
+
+      <img
+        src={PurpleOverlay}
+        alt="purple-overlay"
+        className="blur-purple-overlay"
+      />
+
+      <div className="content-container-for-fp">...</div>
     </div>
   );
 }
