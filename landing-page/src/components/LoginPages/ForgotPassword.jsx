@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "../LoginPages/ForgotPassword.css";
 import PasswordReset from "../../assets/icons/password-reset.png";
 
 export default function ForgotPassword() {
+  const [selectedMethod, setSelectedMethod] = useState("email");
+
   return (
     <div className="forgot-container">
       <div className="left-container-for-forgot-password"></div>
@@ -20,6 +22,23 @@ export default function ForgotPassword() {
         </p>
         <div>
           <p className="parent-div-for-sub-box">Verification Method</p>
+          <div
+            className={`verification-card ${
+              selectedMethod === "email" ? "active" : ""
+            }`}
+            onClick={() => setSelectedMethod("email")}
+          >
+            <input
+              type="radio"
+              className="custom-radio-1"
+              checked={selectedMethod === "email"}
+              onChange={() => setSelectedMethod("email")}
+            />
+            <div>
+              <p>Email Address</p>
+              <p>Send code to j**n@g***l.com</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
