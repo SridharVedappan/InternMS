@@ -116,8 +116,8 @@ export default function ForgotPassword() {
               alt="left-arrow"
               className="left-arrow-icon-1"
             />
-            <span>Back to Login</span>
-          </Link>{" "}
+            <span className="back-to-login-text">Back to Login</span>
+          </Link>
         </div>
       </div>
     </div>
