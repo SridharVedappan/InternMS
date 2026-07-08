@@ -1,12 +1,24 @@
 import React, { useState } from "react";
 import "../LoginPages/ForgotPassword.css";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+
 import PasswordReset from "../../assets/icons/password-reset.png";
 import RightSideArrow from "../../assets/icons/right-arrow-1.png";
 import LeftArrow from "../../assets/icons/left-side-bule-arrow.png";
 
 export default function ForgotPassword() {
   const [selectedMethod, setSelectedMethod] = useState("email");
+
+  const navigate = useNavigate();
+
+  const handleSendCode = () => {
+    navigate("/forgot-password-otp", {
+      state: {
+        method: selectedMethod,
+        value: selectedMethod === "email" ? "j**n@g***l.com" : "+91 9•••• 5678",
+      },
+    });
+  };
 
   return (
     <div className="forgot-container">
@@ -98,7 +110,7 @@ export default function ForgotPassword() {
             </p>
           </div>
         </div>
-        <button className="send-verification-btn">
+        <button className="send-verification-btn" onClick={handleSendCode}>
           Send Verification Code
           <span>
             <img

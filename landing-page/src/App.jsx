@@ -5,6 +5,7 @@ import Register from "./components/RegisterPages/Register";
 import TwoStepVerification from "./components/LoginPages/TwoStepVerification";
 import ForgotPassword from "./components/LoginPages/ForgotPassword";
 import VerificationCode from "./components/LoginPages/VerificationCode";
+import ForgotPasswordOTP from "./components/LoginPages/ForgotPasswordOTP";
 import "./App.css";
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           element={<TwoStepVerification />}
         />
         <Route path="/verification-code" element={<VerificationCode />} />
+        <Route path="/forgot-password-otp" element={<ForgotPasswordOTP />} />
       </Routes>
     </BrowserRouter>
   );
