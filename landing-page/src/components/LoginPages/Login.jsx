@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MailIcon from "../../assets/icons/mail-icon.png";
 import LockIcon from "../../assets/icons/lock.png";
 import { FiEye, FiEyeOff } from "react-icons/fi";
+import { Link } from "react-router-dom";
 import ThinLine from "../../assets/icons/horizontal-divider.png";
 import GoogleBtn from "../../assets/icons/google.png";
 import Arrow2 from "../../assets/icons/right-arrow.png";
@@ -119,9 +120,9 @@ export default function Login() {
               <div className="password-label-row">
                 <label>Password</label>
 
-                <a href="#" className="forgot-password">
+                <Link to="/forgot-password" className="forgot-password">
                   Forgot Password?
-                </a>
+                </Link>
               </div>
 
               <div className="input-container">

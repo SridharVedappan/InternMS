@@ -3,6 +3,7 @@ import LandingPage from "./components/LandingPages/LandingPage";
 import Login from "./components/LoginPages/Login";
 import Register from "./components/RegisterPages/Register";
 import TwoStepVerification from "./components/LoginPages/TwoStepVerification";
+import ForgotPassword from "./components/LoginPages/forgotPassword";
 import VerificationCode from "./components/LoginPages/VerificationCode";
 import "./App.css";
 
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/register" element={<Register />} />
         <Route
           path="/two-step-verification"

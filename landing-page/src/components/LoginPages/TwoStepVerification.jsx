@@ -6,7 +6,7 @@ import Phone from "../../assets/icons/phone-num-verfication-icon.png";
 import SecurityMark from "../../assets/icons/security-mark.png";
 import RidhtSideArrow from "../../assets/icons/right-arrow-1.png";
 import LeftSideArrow from "../../assets/icons/left-arrow-1.png";
-
+import { Link } from "react-router-dom";
 export default function TwoStepVerification() {
   const [selectedMethod, setSelectedMethod] = useState("email");
   const navigate = useNavigate();
@@ -19,13 +19,7 @@ export default function TwoStepVerification() {
       },
     });
   };
-  const handleBackToLogin = () => {
-    navigate("/login");
-  };
 
-  const handleContactSupport = () => {
-    navigate("/contactSupport");
-  };
   return (
     <div className="main-container">
       <div className="left-container">
@@ -121,21 +115,21 @@ export default function TwoStepVerification() {
           </button>
           <div className="parent-back-to-login "></div>
           <div className="back-to-login-wrapper">
-            <p className="back-to-login" onClick={handleBackToLogin}>
+            <Link to="/login" className="back-to-login">
               <img
                 src={LeftSideArrow}
                 alt="left-arrow"
                 className="left-arrow-icon"
               />
               <span>Back to Login</span>
-            </p>
+            </Link>{" "}
           </div>
           <div className="para-container">
             <p>
               Need help?{" "}
-              <span className="cs-blue" onClick={handleContactSupport}>
+              <Link to="/contactSupport" className="cs-blue">
                 Contact Support
-              </span>
+              </Link>
             </p>
           </div>
         </div>

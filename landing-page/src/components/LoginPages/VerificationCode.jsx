@@ -5,6 +5,7 @@ import Security from "../../assets/icons/security-mark.png";
 import Overlaycard from "../../assets/icons/overlay-1.png";
 import RightArrowForButton from "../../assets/icons/arrow-2.png";
 import ShieldProfile from "../../assets/icons/security-profile.png";
+import { Link } from "react-router-dom";
 
 export default function VerificationCode() {
   const navigate = useNavigate();
