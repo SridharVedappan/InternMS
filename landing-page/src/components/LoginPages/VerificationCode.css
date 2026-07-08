@@ -146,28 +146,28 @@
 
 .otp-inputs {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 16px;
+  width: 100%;
 }
-
 .otp-box {
   width: 64px;
   height: 80px;
-  border-radius: 12px;
   border: 2px solid #e2e8f0;
+  border-radius: 12px;
   background: #f9f9ff;
   font-size: 28px;
   font-weight: 600;
   text-align: center;
   outline: none;
   transition: all 0.1s;
-  margin-bottom: 32px;
 }
 
 .otp-box:focus {
-  border: 3px solid #4f46e5;
+  border: 2px solid #4f46e5;
   background: #f9f9ff;
 }
-
 .verify-identity {
   width: 440px;
   height: 48px;

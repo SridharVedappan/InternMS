@@ -28,17 +28,20 @@ export default function TwoStepVerification() {
           Protecting your professional profile and application history is our
           top priority. Choose a method to verify your identity.
         </p>
+
         <div className="img-parent-container">
           <div className="img-container">
             <div className="circle-box">
               <img src={SecurityMark} alt="security-mark-icon" />
             </div>
           </div>
+
           <div className="text-content">
             <p className="no-1">256-bit Encryption</p>
             <p className="no-2">Bank-grade security standards</p>
           </div>
         </div>
+
         <div className="cr-container">
           <p className="copyright-text">© 2024 InternMS</p>
         </div>
@@ -113,6 +116,7 @@ export default function TwoStepVerification() {
             Send Verification Code
             <img src={RidhtSideArrow} className="right-arrow-btn-icon" />
           </button>
+
           <div className="parent-back-to-login "></div>
           <div className="back-to-login-wrapper">
             <Link to="/login" className="back-to-login">
