@@ -393,6 +393,16 @@
     width: 45%;
     padding: 120px 30px 30px;
   }
+  .right-container-for-forgot-password {
+    align-items: flex-start;
+  }
+
+  .image-card {
+    align-self: flex-start;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+  }
 
   .right-container {
     width: 55%;
@@ -410,11 +420,19 @@
     max-width: 443px;
   }
 }
-
 /* Mobile */
 @media (max-width: 768px) {
   .main-container {
     flex-direction: column;
+  }
+  .right-container-for-forgot-password {
+    align-items: flex-start;
+  }
+
+  .image-card {
+    align-self: flex-start;
+    justify-content: center;
+    align-items: center;
   }
 
   .left-container {
