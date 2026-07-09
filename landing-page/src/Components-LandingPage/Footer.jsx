@@ -10,7 +10,7 @@ export const Footer = () => {
         <div className="footer-container">
           <div className="footer-section">
             <h2 className="logo-intern">InternMS</h2>
-            <p className="footer-text" id="quotes">
+            <p className="footer-word-1" id="quotes">
               The ultimate platform for managing internships, connecting talent,
               and building the future of work.
             </p>
@@ -23,19 +23,19 @@ export const Footer = () => {
           <div className="footer-section">
             <h3>Product</h3>
             <ul>
-              <li className="footer-text">For Students</li>
-              <li className="footer-text">For Employers</li>
-              <li className="footer-text">For Universities</li>
-              <li className="footer-text">Pricing</li>
+              <li className="footer-word-1">For Students</li>
+              <li className="footer-word-1">For Employers</li>
+              <li className="footer-word-1">For Universities</li>
+              <li className="footer-word-1">Pricing</li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h3>Company</h3>
-            <p className="footer-text company-link">Privacy Policy</p>
-            <p className="footer-text company-link">Terms of Service</p>
-            <p className="footer-text company-link">Resources</p>
-            <p className="footer-text company-link">Contact Us</p>
+            <p className="footer-word-1 company-link">Privacy Policy</p>
+            <p className="footer-word-1 company-link">Terms of Service</p>
+            <p className="footer-word-1 company-link">Resources</p>
+            <p className="footer-word-1 company-link">Contact Us</p>
           </div>
         </div>
 

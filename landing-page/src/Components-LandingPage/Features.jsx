@@ -25,7 +25,7 @@ export const Features = () => {
 
       <div className="features-grid">
         <div className="feature-card">
-          <div className="icon-box">
+          <div className="icon-box-container">
             <img src={BotIcon} alt="Bot" className="feature-icon" />
           </div>
           <h3>Automated Matching</h3>
@@ -36,7 +36,7 @@ export const Features = () => {
         </div>
 
         <div className="feature-card">
-          <div className="icon-box">
+          <div className="icon-box-container">
             <img src={SearchIcon} alt="Search" className="feature-icon" />
           </div>
           <h3>Real-time Tracking</h3>
@@ -47,7 +47,7 @@ export const Features = () => {
         </div>
 
         <div className="feature-card">
-          <div className="icon-box">
+          <div className="icon-box-container">
             <img src={SecureIcon} alt="Secure" className="feature-icon" />
           </div>
           <h3>Secure Documents</h3>

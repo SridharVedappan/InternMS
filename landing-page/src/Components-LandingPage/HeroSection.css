@@ -10,11 +10,13 @@
   align-items: flex-start;
   padding: 120px 55px 48px;
   gap: 48px;
+  animation: fadeUp 0.9s ease-in-out;
 }
 
 .left-content {
   width: 100%;
   max-width: 512px;
+  animation: slideLeft 0.9s ease-out;
 }
 
 .container-1 {
@@ -33,6 +35,7 @@
   background-color: #dce9ff;
   border: 1px solid #0058be1a;
   padding: 0 12px;
+  animation: popIn 0.6s ease;
 }
 
 .promt-icon {
@@ -45,9 +48,11 @@
   font-size: 16px;
   color: #0058be;
   white-space: nowrap;
+  margin: 0;
   padding: 8px;
-  height: 24px;
+  height: 24;
   font-weight: 400;
+  color: #0058be;
 }
 
 .title-1 {
@@ -56,11 +61,7 @@
   line-height: 72px;
   margin: 0;
   color: #0b1c30;
-}
-
-.title-and-line {
-  display: flex;
-  flex-direction: column;
+  animation: fadeUp 0.8s ease-in-out;
 }
 
 .title-2 {
@@ -69,6 +70,7 @@
   line-height: 72px;
   margin: 0;
   color: #0058be;
+  animation: fadeUp 1s ease-in-out;
 }
 
 .line {
@@ -82,6 +84,7 @@
   color: #4b5563;
   margin-top: 15px;
   max-width: 503px;
+  animation: fadeUp 1.2s ease-in-out;
 }
 
 .sub-4 {
@@ -89,6 +92,7 @@
   gap: 24px;
   margin-top: 60px;
   flex-wrap: wrap;
+  animation: fadeUp 1.4s ease-in-out;
 }
 
 .btns-1 {
@@ -101,9 +105,8 @@
   font-weight: 400;
   border-radius: 12px;
   background: #0058be;
-  color: #ffffff;
+  color: #fff;
   font-size: 16px;
-  cursor: pointer;
   box-shadow: 0 8px 20px rgba(0, 88, 190, 0.2);
   transition: all 0.3s ease;
 }
@@ -123,7 +126,6 @@
   border-radius: 12px;
   background: white;
   color: #0b1c30;
-  cursor: pointer;
   transition: all 0.3s ease;
 }
 
@@ -142,20 +144,20 @@
   max-width: 650px;
   display: flex;
   justify-content: center;
+  animation: zoomIn 1s ease-in-out;
 }
 
 .intern-img {
   width: 100%;
   height: auto;
   object-fit: contain;
+
   transition: transform 0.4s ease;
 }
 
 .intern-img:hover {
   transform: scale(1.05);
 }
-
-/* ---------------- RESPONSIVE ---------------- */
 
 @media (max-width: 1024px) {
   .sub-hero-content {
@@ -206,5 +208,49 @@
 
   .text-1 {
     font-size: 12px;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }

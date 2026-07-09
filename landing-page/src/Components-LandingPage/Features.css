@@ -77,7 +77,7 @@
   box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.08);
 }
 
-.icon-box {
+.icon-box-container {
   display: flex;
   align-items: center;
 }
