@@ -1,4 +1,5 @@
 .footer {
+  height: 388px;
   background: #0f172a;
   color: #ffffff;
   padding: 60px 40px 20px 24px;
@@ -25,31 +26,35 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
 }
 
-/* Logo */
+.footer-section:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.footer-section:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.footer-section:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
 .logo-intern {
   color: #ffffff;
   font-size: 20px;
   font-weight: 700;
-  margin: 0;
+  transition: color 0.3s ease;
 }
 
-/* Heading */
-.footer-section h3 {
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
-  margin: 0;
+.logo-intern:hover {
+  color: #60a5fa;
 }
 
-/* Text */
 .footer-text {
-  color: #9ca3af;
-  font-size: 16px;
-  line-height: 24px;
-  margin: 0;
+  color: #7c839bb2;
 }
 
 .quotes {
@@ -58,7 +63,6 @@
   line-height: 26px;
 }
 
-/* Icons */
 .icon-wrapper {
   display: flex;
   align-items: center;
@@ -69,43 +73,35 @@
 .dual-icon {
   width: 40px;
   height: 40px;
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
 }
 
-/* Hover icons */
 .dual-icon:hover {
-  opacity: 0.8;
+  transform: translateY(-4px) scale(1.05);
+  opacity: 0.9;
 }
 
-/* Lists */
 .footer-section ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-section li {
-  color: #9ca3af;
-  font-size: 16px;
-  line-height: 24px;
+.footer-section ul li {
   margin-bottom: 8px;
   cursor: pointer;
+  opacity: 0.8;
+  transition: all 0.3s ease;
 }
 
-/* Company links */
-.company-link {
-  color: #9ca3af;
-  font-size: 16px;
-  line-height: 24px;
-  cursor: pointer;
-}
-
-/* Hover */
-.footer-section li:hover,
-.company-link:hover {
+.footer-section ul li:hover {
+  opacity: 1;
   color: #ffffff;
+  transform: translateX(4px);
 }
 
-/* Bottom */
 .footer-bottom {
   margin-top: 40px;
   border-top: 1px solid #1f2937;
@@ -115,12 +111,25 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   font-size: 12px;
-  color: #7c839b;
+  color: #7c839bb2;
 }
 
-/* ---------------- RESPONSIVE ---------------- */
+/* ------------------ ANIMATIONS ------------------*/
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ------------------ RESPONSIVE------------------*/
 
 @media (max-width: 1024px) {
   .footer {
@@ -172,9 +181,7 @@
     font-size: 18px;
   }
 
-  .footer-text,
-  .footer-section li,
-  .company-link {
+  .footer-text {
     font-size: 14px;
     line-height: 22px;
   }
@@ -196,4 +203,26 @@
   .footer-bottom {
     font-size: 11px;
   }
+}
+
+.company-link {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.company-link:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+}
+.footer-section ul li,
+.footer-section p {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-section ul li:hover,
+.footer-section p:hover {
+  color: #ffffff;
+  transform: translateX(4px);
+  opacity: 1;
 }
