@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
-import "../LoginPages/ForgotPasswordOTP.css";
+import "../Components-LoginPage/ForgotPasswordOTP.css";
 import { useLocation, useNavigate } from "react-router-dom";
-import WhiteOverlay from "../../assets/white-circle.png";
-import PurpleOverlay from "../../assets/purple-circle.png";
-import Security from "../../assets/icons/security-mark.png";
-import RightArrowForButton from "../../assets/icons/right-arrow.png";
-import Lock from "../../assets/icons/lock.png";
-import Shield from "../../assets/icons/shield-icon.png";
+import WhiteOverlay from "../assets/white-circle.png";
+import PurpleOverlay from "../assets/purple-circle.png";
+import Security from "../assets/icons/security-mark.png";
+import RightArrowForButton from "../assets/icons/right-arrow.png";
+import Lock from "../assets/icons/lock.png";
+import Shield from "../assets/icons/shield-icon.png";
 
 export default function ForgotPasswordOTP() {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);

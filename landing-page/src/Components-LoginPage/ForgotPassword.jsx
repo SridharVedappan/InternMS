@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import "../LoginPages/ForgotPassword.css";
+import "../Components-LoginPage/ForgotPassword.css";
 import { Link, useNavigate } from "react-router-dom";
-
-import PasswordReset from "../../assets/icons/password-reset.png";
-import RightSideArrow from "../../assets/icons/right-arrow-1.png";
-import LeftArrow from "../../assets/icons/left-side-bule-arrow.png";
+import PasswordReset from "../assets/icons/password-reset.png";
+import RightSideArrow from "../assets/icons/right-arrow-1.png";
+import LeftArrow from "../assets/icons/left-side-bule-arrow.png";
 
 export default function ForgotPassword() {
   const [selectedMethod, setSelectedMethod] = useState("email");

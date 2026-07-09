@@ -1,11 +1,10 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import LandingPage from "./components/LandingPages/LandingPage";
-import Login from "./components/LoginPages/Login";
-import Register from "./components/RegisterPages/Register";
-import TwoStepVerification from "./components/LoginPages/TwoStepVerification";
-import ForgotPassword from "./components/LoginPages/ForgotPassword";
-import VerificationCode from "./components/LoginPages/VerificationCode";
-import ForgotPasswordOTP from "./components/LoginPages/ForgotPasswordOTP";
+import LandingPage from "./Components-LandingPage/LandingPage";
+import Login from "./Components-LoginPage/Login";
+import TwoStepVerification from "./Components-LoginPage/TwoStepVerification";
+import ForgotPassword from "./Components-LoginPage/ForgotPassword";
+import VerificationCode from "./Components-LoginPage/VerificationCode";
+import ForgotPasswordOTP from "./Components-LoginPage/ForgotPasswordOTP";
 import "./App.css";
 
 function App() {
@@ -15,7 +14,6 @@ function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/register" element={<Register />} />
         <Route
           path="/two-step-verification"
           element={<TwoStepVerification />}

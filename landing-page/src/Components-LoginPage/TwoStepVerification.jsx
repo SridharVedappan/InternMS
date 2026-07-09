@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "../LoginPages/TwoStepVerification.css";
-import MailVerification from "../../assets/icons/mail-verfication-icon.png";
-import Phone from "../../assets/icons/phone-num-verfication-icon.png";
-import SecurityMark from "../../assets/icons/security-mark.png";
-import RidhtSideArrow from "../../assets/icons/right-arrow-1.png";
-import LeftSideArrow from "../../assets/icons/left-arrow-1.png";
+import "../Components-LoginPage/TwoStepVerification.css";
+import MailVerification from "../assets/icons/mail-verfication-icon.png";
+import Phone from "../assets/icons/phone-num-verfication-icon.png";
+import SecurityMark from "../assets/icons/security-mark.png";
+import RidhtSideArrow from "../assets/icons/right-arrow-1.png";
+import LeftSideArrow from "../assets/icons/left-arrow-1.png";
 import { Link } from "react-router-dom";
 export default function TwoStepVerification() {
   const [selectedMethod, setSelectedMethod] = useState("email");
+
   const navigate = useNavigate();
 
   const handleSendCode = () => {
