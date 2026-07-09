@@ -58,7 +58,7 @@ export const Stackholder = () => {
         <img
           src={OfficeWorkerImage}
           alt="image-1.png"
-          className="image-card-ofi"
+          className="office-image-card"
         />
       </div>
     </section>
