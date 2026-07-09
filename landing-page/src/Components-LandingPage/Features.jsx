@@ -5,7 +5,7 @@ import BotIcon from "../assets/icons/bot.png";
 import SearchIcon from "../assets/icons/search.png";
 import SecureIcon from "../assets/icons/secure.png";
 
-const Features = () => {
+export function Features() {
   return (
     <section className="features-container">
       <div className="features-header">
@@ -59,6 +59,4 @@ const Features = () => {
       </div>
     </section>
   );
-};
-
-export default Features;
+}

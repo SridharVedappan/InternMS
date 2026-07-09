@@ -3,7 +3,7 @@ import "../Components-LandingPage/Footer.css";
 import Mail from "../assets/icons/mail.png";
 import Browser from "../assets/icons/browser.png";
 
-function Footer() {
+export function Footer() {
   return (
     <div className="bg-footer-color">
       <footer className="footer">
@@ -47,5 +47,3 @@ function Footer() {
     </div>
   );
 }
-
-export default Footer;

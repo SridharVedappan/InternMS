@@ -5,7 +5,7 @@ import Right from "../assets/icons/right-arrow.png";
 import "../Components-LandingPage/HeroSection.css";
 import InternImage from "../assets/internship-management-dashboard.png";
 
-export default function HeroSection() {
+export function HeroSection() {
   return (
     <div className="hero-content">
       <div className="sub-hero-content">

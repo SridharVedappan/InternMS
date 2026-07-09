@@ -1,7 +1,7 @@
 import React from "react";
 import "../Components-LandingPage/StatsRow.css";
 
-function StatsRow() {
+export function StatsRow() {
   return (
     <section className="stats-container">
       <div className="stats">
@@ -21,5 +21,3 @@ function StatsRow() {
     </section>
   );
 }
-
-export default StatsRow;
