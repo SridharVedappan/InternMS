@@ -7,7 +7,7 @@ import RightArrowForButton from "../assets/icons/arrow-2.png";
 import ShieldProfile from "../assets/icons/security-profile.png";
 import { Link } from "react-router-dom";
 
-export default function VerificationCode() {
+export const VerificationCode = () => {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
 
   const navigate = useNavigate();
@@ -178,4 +178,4 @@ export default function VerificationCode() {
       </div>
     </div>
   );
-}
+};

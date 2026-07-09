@@ -3,7 +3,7 @@ import "../Components-LandingPage/Footer.css";
 import Mail from "../assets/icons/mail.png";
 import Browser from "../assets/icons/browser.png";
 
-export function Footer() {
+export const Footer = () => {
   return (
     <div className="bg-footer-color">
       <footer className="footer">
@@ -46,4 +46,4 @@ export function Footer() {
       </footer>
     </div>
   );
-}
+};

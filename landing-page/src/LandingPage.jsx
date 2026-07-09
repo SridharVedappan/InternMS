@@ -7,7 +7,7 @@ import { Features } from "./Components-LandingPage/Features";
 import { Stackholder } from "./Components-LandingPage/Stackholder";
 import { Footer } from "./Components-LandingPage/Footer";
 
-export default function LandingPage() {
+export const LandingPage = () => {
   return (
     <div>
       <Navbar />
@@ -18,4 +18,4 @@ export default function LandingPage() {
       <Footer />
     </div>
   );
-}
+};

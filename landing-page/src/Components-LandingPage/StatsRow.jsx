@@ -1,7 +1,7 @@
 import React from "react";
 import "../Components-LandingPage/StatsRow.css";
 
-export function StatsRow() {
+export const StatsRow = () => {
   return (
     <section className="stats-container">
       <div className="stats">
@@ -20,4 +20,4 @@ export function StatsRow() {
       </div>
     </section>
   );
-}
+};

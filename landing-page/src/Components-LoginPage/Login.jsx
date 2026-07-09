@@ -2,15 +2,13 @@ import React, { useState } from "react";
 import MailIcon from "../assets/icons/mail-icon.png";
 import LockIcon from "../assets/icons/lock.png";
 import { FiEye, FiEyeOff } from "react-icons/fi";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import ThinLine from "../assets/icons/horizontal-divider.png";
 import GoogleBtn from "../assets/icons/google.png";
 import Arrow2 from "../assets/icons/right-arrow.png";
-import { useNavigate } from "react-router-dom";
-
 import "../Components-LoginPage/Login.css";
 
-export default function Login() {
+export const Login = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -194,4 +192,4 @@ export default function Login() {
       </div>
     </div>
   );
-}
+};

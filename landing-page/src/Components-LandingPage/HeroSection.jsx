@@ -5,7 +5,7 @@ import Right from "../assets/icons/right-arrow.png";
 import "../Components-LandingPage/HeroSection.css";
 import InternImage from "../assets/internship-management-dashboard.png";
 
-export function HeroSection() {
+export const HeroSection = () => {
   return (
     <div className="hero-content">
       <div className="sub-hero-content">
@@ -46,4 +46,4 @@ export function HeroSection() {
       </div>
     </div>
   );
-}
+};

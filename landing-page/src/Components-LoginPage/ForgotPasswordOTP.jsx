@@ -8,7 +8,7 @@ import RightArrowForButton from "../assets/icons/right-arrow.png";
 import Lock from "../assets/icons/lock.png";
 import Shield from "../assets/icons/shield-icon.png";
 
-export default function ForgotPasswordOTP() {
+export const ForgotPasswordOTP = () => {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
 
   const navigate = useNavigate();
@@ -174,4 +174,4 @@ export default function ForgotPasswordOTP() {
       </div>
     </div>
   );
-}
+};

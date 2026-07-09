@@ -5,7 +5,7 @@ import PasswordReset from "../assets/icons/password-reset.png";
 import RightSideArrow from "../assets/icons/right-arrow-1.png";
 import LeftArrow from "../assets/icons/left-side-bule-arrow.png";
 
-export default function ForgotPassword() {
+export const ForgotPassword = () => {
   const [selectedMethod, setSelectedMethod] = useState("email");
 
   const navigate = useNavigate();
@@ -133,4 +133,4 @@ export default function ForgotPassword() {
       </div>
     </div>
   );
-}
+};

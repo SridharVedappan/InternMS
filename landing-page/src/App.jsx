@@ -1,10 +1,10 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import LandingPage from "./LandingPage";
-import Login from "./Components-LoginPage/Login";
-import TwoStepVerification from "./Components-LoginPage/TwoStepVerification";
-import ForgotPassword from "./Components-LoginPage/ForgotPassword";
-import VerificationCode from "./Components-LoginPage/VerificationCode";
-import ForgotPasswordOTP from "./Components-LoginPage/ForgotPasswordOTP";
+import { LandingPage } from "./LandingPage";
+import { Login } from "./Components-LoginPage/Login";
+import { TwoStepVerification } from "./Components-LoginPage/TwoStepVerification";
+import { ForgotPassword } from "./Components-LoginPage/ForgotPassword";
+import { VerificationCode } from "./Components-LoginPage/VerificationCode";
+import { ForgotPasswordOTP } from "./Components-LoginPage/ForgotPasswordOTP";
 import "./App.css";
 
 const router = createBrowserRouter([

@@ -3,7 +3,7 @@ import "../Components-LandingPage/Stackholder.css";
 import Tick from "../assets/icons/tick.png";
 import OfficeWorkerImage from "../assets/images-1.png";
 
-export function Stackholder() {
+export const Stackholder = () => {
   return (
     <section className="stack-container">
       <div className="stack-wrapper">
@@ -59,4 +59,4 @@ export function Stackholder() {
       </div>
     </section>
   );
-}
+};

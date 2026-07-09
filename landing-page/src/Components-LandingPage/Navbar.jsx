@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "../Components-LandingPage/Navbar.css";
 
-export function Navbar() {
+export const Navbar = () => {
   return (
     <div className="nav-bar">
       <div className="logo-container">
@@ -20,4 +20,4 @@ export function Navbar() {
       </div>
     </div>
   );
-}
+};
