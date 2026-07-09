@@ -49,13 +49,17 @@ export const Stackholder = () => {
           </div>
 
           <div className="button-group">
-            <button className="btn-1 btn-active">Students</button>
+            <button className="btn-1">Students</button>
             <button className="btn-1">Employers</button>
             <button className="btn-1">Universities</button>
           </div>
         </div>
 
-        <img src={OfficeWorkerImage} alt="image-1.png" className="image-card" />
+        <img
+          src={OfficeWorkerImage}
+          alt="image-1.png"
+          className="image-card-ofi"
+        />
       </div>
     </section>
   );

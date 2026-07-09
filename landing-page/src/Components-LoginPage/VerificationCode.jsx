@@ -122,7 +122,7 @@ export const VerificationCode = () => {
               <span className="span-gmail">{value}</span>
             </p>
 
-            <div className="otp-inputs">
+            <div className="otp-inputs-01">
               {otp.map((digit, index) => (
                 <input
                   key={index}
@@ -130,7 +130,7 @@ export const VerificationCode = () => {
                   type="text"
                   maxLength="1"
                   value={digit}
-                  className="otp-box"
+                  className="otp-boxs"
                   onChange={(e) => handleChange(index, e)}
                   onKeyDown={(e) => handleKeyDown(index, e)}
                 />

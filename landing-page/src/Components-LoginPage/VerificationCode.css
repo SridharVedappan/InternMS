@@ -90,7 +90,7 @@
 .otp-wrapper {
   display: flex;
   align-items: flex-start;
-  gap: 106px;
+  gap: 40px;
   max-width: 1400px;
   margin: 0 auto;
   padding-left: 80px;
@@ -101,10 +101,11 @@
 }
 
 .right-content-container {
-  width: 440px;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin-top: 92px;
+  margin-top: 60px;
+  padding: 0;
 }
 
 .enter-code-title {
@@ -144,29 +145,31 @@
   color: #111c2d;
 }
 
-.otp-inputs {
+.otp-inputs-01 {
   display: flex;
-  justify-content: center;
   align-items: center;
   gap: 16px;
-  width: 100%;
+  width: 464px;
+  margin-bottom: 32px;
 }
-.otp-box {
-  width: 64px;
+.otp-boxs {
+  width: 60px;
   height: 80px;
+  box-sizing: border-box;
   border: 2px solid #e2e8f0;
   border-radius: 12px;
   background: #f9f9ff;
+  font-family: "Hanken Grotesk", sans-serif;
   font-size: 28px;
   font-weight: 600;
   text-align: center;
   outline: none;
-  transition: all 0.1s;
+  margin: 0;
+  transition: all 0.1s ease;
 }
 
-.otp-box:focus {
+.otp-boxs:focus {
   border: 2px solid #4f46e5;
-  background: #f9f9ff;
 }
 .verify-identity {
   width: 440px;
@@ -377,13 +380,13 @@
     height: auto;
   }
 
-  .otp-inputs {
+  .otp-inputs-01 {
     justify-content: center;
     flex-wrap: wrap;
     gap: 12px;
   }
 
-  .otp-box {
+  .otp-boxs {
     width: 56px;
     height: 70px;
     font-size: 24px;
@@ -430,11 +433,11 @@
     line-height: 22px;
   }
 
-  .otp-inputs {
+  .otp-inputs-01 {
     gap: 8px;
   }
 
-  .otp-box {
+  .otp-boxs {
     width: 42px;
     height: 52px;
     font-size: 18px;

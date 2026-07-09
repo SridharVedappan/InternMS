@@ -5,6 +5,8 @@ import { TwoStepVerification } from "./Components-LoginPage/TwoStepVerification"
 import { ForgotPassword } from "./Components-LoginPage/ForgotPassword";
 import { VerificationCode } from "./Components-LoginPage/VerificationCode";
 import { ForgotPasswordOTP } from "./Components-LoginPage/ForgotPasswordOTP";
+import { ResetPassword } from "./Components-LoginPage/ResetPassword";
+import { PasswordResetSuccess } from "./Components-LoginPage/PasswordResetSuccess";
 import "./App.css";
 
 const router = createBrowserRouter([
@@ -31,6 +33,15 @@ const router = createBrowserRouter([
   {
     path: "/forgot-password-otp",
     element: <ForgotPasswordOTP />,
+  },
+  {
+    path: "/reset-password",
+    element: <ResetPassword />,
+  },
+  ,
+  {
+    path: "/password-reset-success",
+    element: <PasswordResetSuccess />,
   },
 ]);
 

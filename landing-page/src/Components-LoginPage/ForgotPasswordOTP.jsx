@@ -74,7 +74,7 @@ export const ForgotPasswordOTP = () => {
 
     alert("OTP Verified Successfully!");
 
-    navigate("/xyz");
+    navigate("/reset-password");
   };
 
   return (
