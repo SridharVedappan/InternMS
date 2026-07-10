@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "../Components-Registration/HrRegistration.css";
 import HrIcon from "../assets/icons/human-icon.png";
+import Hr from "../assets/icons/hr.png";
+import Mentor from "../assets/icons/mentor.png";
+import Intern from "../assets/icons/intern.png";
+import Company from "../assets/icons/company.png";
 
 export const HrRegistration = () => {
   return (
@@ -63,8 +67,138 @@ export const HrRegistration = () => {
       <div className="hr-reg-right-container">
         <div className="hr-reg-right-content-container">
           <div>
-            <h1>Create your HR account</h1>
-            <p>Join our ecosystem of professional employers.</p>
+            <h1 className="hr-reg-title">Create your HR account</h1>
+            <p className="hr-reg-subtitle">
+              Join our ecosystem of professional employers.
+            </p>
+          </div>
+
+          <div>
+            <span className="reg-as-subtitle">Registering as</span>
+            <div className="page-nav-conatiner">
+              <div className="reg-card">
+                <div className="icon-wrapper">
+                  <span id="white-circle">
+                    <img src={Hr} alt="hr-icon" id="hr-page-icon" />
+                  </span>
+                </div>
+                <p className="hr-text">HR</p>
+              </div>
+
+              <div className="reg-card">
+                <div className="icon-wrapper">
+                  <span id="white-circle">
+                    <img src={Mentor} alt="mentor-icon" id="hr-page-icon" />
+                  </span>
+                </div>
+                <p className="hr-text">Mentor</p>
+              </div>
+
+              <div className="reg-card">
+                <div className="icon-wrapper">
+                  <span id="white-circle">
+                    <img src={Intern} alt="intern-icon" id="hr-page-icon" />
+                  </span>
+                </div>
+                <p className="hr-text">Intern</p>
+              </div>
+
+              <div className="reg-card">
+                <div className="icon-wrapper">
+                  <span id="white-circle">
+                    <img src={Company} alt="company-icon" id="hr-page-icon" />
+                  </span>
+                </div>
+                <p className="hr-text">Company</p>
+              </div>
+            </div>
+          </div>
+          <div>
+            <form className="hr-reg-form">
+              <div className="hr-reg-form-row">
+                <div className="hr-reg-form-group">
+                  <label className="hr-reg-label">
+                    Full Name <span className="hr-reg-required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className="hr-reg-input"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+
+                <div className="hr-reg-form-group">
+                  <label className="hr-reg-label">
+                    Work Email Address{" "}
+                    <span className="hr-reg-required">*</span>
+                  </label>
+                  <input
+                    type="email"
+                    className="hr-reg-input"
+                    placeholder="Enter your work email"
+                  />
+                </div>
+              </div>
+
+              <div className="hr-reg-form-row">
+                <div className="hr-reg-form-group">
+                  <label className="hr-reg-label">
+                    Phone Number <span className="hr-reg-required">*</span>
+                  </label>
+                  <input
+                    type="tel"
+                    className="hr-reg-input"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+
+                <div className="hr-reg-form-group">
+                  <label className="hr-reg-label">
+                    Department <span className="hr-reg-required">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    className="hr-reg-input"
+                    placeholder="Enter your department"
+                  />
+                </div>
+              </div>
+
+              <div className="hr-reg-form-group">
+                <label className="hr-reg-label">
+                  Company Name <span className="hr-reg-required">*</span>
+                </label>
+                <input
+                  type="text"
+                  className="hr-reg-input"
+                  placeholder="Enter company name"
+                />
+              </div>
+
+              <div className="hr-reg-form-row">
+                <div className="hr-reg-form-group">
+                  <label className="hr-reg-label">
+                    Password <span className="hr-reg-required">*</span>
+                  </label>
+                  <input
+                    type="password"
+                    className="hr-reg-input"
+                    placeholder="Create a password"
+                  />
+                </div>
+
+                <div className="hr-reg-form-group">
+                  <label className="hr-reg-label">
+                    Confirm Password <span className="hr-reg-required">*</span>
+                  </label>
+                  <input
+                    type="password"
+                    className="hr-reg-input"
+                    placeholder="Confirm your password"
+                  />
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
