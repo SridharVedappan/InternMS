@@ -1,12 +1,14 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LandingPage } from "./LandingPage";
 import { Login } from "./Components-LoginPage/Login";
+import { HrRegistration } from "./Components-Registration/HrRegistration";
 import { TwoStepVerification } from "./Components-LoginPage/TwoStepVerification";
 import { ForgotPassword } from "./Components-LoginPage/ForgotPassword";
 import { VerificationCode } from "./Components-LoginPage/VerificationCode";
 import { ForgotPasswordOTP } from "./Components-LoginPage/ForgotPasswordOTP";
 import { ResetPassword } from "./Components-LoginPage/ResetPassword";
 import { PasswordResetSuccess } from "./Components-LoginPage/PasswordResetSuccess";
+
 import "./App.css";
 
 const router = createBrowserRouter([
@@ -17,6 +19,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <Login />,
+  },
+  {
+    path: "/hr-registration",
+    element: <HrRegistration />,
   },
   {
     path: "/forgot-password",

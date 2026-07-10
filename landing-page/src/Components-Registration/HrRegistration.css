@@ -1,0 +1,91 @@
+.hr-reg-page-container {
+  width: 100%;
+  min-height: 1054px;
+  max-width: 1280px;
+  margin: 0;
+  display: flex;
+}
+
+.hr-reg-left-container {
+  width: 537.59px;
+  min-height: 1054px;
+  display: flex;
+  flex-direction: column;
+  padding: 64px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: linear-gradient(165.73deg, #3571ca 2.49%, #29436b 100%);
+}
+
+.hr-reg-right-container {
+  flex: 1;
+  min-height: 1054px;
+  padding: 64px;
+  background: #ffffff;
+}
+
+.hr-reg-logo {
+  width: 89px;
+  height: 32px;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.hr-reg-quotes {
+  width: 409.59px;
+  height: 100px;
+  margin: 0;
+  font-family: "Manrope", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: -0.8px;
+  color: #ffffff;
+}
+
+.hr-reg-description {
+  width: 409.59px;
+  height: 84px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #dad7ff;
+}
+#left-blur-box {
+  width: 409.59px;
+  height: 157px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding: 24px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+#hr-icon {
+  width: 24px;
+  height: 12px;
+}
+
+#purple-circle {
+  width: 48px;
+  height: 48px;
+  background: #8a4cfc;
+  border-radius: 9999px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

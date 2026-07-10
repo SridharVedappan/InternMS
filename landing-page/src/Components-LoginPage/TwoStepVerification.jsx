@@ -57,7 +57,6 @@ export const TwoStepVerification = () => {
           </p>
           <div className="verification-card-container">
             {/* Email Verification */}
-
             <div
               className={`verification-card ${
                 selectedMethod === "email" ? "active" : ""
