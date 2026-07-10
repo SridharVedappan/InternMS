@@ -15,7 +15,7 @@ export const Navbar = () => {
         </Link>
 
         <Link to="/hr-registration">
-          <button className="register-btn">Register</button>
+          <button className="register-btn-lp">Register</button>
         </Link>
       </div>
     </div>

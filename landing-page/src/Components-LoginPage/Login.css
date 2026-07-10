@@ -136,12 +136,10 @@ body {
 }
 .error-message {
   margin-top: 6px;
-
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-
   color: #dc2626;
 }
 
@@ -263,7 +261,6 @@ body {
   padding-left: 40px;
   border: 1px solid #c7c4d8;
   border-radius: 8px;
-  font-family: "Hanken Grotesk", sans-serif;
   font-size: 14px;
   outline: none;
   background: #ffffff;
