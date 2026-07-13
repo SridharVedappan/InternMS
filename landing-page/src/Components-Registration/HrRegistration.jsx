@@ -91,7 +91,6 @@ export const HrRegistration = () => {
 
     setPhone(value);
 
-    // Live validation while typing
     if (countryCode === "+91" && !/^[6-9]/.test(value)) {
       setErrors((prev) => ({
         ...prev,
