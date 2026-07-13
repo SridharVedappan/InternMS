@@ -713,3 +713,33 @@
   align-items: center;
   gap: 12px;
 }
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper .hr-reg-input {
+  width: 100%;
+  padding-right: 45px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle:hover {
+  color: #3525cd;
+}
+
+.hr-reg-input[type="password"] {
+  font-family: Arial, sans-serif;
+}

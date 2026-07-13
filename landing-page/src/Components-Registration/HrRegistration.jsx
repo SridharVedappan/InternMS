@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 import Select from "react-select";
-import PhoneInput from "react-phone-input-2";
-import "react-phone-input-2/lib/style.css";
 import "../Components-Registration/HrRegistration.css";
 import HrIcon from "../assets/icons/human-icon.png";
 import Hr from "../assets/icons/hr.png";
@@ -21,6 +20,8 @@ export const HrRegistration = () => {
   const [companyName, setCompanyName] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [termsAccepted, setTermsAccepted] = useState(false);
   const [errors, setErrors] = useState({});
 
@@ -241,6 +242,7 @@ export const HrRegistration = () => {
       newErrors.confirmPassword = "Passwords do not match.";
     }
 
+    // Terms Accept Validation
     if (!termsAccepted) {
       newErrors.terms =
         "Please accept the Terms of Service and Privacy Policy.";
@@ -517,15 +519,24 @@ export const HrRegistration = () => {
                     Password <span className="hr-reg-required">*</span>
                   </label>
 
-                  <input
-                    type="password"
-                    className={`hr-reg-input ${
-                      errors.password ? "input-error-1" : ""
-                    }`}
-                    placeholder="Create a strong password"
-                    value={password}
-                    onChange={handlePasswordChange}
-                  />
+                  <div className="password-wrapper">
+                    <input
+                      type={showPassword ? "text" : "password"}
+                      className={`hr-reg-input ${
+                        errors.password ? "input-error-1" : ""
+                      }`}
+                      placeholder="Create a strong password"
+                      value={password}
+                      onChange={handlePasswordChange}
+                    />
+
+                    <span
+                      className="password-toggle"
+                      onClick={() => setShowPassword(!showPassword)}
+                    >
+                      {showPassword ? <FiEyeOff /> : <FiEye />}
+                    </span>
+                  </div>
 
                   {errors.password && (
                     <p className="error-message">{errors.password}</p>
@@ -537,15 +548,26 @@ export const HrRegistration = () => {
                     Confirm Password <span className="hr-reg-required">*</span>
                   </label>
 
-                  <input
-                    type="password"
-                    className={`hr-reg-input ${
-                      errors.confirmPassword ? "input-error-1" : ""
-                    }`}
-                    placeholder="Confirm Password"
-                    value={confirmPassword}
-                    onChange={handleConfirmPasswordChange}
-                  />
+                  <div className="password-wrapper">
+                    <input
+                      type={showConfirmPassword ? "text" : "password"}
+                      className={`hr-reg-input ${
+                        errors.confirmPassword ? "input-error-1" : ""
+                      }`}
+                      placeholder="Confirm Password"
+                      value={confirmPassword}
+                      onChange={handleConfirmPasswordChange}
+                    />
+
+                    <span
+                      className="password-toggle"
+                      onClick={() =>
+                        setShowConfirmPassword(!showConfirmPassword)
+                      }
+                    >
+                      {showConfirmPassword ? <FiEyeOff /> : <FiEye />}
+                    </span>
+                  </div>
 
                   {errors.confirmPassword && (
                     <p className="error-message">{errors.confirmPassword}</p>
