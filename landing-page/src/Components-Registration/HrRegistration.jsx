@@ -22,19 +22,6 @@ export const HrRegistration = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [termsAccepted, setTermsAccepted] = useState(false);
-
-  const initialFormData = {
-    fullName: "",
-    email: "",
-    phone: "",
-    countryCode: "+91",
-    department: null,
-    password: "",
-    confirmPassword: "",
-  };
-
-  const [formData, setFormData] = useState(initialFormData);
-
   const [errors, setErrors] = useState({});
 
   const countryCodes = [
@@ -51,6 +38,19 @@ export const HrRegistration = () => {
     { value: "it", label: "Information Technology" },
     { value: "finance", label: "Finance" },
   ];
+
+  const resetForm = () => {
+    setFullName("");
+    setEmail("");
+    setPhone("");
+    setCountryCode("+91");
+    setDepartment(null);
+    setCompanyName("");
+    setPassword("");
+    setConfirmPassword("");
+    setTermsAccepted(false);
+    setErrors({});
+  };
 
   // Full Name
   const handleFullNameChange = (e) => {
@@ -131,7 +131,6 @@ export const HrRegistration = () => {
     }));
   };
 
-  // Password
   // Password
   const handlePasswordChange = (e) => {
     const value = e.target.value;

@@ -7,7 +7,7 @@
 }
 
 .hr-reg-left-container {
-  max-width: 1280px;
+  width: 1280px;
   height: 1120px;
   display: flex;
   align-items: stretch;
@@ -29,11 +29,9 @@
   width: 614.39px;
   height: 926px;
   max-width: 672px;
-
   display: flex;
   flex-direction: column;
   gap: 32px;
-
   box-sizing: border-box;
 }
 
@@ -542,7 +540,6 @@
   box-shadow:
     0px 4px 6px -4px rgba(0, 0, 0, 0.1),
     0px 10px 15px -3px rgba(0, 0, 0, 0.1);
-
   transition: all 0.2s ease;
 }
 
