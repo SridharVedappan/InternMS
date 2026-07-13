@@ -1,12 +1,269 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import Select from "react-select";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 import "../Components-Registration/HrRegistration.css";
 import HrIcon from "../assets/icons/human-icon.png";
 import Hr from "../assets/icons/hr.png";
 import Mentor from "../assets/icons/mentor.png";
 import Intern from "../assets/icons/intern.png";
 import Company from "../assets/icons/company.png";
+import CompanyLogo from "../assets/icons/company-icon.png";
+import DownArrowSelect from "../assets/icons/down-arrow.png";
 
 export const HrRegistration = () => {
+  const [fullName, setFullName] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
+  const [countryCode, setCountryCode] = useState("+91");
+  const [department, setDepartment] = useState(null);
+  const [companyName, setCompanyName] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [termsAccepted, setTermsAccepted] = useState(false);
+
+  const initialFormData = {
+    fullName: "",
+    email: "",
+    phone: "",
+    countryCode: "+91",
+    department: null,
+    password: "",
+    confirmPassword: "",
+  };
+
+  const [formData, setFormData] = useState(initialFormData);
+
+  const [errors, setErrors] = useState({});
+
+  const countryCodes = [
+    { code: "+91" },
+    { code: "+1" },
+    { code: "+44" },
+    { code: "+971" },
+    { code: "+61" },
+    { code: "+81" },
+  ];
+
+  const departmentOptions = [
+    { value: "hr", label: "Human Resources" },
+    { value: "it", label: "Information Technology" },
+    { value: "finance", label: "Finance" },
+  ];
+
+  // Full Name
+  const handleFullNameChange = (e) => {
+    let value = e.target.value;
+
+    value = value.replace(/[^A-Za-z\s]/g, "");
+    value = value.replace(/\s+/g, " ");
+
+    setFullName(value);
+
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      fullName: "",
+    }));
+  };
+
+  // Email
+  const handleEmailChange = (e) => {
+    const value = e.target.value;
+
+    setEmail(value);
+
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      email: "",
+    }));
+  };
+
+  // Phone
+  const handlePhoneChange = (e) => {
+    let value = e.target.value;
+
+    value = value.replace(/\D/g, "");
+
+    if (value.length > 10) {
+      value = value.slice(0, 10);
+    }
+
+    setPhone(value);
+
+    // Live validation while typing
+    if (countryCode === "+91" && !/^[6-9]/.test(value)) {
+      setErrors((prev) => ({
+        ...prev,
+        phone: "Phone number must start with 6, 7, 8, or 9.",
+      }));
+    } else if (value.length !== 10) {
+      setErrors((prev) => ({
+        ...prev,
+        phone: "Phone number must be 10 digits.",
+      }));
+    } else {
+      setErrors((prev) => ({
+        ...prev,
+        phone: "",
+      }));
+    }
+  };
+
+  // Department
+  const handleDepartmentChange = (selectedOption) => {
+    setDepartment(selectedOption);
+
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      department: "",
+    }));
+  };
+
+  const handleCompanyNameChange = (e) => {
+    const value = e.target.value;
+
+    setCompanyName(value);
+
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      companyName: "",
+    }));
+  };
+
+  // Password
+  // Password
+  const handlePasswordChange = (e) => {
+    const value = e.target.value;
+
+    setPassword(value);
+
+    if (!value.trim()) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        password: "Password is required.",
+      }));
+    } else if (value.length < 8) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        password: "Password must be at least 8 characters.",
+      }));
+    } else {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        password: "",
+      }));
+    }
+  };
+
+  // Confirm Password
+  const handleConfirmPasswordChange = (e) => {
+    const value = e.target.value;
+
+    setConfirmPassword(value);
+
+    if (!value.trim()) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        confirmPassword: "Confirm password is required.",
+      }));
+    } else if (value !== password) {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        confirmPassword: "Passwords do not match.",
+      }));
+    } else {
+      setErrors((prevErrors) => ({
+        ...prevErrors,
+        confirmPassword: "",
+      }));
+    }
+  };
+
+  const handleTermsChange = (e) => {
+    setTermsAccepted(e.target.checked);
+
+    setErrors((prevErrors) => ({
+      ...prevErrors,
+      terms: "",
+    }));
+  };
+
+  // Submit
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    let newErrors = {};
+
+    // Full Name Validation
+    if (!fullName.trim()) {
+      newErrors.fullName = "Full name is required.";
+    } else if (fullName.trim().length > 50) {
+      newErrors.fullName = "Name cannot exceed 50 characters.";
+    }
+
+    // Email Validation
+    if (!email.trim()) {
+      newErrors.email = "Email address is required.";
+    } else if (
+      !/^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/.test(email)
+    ) {
+      newErrors.email = "Please enter a valid email address.";
+    }
+
+    // Phone Validation
+    if (!phone.trim()) {
+      newErrors.phone = "Phone number is required.";
+    } else if (countryCode === "+91" && !/^[6-9]/.test(phone)) {
+      newErrors.phone = "Phone number must start with 6, 7, 8, or 9.";
+    } else if (phone.length !== 10) {
+      newErrors.phone = "Phone number must be 10 digits.";
+    }
+
+    // Department Validation
+    if (!department) {
+      newErrors.department = "Please select a department.";
+    }
+    // companyName vlaidtion
+    if (!companyName.trim()) {
+      newErrors.companyName = "Company name is required.";
+    }
+
+    // Password Validation
+    if (!password.trim()) {
+      newErrors.password = "Password is required.";
+    } else if (password.length < 8) {
+      newErrors.password = "Password must be at least 8 characters.";
+    }
+
+    // Confirm Password Validation
+    if (!confirmPassword.trim()) {
+      newErrors.confirmPassword = "Confirm password is required.";
+    } else if (password !== confirmPassword) {
+      newErrors.confirmPassword = "Passwords do not match.";
+    }
+
+    if (!termsAccepted) {
+      newErrors.terms =
+        "Please accept the Terms of Service and Privacy Policy.";
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      const fullPhoneNumber = countryCode + phone;
+
+      console.log("Full Name:", fullName);
+      console.log("Email:", email);
+      console.log("Phone:", fullPhoneNumber);
+      console.log("Department:", department);
+
+      alert("Account created successfully!");
+
+      resetForm();
+    }
+  };
+
   return (
     <div className="hr-reg-page-container">
       <div className="hr-reg-left-container">
@@ -114,89 +371,229 @@ export const HrRegistration = () => {
             </div>
           </div>
           <div>
-            <form className="hr-reg-form">
+            <form className="hr-reg-form" onSubmit={handleSubmit}>
               <div className="hr-reg-form-row">
+                {/* Full Name */}
                 <div className="hr-reg-form-group">
                   <label className="hr-reg-label">
                     Full Name <span className="hr-reg-required">*</span>
                   </label>
+
                   <input
                     type="text"
-                    className="hr-reg-input"
-                    placeholder="Enter your full name"
+                    placeholder="John Doe"
+                    className={`hr-reg-input ${
+                      errors.fullName ? "input-error-1" : ""
+                    }`}
+                    value={fullName}
+                    onChange={handleFullNameChange}
                   />
+
+                  {errors.fullName && (
+                    <p className="error-message">{errors.fullName}</p>
+                  )}
                 </div>
 
+                {/* Email */}
                 <div className="hr-reg-form-group">
                   <label className="hr-reg-label">
                     Work Email Address{" "}
                     <span className="hr-reg-required">*</span>
                   </label>
+
                   <input
                     type="email"
-                    className="hr-reg-input"
-                    placeholder="Enter your work email"
+                    className={`hr-reg-input ${
+                      errors.email ? "input-error-1" : ""
+                    }`}
+                    placeholder="john.doe@company.com"
+                    value={email}
+                    onChange={handleEmailChange}
                   />
+
+                  {errors.email && (
+                    <p className="error-message">{errors.email}</p>
+                  )}
                 </div>
               </div>
 
               <div className="hr-reg-form-row">
+                {/* Phone */}
                 <div className="hr-reg-form-group">
                   <label className="hr-reg-label">
                     Phone Number <span className="hr-reg-required">*</span>
                   </label>
-                  <input
-                    type="tel"
-                    className="hr-reg-input"
-                    placeholder="Enter your phone number"
-                  />
+
+                  <div className="phone-wrapper">
+                    <select
+                      className="country-code-box"
+                      value={countryCode}
+                      onChange={(e) => setCountryCode(e.target.value)}
+                    >
+                      {countryCodes.map((item) => (
+                        <option key={item.code} value={item.code}>
+                          {item.code}
+                        </option>
+                      ))}
+                    </select>
+
+                    <input
+                      type="tel"
+                      className={`hr-reg-input phone-number-input ${
+                        errors.phone ? "input-error-1" : ""
+                      }`}
+                      placeholder="Enter your number"
+                      value={phone}
+                      onChange={handlePhoneChange}
+                    />
+                  </div>
+
+                  {errors.phone && (
+                    <p className="error-message">{errors.phone}</p>
+                  )}
                 </div>
 
+                {/* Department */}
                 <div className="hr-reg-form-group">
                   <label className="hr-reg-label">
                     Department <span className="hr-reg-required">*</span>
                   </label>
-                  <input
-                    type="text"
-                    className="hr-reg-input"
-                    placeholder="Enter your department"
+
+                  <Select
+                    className={`department-select ${
+                      errors.department ? "department-error" : ""
+                    }`}
+                    classNamePrefix="department"
+                    options={departmentOptions}
+                    value={department}
+                    onChange={handleDepartmentChange}
+                    placeholder="Select your department"
+                    isSearchable={false}
+                    styles={{
+                      valueContainer: (provided) => ({
+                        ...provided,
+                        paddingLeft: "16px",
+                      }),
+                    }}
                   />
+
+                  {errors.department && (
+                    <p className="error-message">{errors.department}</p>
+                  )}
                 </div>
               </div>
 
+              {/* Company Name */}
               <div className="hr-reg-form-group">
                 <label className="hr-reg-label">
                   Company Name <span className="hr-reg-required">*</span>
                 </label>
-                <input
-                  type="text"
-                  className="hr-reg-input"
-                  placeholder="Enter company name"
-                />
+
+                <div className="hr-reg-input-wrapper">
+                  <img
+                    src={CompanyLogo}
+                    alt="Company"
+                    className="company-icon-1"
+                  />
+
+                  <input
+                    className={`hr-reg-input-company ${
+                      errors.companyName ? "input-error-1" : ""
+                    }`}
+                    type="text"
+                    placeholder="InternHub Inc."
+                    value={companyName}
+                    onChange={handleCompanyNameChange}
+                  />
+                </div>
+
+                {errors.companyName && (
+                  <p className="error-message">{errors.companyName}</p>
+                )}
               </div>
 
+              {/* Password */}
               <div className="hr-reg-form-row">
                 <div className="hr-reg-form-group">
                   <label className="hr-reg-label">
                     Password <span className="hr-reg-required">*</span>
                   </label>
+
                   <input
                     type="password"
-                    className="hr-reg-input"
-                    placeholder="Create a password"
+                    className={`hr-reg-input ${
+                      errors.password ? "input-error-1" : ""
+                    }`}
+                    placeholder="Create a strong password"
+                    value={password}
+                    onChange={handlePasswordChange}
                   />
+
+                  {errors.password && (
+                    <p className="error-message">{errors.password}</p>
+                  )}
                 </div>
 
                 <div className="hr-reg-form-group">
                   <label className="hr-reg-label">
                     Confirm Password <span className="hr-reg-required">*</span>
                   </label>
+
                   <input
                     type="password"
-                    className="hr-reg-input"
-                    placeholder="Confirm your password"
+                    className={`hr-reg-input ${
+                      errors.confirmPassword ? "input-error-1" : ""
+                    }`}
+                    placeholder="Confirm Password"
+                    value={confirmPassword}
+                    onChange={handleConfirmPasswordChange}
                   />
+
+                  {errors.confirmPassword && (
+                    <p className="error-message">{errors.confirmPassword}</p>
+                  )}
                 </div>
+              </div>
+
+              {/* Terms */}
+              <div className="terms-container">
+                <input
+                  type="checkbox"
+                  id="terms"
+                  className="terms-checkbox"
+                  checked={termsAccepted}
+                  onChange={handleTermsChange}
+                />
+
+                <div className="label-container-reg">
+                  <label htmlFor="terms" className="terms-text">
+                    I agree to the <span>Terms of Service</span> and{" "}
+                    <span>Privacy Policy</span>
+                  </label>
+                </div>
+                <br />
+                {errors.terms && (
+                  <p className="error-message">{errors.terms}</p>
+                )}
+              </div>
+
+              <button type="submit" className="create-account-btn">
+                Create Account
+              </button>
+
+              <div className="divider-line">
+                <div className="line"></div>
+
+                <span className="or-text-hr">OR</span>
+
+                <div className="line"></div>
+              </div>
+
+              <div className="signin-container">
+                <p className="signin-text">
+                  Already have an account?{" "}
+                  <span className="signin-link">Sign in</span>
+                </p>
               </div>
             </form>
           </div>
