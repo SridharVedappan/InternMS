@@ -11,6 +11,9 @@ import Intern from "../assets/icons/intern.png";
 import Company from "../assets/icons/company.png";
 import CompanyLogo from "../assets/icons/company-icon.png";
 import DownArrowSelect from "../assets/icons/down-arrow.png";
+import ShieldBadge from "../assets/icons/security-mark.png";
+import Stars from "../assets/icons/stars.png";
+import OfficeImage from "../assets/Office-image-png.png";
 
 export const MentorRegistration = () => {
   const [fullName, setFullName] = useState("");
@@ -266,58 +269,81 @@ export const MentorRegistration = () => {
   };
 
   return (
-    <div className="hr-reg-page-container">
-      <div className="hr-reg-left-container">
-        <div className="hr-reg-left-content-container">
-          <h1 className="hr-reg-logo">InterMS</h1>
-          <div id="left-container-2-reg">
-            <h1 className="hr-reg-quotes ">
+    <div className="mentor-reg-page-container">
+      <div className="mentor-reg-left-container">
+        <div className="mentor-reg-left-content-container">
+          <h1 className="mentor-reg-logo">InterMS</h1>
+          <div id="left-container-2-mentor">
+            <h1 className="mentor-reg-quotes ">
               Empower your team with top-tier talent.
             </h1>
-            <p className="hr-reg-description">
-              Streamline your recruitment process, manage internships with ease,
-              and connect with the next generation of industry leaders.
+            <p className="mentor-reg-description">
+              Join a community of experts dedicated to guiding students through
+              their career journey. Share your wisdom, foster growth, and shape
+              the industry's future.
             </p>
-            <div id="left-blur-box">
-              <div className="reg-dashboard-card">
-                <div className="reg-dashboard-item">
-                  <div id="purple-circle">
-                    <img src={HrIcon} alt="Hr-icon" id="hr-icon" />
-                  </div>
-
-                  <div className="reg-dashboard-content">
-                    <h3 className="reg-dashboard-title">
-                      Unified Talent Dashboard
-                    </h3>
-
-                    <p className="reg-dashboard-description">
-                      Monitor all applications in real-time.
-                    </p>
-                  </div>
+            <div className="mentor-features">
+              <div className="mentor-info-card">
+                <div className="image-div-shield">
+                  <img
+                    src={ShieldBadge}
+                    alt="Industry Impact"
+                    className="mentor-guard-shield"
+                  />
                 </div>
-                <div>
-                  <div className="progress-container">
-                    <div className="reg-progress-bar">
-                      <div className="reg-progress-fill"></div>
-                    </div>
-                    <div className="labels-container">
-                      <p id="small-label-1">75% Efficiency Boost</p>
-                      <p id="small-label-2">120+ Placements</p>
-                    </div>
-                  </div>
+
+                <div className="mentor-text-content">
+                  <h2 className="impact">Industry Impact</h2>
+                  <p className="subtitle-mentor">
+                    Bridge the gap between academic learning and real-world
+                    excellence.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mentor-info-card">
+                <div className="image-div-shield">
+                  <img
+                    src={HrIcon}
+                    alt="Mentor Growth"
+                    className="mentor-guard-shield-sub"
+                  />
+                </div>
+
+                <div className="mentor-text-content">
+                  <h2 className="impact">Meaningful Connections</h2>
+                  <p className="subtitle-mentor">
+                    Build lasting professional relationships with ambitious
+                    young minds.
+                  </p>
+                </div>
+              </div>
+
+              <div className="mentor-info-card">
+                <div className="image-div-shield">
+                  <img
+                    src={Stars}
+                    alt="Growth"
+                    className="mentor-guard-shield-stars"
+                  />
+                </div>
+
+                <div className="mentor-text-content">
+                  <h2 className="impact">Personal Growth</h2>
+                  <p className="subtitle-mentor">
+                    Enhance your leadership and communication skills through
+                    mentorship.
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
-          <div className="stats-container-hr">
-            <div className="stat-item-hr">
-              <span className="stat-number-hr">500+</span>
-              <span className="stat-label-hr">COMPANIES</span>
-            </div>
 
-            <div className="stat-item-hr">
-              <span className="stat-number-hr">10k+</span>
-              <span className="stat-label-hr">STUDENTS</span>
+            <div>
+              <img
+                src={OfficeImage}
+                alt="office-image"
+                className="office-Image"
+              />
             </div>
           </div>
         </div>
