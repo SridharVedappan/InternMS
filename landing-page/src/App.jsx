@@ -2,6 +2,9 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LandingPage } from "./LandingPage";
 import { Login } from "./Components-LoginPage/Login";
 import { HrRegistration } from "./Components-Registration/HrRegistration";
+import { MentorRegistration } from "./Components-Registration/MentorRegistration";
+import { InternRegistration } from "./Components-Registration/InternRegistration";
+import { CompanyRegistration } from "./Components-Registration/CompanyRegistration";
 import { TwoStepVerification } from "./Components-LoginPage/TwoStepVerification";
 import { ForgotPassword } from "./Components-LoginPage/ForgotPassword";
 import { VerificationCode } from "./Components-LoginPage/VerificationCode";
@@ -23,6 +26,18 @@ const router = createBrowserRouter([
   {
     path: "/hr-registration",
     element: <HrRegistration />,
+  },
+  {
+    path: "/mentor-registration",
+    element: <MentorRegistration />,
+  },
+  {
+    path: "/intern-registration",
+    element: <InternRegistration />,
+  },
+  {
+    path: "/company-registration",
+    element: <CompanyRegistration />,
   },
   {
     path: "/forgot-password",

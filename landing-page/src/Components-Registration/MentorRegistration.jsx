@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import "../Components-Registration/MentorRegistration.css";
 import { Link } from "react-router-dom";
 import { FiEye, FiEyeOff } from "react-icons/fi";
 import Select from "react-select";
 import { NavLink } from "react-router-dom";
-import "../Components-Registration/HrRegistration.css";
 import HrIcon from "../assets/icons/human-icon.png";
 import Hr from "../assets/icons/hr.png";
 import Mentor from "../assets/icons/mentor.png";
@@ -12,7 +12,7 @@ import Company from "../assets/icons/company.png";
 import CompanyLogo from "../assets/icons/company-icon.png";
 import DownArrowSelect from "../assets/icons/down-arrow.png";
 
-export const HrRegistration = () => {
+export const MentorRegistration = () => {
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
