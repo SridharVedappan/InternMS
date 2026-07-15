@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FiEye, FiEyeOff } from "react-icons/fi";
+import EyeOpen from "../assets/icons/eye-open.png";
+import EyeClose from "../assets/icons/eye-close.png";
 import Select from "react-select";
 import { NavLink } from "react-router-dom";
 import "../Components-Registration/HrRegistration.css";
@@ -332,7 +333,9 @@ export const HrRegistration = () => {
           </div>
 
           <div>
-            <span className="reg-as-subtitle">Registering as</span>
+            <span className="reg-as-subtitle">
+              Registering as <span className="hr-reg-required">*</span>
+            </span>
             <div className="page-nav-conatiner">
               <NavLink
                 to="/hr-registration"
@@ -563,7 +566,13 @@ export const HrRegistration = () => {
                       className="password-toggle"
                       onClick={() => setShowPassword(!showPassword)}
                     >
-                      {showPassword ? <FiEyeOff /> : <FiEye />}
+                      <img
+                        src={showPassword ? EyeOpen : EyeClose}
+                        alt={showPassword ? "Hide password" : "Show password"}
+                        className={
+                          showPassword ? "eye-open-icon" : "eye-close-icon"
+                        }
+                      />
                     </span>
                   </div>
 
@@ -594,7 +603,19 @@ export const HrRegistration = () => {
                         setShowConfirmPassword(!showConfirmPassword)
                       }
                     >
-                      {showConfirmPassword ? <FiEyeOff /> : <FiEye />}
+                      <img
+                        src={showConfirmPassword ? EyeOpen : EyeClose}
+                        alt={
+                          showConfirmPassword
+                            ? "Hide password"
+                            : "Show password"
+                        }
+                        className={
+                          showConfirmPassword
+                            ? "eye-open-icon"
+                            : "eye-close-icon"
+                        }
+                      />
                     </span>
                   </div>
 

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import MailIcon from "../assets/icons/mail-icon.png";
 import LockIcon from "../assets/icons/lock.png";
-import { FiEye, FiEyeOff } from "react-icons/fi";
+import EyeOpen from "../assets/icons/eye-open.png";
+import EyeClose from "../assets/icons/eye-close.png";
 import { Link, useNavigate } from "react-router-dom";
 import ThinLine from "../assets/icons/horizontal-divider.png";
 import GoogleBtn from "../assets/icons/google.png";
@@ -141,7 +142,13 @@ export const Login = () => {
                   className="toggle-password-btn"
                   onClick={() => setShowPassword(!showPassword)}
                 >
-                  {showPassword ? <FiEyeOff size={22} /> : <FiEye size={22} />}
+                  <img
+                    src={showPassword ? EyeOpen : EyeClose}
+                    alt={showPassword ? "Hide password" : "Show password"}
+                    className={
+                      showPassword ? "eye-open-icon" : "eye-close-icon"
+                    }
+                  />
                 </button>
               </div>
 

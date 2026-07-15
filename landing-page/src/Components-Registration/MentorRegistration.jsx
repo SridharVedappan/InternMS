@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "../Components-Registration/MentorRegistration.css";
 import { Link } from "react-router-dom";
-import { FiEye, FiEyeOff } from "react-icons/fi";
+import EyeOpen from "../assets/icons/eye-open.png";
+import EyeClose from "../assets/icons/eye-close.png";
 import Select from "react-select";
 import { NavLink } from "react-router-dom";
 import HrIcon from "../assets/icons/human-icon.png";
@@ -20,7 +21,10 @@ export const MentorRegistration = () => {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [countryCode, setCountryCode] = useState("+91");
-  const [department, setDepartment] = useState(null);
+  const [professionalTitle, setProfessionalTitle] = useState("");
+  const [skills, setSkills] = useState("");
+  const [bio, setBio] = useState("");
+  const [experienceLevel, setExperienceLevel] = useState(null);
   const [companyName, setCompanyName] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
@@ -38,10 +42,12 @@ export const MentorRegistration = () => {
     { code: "+81" },
   ];
 
-  const departmentOptions = [
-    { value: "hr", label: "Human Resources" },
-    { value: "it", label: "Information Technology" },
-    { value: "finance", label: "Finance" },
+  const experienceOptions = [
+    { value: "fresher", label: "Fresher (0-1 years)" },
+    { value: "junior", label: "Junior (1-3 years)" },
+    { value: "mid", label: "Mid-Level (3-5 years)" },
+    { value: "senior", label: "Senior (5-8 years)" },
+    { value: "lead", label: "Lead (8+ years)" },
   ];
 
   const resetForm = () => {
@@ -114,13 +120,51 @@ export const MentorRegistration = () => {
     }
   };
 
-  // Department
-  const handleDepartmentChange = (selectedOption) => {
-    setDepartment(selectedOption);
+  //  Professional Title
+  const handleProfessionalTitleChange = (e) => {
+    const value = e.target.value;
 
-    setErrors((prevErrors) => ({
-      ...prevErrors,
-      department: "",
+    setProfessionalTitle(value);
+
+    setErrors((prev) => ({
+      ...prev,
+      professionalTitle: value.trim() ? "" : "Professional title is required.",
+    }));
+  };
+
+  // Bio
+  const handleBioChange = (e) => {
+    const value = e.target.value;
+
+    setBio(value);
+
+    setErrors((prev) => ({
+      ...prev,
+      bio: value.trim() ? "" : "Bio is required.",
+    }));
+  };
+
+  // Skills / Expertise
+  const handleSkillsChange = (e) => {
+    const value = e.target.value;
+
+    setSkills(value);
+
+    setErrors((prev) => ({
+      ...prev,
+      skills: value.trim() ? "" : "Skills / Expertise is required.",
+    }));
+  };
+
+  // Years of Experience
+  const handleExperienceLevelChange = (selectedOption) => {
+    setExperienceLevel(selectedOption);
+
+    setErrors((prev) => ({
+      ...prev,
+      experienceLevel: selectedOption
+        ? ""
+        : "Please select your experience level.",
     }));
   };
 
@@ -214,6 +258,10 @@ export const MentorRegistration = () => {
       newErrors.email = "Please enter a valid email address.";
     }
 
+    // bio validation
+    if (!bio.trim()) {
+      newErrors.bio = "Bio is required.";
+    }
     // Phone Validation
     if (!phone.trim()) {
       newErrors.phone = "Phone number is required.";
@@ -223,10 +271,6 @@ export const MentorRegistration = () => {
       newErrors.phone = "Phone number must be 10 digits.";
     }
 
-    // Department Validation
-    if (!department) {
-      newErrors.department = "Please select a department.";
-    }
     // companyName vlaidtion
     if (!companyName.trim()) {
       newErrors.companyName = "Company name is required.";
@@ -252,6 +296,23 @@ export const MentorRegistration = () => {
         "Please accept the Terms of Service and Privacy Policy.";
     }
 
+    // Professional Title
+    if (!professionalTitle.trim()) {
+      newErrors.professionalTitle = "Professional title is required.";
+    }
+    // Experience Level
+    if (!experienceLevel) {
+      newErrors.experienceLevel = "Please select your experience level.";
+    }
+
+    // Skills / Expertise
+    if (!skills.trim()) {
+      newErrors.skills = "Skills / Expertise is required.";
+    }
+
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length > 0) return;
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
@@ -338,11 +399,11 @@ export const MentorRegistration = () => {
               </div>
             </div>
 
-            <div>
+            <div className="mentor-office-image-card">
               <img
                 src={OfficeImage}
-                alt="office-image"
-                className="office-Image"
+                alt="Office"
+                className="office-image-mentor"
               />
             </div>
           </div>
@@ -351,14 +412,16 @@ export const MentorRegistration = () => {
       <div className="hr-reg-right-container">
         <div className="hr-reg-right-content-container">
           <div>
-            <h1 className="hr-reg-title">Create your HR account</h1>
-            <p className="hr-reg-subtitle">
-              Join our ecosystem of professional employers.
+            <h1 className="mentor-reg-title">Mentor Registration</h1>
+            <p className="mentor-reg-subtitle ">
+              Complete your profile to start connecting with students.
             </p>
           </div>
 
           <div>
-            <span className="reg-as-subtitle">Registering as</span>
+            <span className="reg-as-subtitle">
+              Registering as <span className="hr-reg-required">*</span>
+            </span>
             <div className="page-nav-conatiner">
               <NavLink
                 to="/hr-registration"
@@ -436,7 +499,7 @@ export const MentorRegistration = () => {
 
                   <input
                     type="text"
-                    placeholder="John Doe"
+                    placeholder="Enter your full name"
                     className={`hr-reg-input ${
                       errors.fullName ? "input-error-1" : ""
                     }`}
@@ -452,8 +515,7 @@ export const MentorRegistration = () => {
                 {/* Email */}
                 <div className="hr-reg-form-group">
                   <label className="hr-reg-label">
-                    Work Email Address{" "}
-                    <span className="hr-reg-required">*</span>
+                    Email Address <span className="hr-reg-required">*</span>
                   </label>
 
                   <input
@@ -461,7 +523,7 @@ export const MentorRegistration = () => {
                     className={`hr-reg-input ${
                       errors.email ? "input-error-1" : ""
                     }`}
-                    placeholder="john.doe@company.com"
+                    placeholder="Enter your email address"
                     value={email}
                     onChange={handleEmailChange}
                   />
@@ -507,8 +569,54 @@ export const MentorRegistration = () => {
                     <p className="error-message">{errors.phone}</p>
                   )}
                 </div>
-
                 {/* Department */}
+                <div className="hr-reg-form-group">
+                  <label className="hr-reg-label">
+                    Professional Title{" "}
+                    <span className="hr-reg-required">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    placeholder="e.g., Senior Software Engineer"
+                    className={`hr-reg-input ${
+                      errors.professionalTitle ? "input-error-1" : ""
+                    }`}
+                    value={professionalTitle}
+                    onChange={handleProfessionalTitleChange}
+                  />
+
+                  {errors.professionalTitle && (
+                    <p className="error-message">{errors.professionalTitle}</p>
+                  )}
+                </div>
+              </div>
+              <div className="hr-reg-form-row">
+                {/* Skills / Expertise */}
+                <div className="hr-reg-form-group">
+                  <label className="hr-reg-label">
+                    Skills / Expertise{" "}
+                    <span className="hr-reg-required">*</span>
+                  </label>
+
+                  <input
+                    type="text"
+                    placeholder="e.g., UI/UX, React, Mentoring"
+                    className={`hr-reg-input ${
+                      errors.skills ? "input-error-1" : ""
+                    }`}
+                    value={skills}
+                    onChange={handleSkillsChange}
+                  />
+
+                  <p
+                    className={errors.skills ? "error-message" : "helper-text"}
+                  >
+                    {errors.skills || "Separate multiple skills with commas"}
+                  </p>
+                </div>
+
+                {/* Years of Experience */}
                 <div className="hr-reg-form-group">
                   <label className="hr-reg-label">
                     Department <span className="hr-reg-required">*</span>
@@ -516,13 +624,13 @@ export const MentorRegistration = () => {
 
                   <Select
                     className={`department-select ${
-                      errors.department ? "department-error" : ""
+                      errors.experienceLevel ? "department-error" : ""
                     }`}
                     classNamePrefix="department"
-                    options={departmentOptions}
-                    value={department}
-                    onChange={handleDepartmentChange}
-                    placeholder="Select your department"
+                    options={experienceOptions}
+                    value={experienceLevel}
+                    onChange={handleExperienceLevelChange}
+                    placeholder="Select experience level"
                     isSearchable={false}
                     styles={{
                       valueContainer: (provided) => ({
@@ -532,41 +640,33 @@ export const MentorRegistration = () => {
                     }}
                   />
 
-                  {errors.department && (
-                    <p className="error-message">{errors.department}</p>
+                  {errors.experienceLevel && (
+                    <p className="error-message">{errors.experienceLevel}</p>
                   )}
                 </div>
               </div>
 
-              {/* Company Name */}
               <div className="hr-reg-form-group">
-                <label className="hr-reg-label">
-                  Company Name <span className="hr-reg-required">*</span>
-                </label>
+                <div className="label-row">
+                  <label className="hr-reg-label">
+                    Bio / About You <span className="hr-reg-required">*</span>
+                  </label>
 
-                <div className="hr-reg-input-wrapper">
-                  <img
-                    src={CompanyLogo}
-                    alt="Company"
-                    className="company-icon-1"
-                  />
-
-                  <input
-                    className={`hr-reg-input-company ${
-                      errors.companyName ? "input-error-1" : ""
-                    }`}
-                    type="text"
-                    placeholder="InternHub Inc."
-                    value={companyName}
-                    onChange={handleCompanyNameChange}
-                  />
+                  <span className="character-count">{bio.length}/500</span>
                 </div>
 
-                {errors.companyName && (
-                  <p className="error-message">{errors.companyName}</p>
-                )}
-              </div>
+                <textarea
+                  className={`hr-reg-textarea ${
+                    errors.bio ? "input-error-1" : ""
+                  }`}
+                  placeholder="Tell us about yourself, your background and why you're passionate about mentoring..."
+                  maxLength={500}
+                  value={bio}
+                  onChange={handleBioChange}
+                />
 
+                {errors.bio && <p className="error-message">{errors.bio}</p>}
+              </div>
               {/* Password */}
               <div className="hr-reg-form-row">
                 <div className="hr-reg-form-group">
@@ -589,7 +689,13 @@ export const MentorRegistration = () => {
                       className="password-toggle"
                       onClick={() => setShowPassword(!showPassword)}
                     >
-                      {showPassword ? <FiEyeOff /> : <FiEye />}
+                      <img
+                        src={showPassword ? EyeOpen : EyeClose}
+                        alt={showPassword ? "Hide password" : "Show password"}
+                        className={
+                          showPassword ? "eye-open-icon" : "eye-close-icon"
+                        }
+                      />
                     </span>
                   </div>
 
@@ -620,7 +726,19 @@ export const MentorRegistration = () => {
                         setShowConfirmPassword(!showConfirmPassword)
                       }
                     >
-                      {showConfirmPassword ? <FiEyeOff /> : <FiEye />}
+                      <img
+                        src={showConfirmPassword ? EyeOpen : EyeClose}
+                        alt={
+                          showConfirmPassword
+                            ? "Hide password"
+                            : "Show password"
+                        }
+                        className={
+                          showConfirmPassword
+                            ? "eye-open-icon"
+                            : "eye-close-icon"
+                        }
+                      />
                     </span>
                   </div>
 
@@ -655,22 +773,35 @@ export const MentorRegistration = () => {
               <button type="submit" className="create-account-btn">
                 Create Account
               </button>
-
-              <div className="divider-line">
-                <div className="line"></div>
-
-                <span className="or-text-hr">OR</span>
-
-                <div className="line"></div>
-              </div>
-
-              <div className="signin-container">
-                <p className="signin-text">
-                  Already have an account?{" "}
-                  <span className="signin-link">Sign in</span>
-                </p>
-              </div>
             </form>
+            <div className="divider-line">
+              <div className="line"></div>
+
+              <span className="or-text-hr">OR</span>
+
+              <div className="line"></div>
+            </div>
+
+            <div className="signin-container">
+              <p className="signin-text">
+                Already have an account?{" "}
+                <span className="signin-link">Sign in</span>
+              </p>
+            </div>
+            <div className="footer-bottom">
+              <p className="footer-copyright">
+                © 2024 InternHub. All rights reserved.
+              </p>
+
+              <div className="footer-links">
+                <a href="#" className="footer-link">
+                  Support
+                </a>
+                <a href="#" className="footer-link">
+                  Contact Us
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </div>

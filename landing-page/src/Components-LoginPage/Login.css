@@ -727,3 +727,18 @@ input::placeholder {
     max-width: 100%;
   }
 }
+.eye-open-icon {
+  width: 16.5px;
+  height: 14.85px;
+  opacity: 1;
+  display: block;
+  object-fit: contain;
+}
+
+.eye-close-icon {
+  width: 16.5px;
+  height: 14.85px;
+  opacity: 1;
+  display: block;
+  object-fit: contain;
+}
