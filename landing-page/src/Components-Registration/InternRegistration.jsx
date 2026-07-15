@@ -398,10 +398,10 @@ export const InternRegistration = () => {
   };
 
   return (
-    <div className="mentor-reg-page-container">
-      <div className="mentor-reg-left-container">
-        <div className="mentor-reg-left-content-container">
-          <h1 className="mentor-reg-logo">InterMS</h1>
+    <div className="intern-reg-page-container">
+      <div className="intern-reg-left-container">
+        <div className="intern-reg-left-content-container">
+          <h1 className="intern-reg-logo">InterMS</h1>
           <div id="left-container-2-intern">
             <h1 className="intern-reg-quotes ">
               Your gateway to professional excellence starts here.

@@ -1,4 +1,4 @@
-.mentor-reg-page-container {
+.intern-reg-page-container {
   width: 100%;
   min-height: 1054px;
   max-width: 1280px;
@@ -6,9 +6,9 @@
   display: flex;
 }
 
-.mentor-reg-left-container {
+.intern-reg-left-container {
   width: 1280px;
-  height: 1190px;
+  height: 1230px;
   display: flex;
   align-items: stretch;
   flex-direction: column;
@@ -35,7 +35,7 @@
   box-sizing: border-box;
 }
 
-.mentor-reg-logo {
+.intern-reg-logo {
   width: 89px;
   height: 32px;
   font-family: "Manrope", sans-serif;
