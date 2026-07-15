@@ -614,7 +614,8 @@ export const MentorRegistration = () => {
                 {/* Years of Experience */}
                 <div className="hr-reg-form-group">
                   <label className="hr-reg-label">
-                    Department <span className="hr-reg-required">*</span>
+                    Years of Experience{" "}
+                    <span className="hr-reg-required">*</span>
                   </label>
 
                   <Select

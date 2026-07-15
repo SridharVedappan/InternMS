@@ -1,0 +1,875 @@
+.mentor-reg-page-container {
+  width: 100%;
+  min-height: 1054px;
+  max-width: 1280px;
+  margin: 0;
+  display: flex;
+}
+
+.mentor-reg-left-container {
+  width: 1280px;
+  height: 1190px;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  padding: 64px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: linear-gradient(170.73deg, #16224b 0.69%, #26569f 97.54%);
+}
+
+.hr-reg-right-container {
+  flex: 1;
+  min-height: 1054px;
+  padding-top: 64px;
+  padding-left: 180px;
+  background: #ffffff;
+}
+.hr-reg-right-content-container {
+  width: 614.39px;
+  height: 926px;
+  max-width: 672px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  box-sizing: border-box;
+}
+
+.mentor-reg-logo {
+  width: 89px;
+  height: 32px;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.intern-reg-quotes {
+  width: 432px;
+  height: 150px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 50px;
+  letter-spacing: -0.8px;
+  color: #ffffff;
+  opacity: 1;
+  margin: 0;
+}
+
+#left-container-2-intern {
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  gap: 24px;
+}
+
+.intern-reg-description {
+  width: 432px;
+  height: 84px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #dad7ff;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.mentor-reg-title {
+  width: 614.39px;
+  height: 40px;
+  margin: 0;
+  padding-bottom: 8px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  color: #111c2d;
+}
+
+.mentor-reg-subtitle {
+  width: 614.39px;
+  height: 24px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #464555;
+}
+
+.reg-as-subtitle {
+  width: 481px;
+  height: 20px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: #464555;
+}
+
+.reg-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.reg-card {
+  width: 113px;
+  height: 90px;
+  padding: 24px;
+  box-sizing: border-box;
+  border: 1px solid #c7c4d8;
+  border-radius: 16px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  transition:
+    background-color 0.4s ease-in-out,
+    border-color 0.4s ease-in-out,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.reg-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.reg-card-link.active .reg-card {
+  background: #c7e6ff;
+  border-color: #c7c4d8;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#white-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: #fdf2f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.helper-text {
+  width: 297.33px;
+  height: 17px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16.5px;
+  color: #464555;
+  margin-top: 4px;
+}
+
+#hr-page-icon {
+  width: 28.8px;
+  height: 24px;
+}
+
+.hr-text {
+  width: 23px;
+  height: 24px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #0f172a;
+}
+
+.page-nav-conatiner {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-left: 59.7px;
+  margin-top: 16px;
+}
+
+.reg-as-subtitle {
+  margin-left: 66.7px;
+  margin-top: 8px;
+}
+
+.hr-reg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.hr-reg-form-row {
+  display: flex;
+  gap: 24px;
+}
+
+.hr-reg-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hr-reg-label {
+  margin-bottom: 8px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: #111c2d;
+}
+
+.hr-reg-required {
+  color: #ef4444;
+}
+.hr-reg-input-wrapper {
+  position: relative;
+}
+
+.company-icon-1 {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.hr-reg-input-company {
+  width: 100%;
+  height: 50px;
+  padding: 13px 16px 14px 49px;
+  border: 1px solid #c7c4d8;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #111c2d;
+}
+
+.hr-reg-input-company ::placeholder {
+  color: #9ca3af;
+}
+
+.hr-reg-input-company :focus {
+  border-color: #3525cd;
+}
+
+.department__control {
+  height: 50px;
+  border: 1px solid #c7c4d8 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+.department__value-container {
+  padding-left: 40px;
+}
+
+.department__control:hover {
+  border-color: #3525cd !important;
+}
+
+.department__control--is-focused {
+  border-color: #3525cd !important;
+}
+
+.department__placeholder {
+  color: #9ca3af !important;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+}
+
+.department__single-value,
+.department__option {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+}
+
+.department__indicator-separator {
+  display: none;
+}
+
+.department__dropdown-indicator {
+  color: #6b7280 !important;
+}
+
+.hr-reg-input {
+  width: 295.19px;
+  height: 50px;
+  padding: 13px 16px 14px 16px;
+  border: 1px solid #c7c4d8;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #111c2d;
+}
+
+.hr-reg-input::placeholder {
+  color: #9ca3af;
+}
+
+.hr-reg-input:focus {
+  border-color: #3525cd;
+}
+
+.terms-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 23.5px 0;
+}
+
+.terms-checkbox {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid #c7c4d8;
+  border-radius: 4px;
+  cursor: pointer;
+  accent-color: #3525cd;
+}
+
+.terms-text {
+  width: 311.46px;
+  height: 20px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #464555;
+}
+
+.terms-text span {
+  color: #3525cd;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.create-account-btn {
+  width: 613.66px;
+  height: 52px;
+  border: none;
+  border-radius: 8px;
+  background: #3525cd;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  outline: none;
+  box-shadow:
+    0px 4px 6px -4px rgba(0, 0, 0, 0.1),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.create-account-btn:hover {
+  background: #ffffff;
+  color: #3525cd;
+  border: 1px solid #3525cd;
+}
+
+.create-account-btn:focus,
+.create-account-btn:focus-visible {
+  outline: none;
+  border: 1px solid #3525cd;
+}
+
+.create-account-btn:active {
+  transform: scale(0.98);
+}
+
+.create-account-btn:disabled {
+  background: #c7c4d8;
+  color: #ffffff;
+  cursor: not-allowed;
+  border: none;
+}
+.divider-line {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 23.5px 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: #c7c4d8;
+}
+
+.divider span {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: #c7c4d8;
+}
+
+.or-text-hr {
+  width: 18.63px;
+  height: 16px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+
+  color: #464555;
+}
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.signin-text {
+  margin: 0;
+}
+
+.signin-text {
+  text-align: center;
+  width: 236.68px;
+  height: 24px;
+  margin-bottom: 32px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #464555;
+}
+
+.signin-link {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #3525cd;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.signin-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .hr-reg-form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.error-message {
+  margin-top: 6px;
+  margin-left: 2px;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #ef4444;
+}
+
+.input-error-1 {
+  border: 1px solid #ef4444 !important;
+}
+
+.phone-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.country-code-box {
+  width: 47px;
+  height: 50px;
+  border: 1px solid #c7c4d8;
+  border-radius: 8px;
+  background: #ffffff;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #000000;
+  text-align: center;
+  padding: 0;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.phone-number-input {
+  width: 240.19px;
+  height: 50px;
+  padding-top: 13px;
+  padding-right: 16px;
+  padding-bottom: 14px;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+
+.department-error .department__control {
+  border: 1px solid #ef4444 !important;
+}
+
+.terms-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.terms-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper .hr-reg-input {
+  width: 100%;
+  padding-right: 45px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle:hover {
+  color: #3525cd;
+}
+
+.hr-reg-input[type="password"] {
+  font-family: Arial, sans-serif;
+}
+
+.hr-reg-textarea {
+  width: 618.66px;
+  height: 122px;
+  padding: 12px 16px 60px 16px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #c7c4d8;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px -1px rgba(79, 70, 229, 0.05);
+  resize: none;
+  outline: none;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #1f2937;
+}
+
+.hr-reg-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.hr-reg-textarea:focus {
+  border-color: #6366f1;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.character-count {
+  width: 31.92px;
+  height: 16px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #464555;
+}
+
+.blur-card-container-intern {
+  width: 432px;
+  height: 74px;
+
+  padding: 16px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  box-sizing: border-box;
+}
+
+.blur-card-1 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  width: 100%;
+  height: 100%;
+}
+
+.verify-icon {
+  width: 22px;
+  height: 21px;
+  object-fit: contain;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+.blur-card-container-intern {
+  width: 432px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-sizing: border-box;
+}
+
+.blur-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.verify-icon {
+  width: 22px;
+  height: 21px;
+  flex-shrink: 0;
+}
+
+.blur-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.verify-badge-for-inter {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: #ffffff;
+}
+
+.intern-quotes {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(218, 215, 255, 0.7);
+}
+
+.intern-quotes-2 {
+  width: 285.78px;
+  height: 40px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: rgba(218, 215, 255, 0.7);
+  opacity: 1;
+}
+
+.blur-card-container-intern-1 {
+  width: 432px;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-sizing: border-box;
+}
+
+.profile-and-quotes {
+  width: 432px;
+  height: 121px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.testimonial-quote {
+  width: 432px;
+  height: 40px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+
+  color: rgba(218, 215, 255, 0.6);
+}
+
+.testimonial-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 9999px;
+  object-fit: cover;
+  display: block;
+  opacity: 1;
+}
+
+.testimonial-name {
+  width: 182.03px;
+  height: 16px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+.bottom-container-intern {
+  margin-top: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.hr-reg-input[type="date"]::-webkit-datetime-edit {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #111c2d;
+}
+
+.hr-reg-optional {
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.resume-upload-box {
+  width: 284px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px dashed #3525cd;
+  background: #4f46e50d;
+
+  padding: 12px 16px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+}
+
+.resume-upload-box img {
+  width: 16px;
+  height: 16px;
+}
+
+.resume-upload-box span {
+  width: 213.25px;
+  height: 24px;
+
+  font-family: "Hanken Grotesk";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  color: #3525cd;
+}
+
+.resume-file-name {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #3525cd;
+}
+
+.resume-error {
+  border: 1px dashed #dc2626 !important;
+}
