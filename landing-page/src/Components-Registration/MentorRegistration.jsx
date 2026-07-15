@@ -25,7 +25,6 @@ export const MentorRegistration = () => {
   const [skills, setSkills] = useState("");
   const [bio, setBio] = useState("");
   const [experienceLevel, setExperienceLevel] = useState(null);
-  const [companyName, setCompanyName] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -55,12 +54,14 @@ export const MentorRegistration = () => {
     setEmail("");
     setPhone("");
     setCountryCode("+91");
-    setDepartment(null);
-    setCompanyName("");
     setPassword("");
     setConfirmPassword("");
     setTermsAccepted(false);
     setErrors({});
+    setProfessionalTitle("");
+    setSkills("");
+    setProfessionalTitle("");
+    setBio("");
   };
 
   // Full Name
@@ -271,11 +272,6 @@ export const MentorRegistration = () => {
       newErrors.phone = "Phone number must be 10 digits.";
     }
 
-    // companyName vlaidtion
-    if (!companyName.trim()) {
-      newErrors.companyName = "Company name is required.";
-    }
-
     // Password Validation
     if (!password.trim()) {
       newErrors.password = "Password is required.";
@@ -321,7 +317,6 @@ export const MentorRegistration = () => {
       console.log("Full Name:", fullName);
       console.log("Email:", email);
       console.log("Phone:", fullPhoneNumber);
-      console.log("Department:", department);
 
       alert("Account created successfully!");
 
