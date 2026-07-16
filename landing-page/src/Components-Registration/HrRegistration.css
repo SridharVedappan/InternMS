@@ -557,7 +557,7 @@
   font-weight: 400;
 }
 
-.create-account-btn {
+.Register-Company-btn {
   width: 613.66px;
   height: 52px;
   border: none;
@@ -566,10 +566,10 @@
   color: #ffffff;
   cursor: pointer;
 
-  font-family: "Hanken Grotesk", sans-serif;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 20px;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   letter-spacing: 0.7px;
 
   outline: none;
@@ -579,23 +579,23 @@
   transition: all 0.2s ease;
 }
 
-.create-account-btn:hover {
+.Register-Company-btn:hover {
   background: #ffffff;
   color: #3525cd;
   border: 1px solid #3525cd;
 }
 
-.create-account-btn:focus,
-.create-account-btn:focus-visible {
+.Register-Company-btn:focus,
+.Register-Company-btn:focus-visible {
   outline: none;
   border: 1px solid #3525cd;
 }
 
-.create-account-btn:active {
+.Register-Company-btn:active {
   transform: scale(0.98);
 }
 
-.create-account-btn:disabled {
+.Register-Company-btn:disabled {
   background: #c7c4d8;
   color: #ffffff;
   cursor: not-allowed;

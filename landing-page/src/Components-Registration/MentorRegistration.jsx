@@ -1,17 +1,14 @@
 import React, { useState } from "react";
 import "../Components-Registration/MentorRegistration.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import EyeOpen from "../assets/icons/eye-open.png";
 import EyeClose from "../assets/icons/eye-close.png";
 import Select from "react-select";
-import { NavLink } from "react-router-dom";
 import HrIcon from "../assets/icons/human-icon.png";
 import Hr from "../assets/icons/hr.png";
 import Mentor from "../assets/icons/mentor.png";
 import Intern from "../assets/icons/intern.png";
 import Company from "../assets/icons/company.png";
-import CompanyLogo from "../assets/icons/company-icon.png";
-import DownArrowSelect from "../assets/icons/down-arrow.png";
 import ShieldBadge from "../assets/icons/security-mark.png";
 import Stars from "../assets/icons/stars.png";
 import OfficeImage from "../assets/Office-image-png.png";

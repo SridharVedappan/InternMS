@@ -1,0 +1,1548 @@
+.company-reg-page-container {
+  width: 100%;
+  min-height: 1054px;
+  max-width: 1280px;
+  margin: 0;
+  display: flex;
+}
+
+.company-navbar {
+  width: 1280px;
+  height: 64px;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #ffffff;
+  border-bottom: 1px solid #c7c4d8;
+
+  opacity: 1;
+  box-sizing: border-box;
+}
+
+.company-navbar-logo {
+  display: flex;
+  align-items: center;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.company-navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.company-navbar-links a {
+  text-decoration: none;
+  color: #1f2937;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.company-navbar-links a:hover {
+  color: #4f46e5;
+}
+
+.company-reg-left-container {
+  width: 1280px;
+  height: 1230px;
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  padding: 64px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: linear-gradient(190.83deg, #467ee5 0.48%, #1b2f4c 100%);
+}
+
+.company-reg-right-container {
+  flex: 1;
+  min-height: 1054px;
+  padding-top: 64px;
+  padding-left: 180px;
+  background: #ffffff;
+}
+
+.company-reg-right-content-container {
+  width: 614.39px;
+  height: 926px;
+  max-width: 672px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  box-sizing: border-box;
+}
+
+.intern-reg-logo {
+  width: 89px;
+  height: 32px;
+  font-family: "Manrope", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.company-reg-quotes {
+  width: 410px;
+  height: 96px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: -0.8px;
+  color: #ffffff;
+}
+
+#left-container-2-company {
+  display: flex;
+  flex-direction: column;
+  margin-top: 48px;
+  gap: 24px;
+}
+
+.company-reg-description {
+  width: 431.63px;
+  height: 56px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
+  letter-spacing: 0;
+  color: #dad7ff;
+}
+
+.company-reg-title {
+  width: 614.39px;
+  height: 40px;
+  margin: 0;
+  padding-bottom: 8px;
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.32px;
+  color: #111c2d;
+}
+
+.company-reg-subtitle {
+  width: 614.39px;
+  height: 24px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #464555;
+}
+
+.reg-as-subtitle {
+  width: 481px;
+  height: 20px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: #464555;
+}
+
+.reg-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.reg-card {
+  width: 113px;
+  height: 90px;
+  padding: 24px;
+  box-sizing: border-box;
+  border: 1px solid #c7c4d8;
+  border-radius: 16px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  cursor: pointer;
+  transition:
+    background-color 0.4s ease-in-out,
+    border-color 0.4s ease-in-out,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.reg-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.reg-card-link.active .reg-card {
+  background: #c7e6ff;
+  border-color: #c7c4d8;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#white-circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 9999px;
+  background: #fdf2f8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.helper-text {
+  width: 297.33px;
+  height: 17px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16.5px;
+  color: #464555;
+  margin-top: 4px;
+}
+
+#hr-page-icon {
+  width: 28.8px;
+  height: 24px;
+}
+
+.hr-text {
+  width: 23px;
+  height: 24px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #0f172a;
+}
+
+.page-nav-conatiner {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  margin-left: 59.7px;
+  margin-top: 16px;
+}
+
+.hr-reg-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  width: 100%;
+}
+
+.hr-reg-form-row {
+  display: flex;
+  gap: 24px;
+}
+
+.hr-reg-form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.hr-reg-label {
+  margin-bottom: 8px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: #111c2d;
+}
+
+.hr-reg-required {
+  color: #ef4444;
+}
+.hr-reg-input-wrapper {
+  position: relative;
+}
+
+.company-features {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-top: 24px;
+}
+.company-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.image-div-com {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  opacity: 1;
+  border-radius: 9999px;
+  background: #3525cd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.primary-container-com {
+  padding-top: 64px;
+}
+
+.agreement-logo-container {
+  width: 384px;
+  height: 364px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.agree-icon {
+  width: 110.051px;
+  height: 100px;
+  object-fit: contain;
+}
+.image-div-shield {
+  width: 40px;
+  height: 40px;
+  border-radius: 9999px;
+  opacity: 1;
+  border-radius: 9999px;
+  background: #3525cd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.mentor-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.impact {
+  width: 100%;
+  height: 24px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+.company-icon-effortless {
+  width: 24px;
+  height: 16px;
+}
+.mentor-guard-shield-sub {
+  width: 16px;
+  height: 20px;
+}
+
+.mentor-guard-shield-stars {
+  width: 14.67px;
+  height: 14.67px;
+}
+.mentor-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.subtitle-mentor {
+  width: 336.11px;
+  height: 40px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #dad7ff;
+}
+
+.company-icon-1 {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  pointer-events: none;
+}
+
+.hr-reg-input-company {
+  width: 100%;
+  height: 50px;
+  padding: 13px 16px 14px 49px;
+  border: 1px solid #c7c4d8;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #111c2d;
+}
+
+.hr-reg-form-group.full-width {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hr-reg-form-group.full-width .hr-reg-input {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hr-reg-input-company ::placeholder {
+  color: #9ca3af;
+}
+
+.hr-reg-input-company :focus {
+  border-color: #3525cd;
+}
+
+.department__control {
+  height: 50px;
+  border: 1px solid #c7c4d8 !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+}
+
+.department__value-container {
+  padding-left: 40px;
+}
+
+.department__control:hover {
+  border-color: #3525cd !important;
+}
+
+.department__control--is-focused {
+  border-color: #3525cd !important;
+}
+
+.department__placeholder {
+  color: #9ca3af !important;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+}
+
+.department__single-value,
+.department__option {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+}
+
+.department__indicator-separator {
+  display: none;
+}
+
+.department__dropdown-indicator {
+  color: #6b7280 !important;
+}
+
+.hr-reg-input {
+  width: 295.19px;
+  height: 50px;
+  padding: 13px 16px 14px 16px;
+  border: 1px solid #c7c4d8;
+  border-radius: 8px;
+  outline: none;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #111c2d;
+}
+
+.hr-reg-input::placeholder {
+  color: #9ca3af;
+}
+
+.hr-reg-input:focus {
+  border-color: #3525cd;
+}
+
+.terms-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 23.5px 0;
+}
+
+.terms-checkbox {
+  width: 20px;
+  height: 20px;
+  margin: 0;
+  border: 1px solid #c7c4d8;
+  border-radius: 4px;
+  cursor: pointer;
+  accent-color: #3525cd;
+}
+
+.terms-text {
+  width: 311.46px;
+  height: 20px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #464555;
+}
+
+.terms-text span {
+  color: #3525cd;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.register-company-btn {
+  width: 140.48px;
+  height: 24px;
+  border: none;
+  border-radius: 8px;
+  background: #3525cd;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+  outline: none;
+  box-shadow:
+    0px 4px 6px -4px rgba(0, 0, 0, 0.1),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.register-company-btn:hover {
+  background: #ffffff;
+  color: #3525cd;
+  border: 1px solid #3525cd;
+}
+
+.register-company-btn:focus,
+.register-company-btn:focus-visible {
+  outline: none;
+  border: 1px solid #3525cd;
+}
+
+.register-company-btn:active {
+  transform: scale(0.98);
+}
+
+.register-company-btn:disabled {
+  background: #c7c4d8;
+  color: #ffffff;
+  cursor: not-allowed;
+  border: none;
+}
+.divider-line {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 23.5px 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background: #c7c4d8;
+}
+
+.divider span {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  color: #c7c4d8;
+}
+
+.or-text-hr {
+  width: 18.63px;
+  height: 16px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+
+  color: #464555;
+}
+.signin-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.signin-text {
+  margin: 0;
+}
+
+.signin-text {
+  text-align: center;
+  width: 236.68px;
+  height: 24px;
+  margin-bottom: 32px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+  color: #464555;
+}
+
+.signin-link {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #3525cd;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.signin-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .hr-reg-form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.error-message {
+  margin-top: 6px;
+  margin-left: 2px;
+
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #ef4444;
+}
+
+.input-error-1 {
+  border: 1px solid #ef4444 !important;
+}
+
+.phone-wrapper {
+  display: flex;
+  gap: 12px;
+}
+
+.country-code-box {
+  width: 47px;
+  height: 50px;
+  border: 1px solid #c7c4d8;
+  border-radius: 8px;
+  background: #ffffff;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #000000;
+  text-align: center;
+  padding: 0;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.phone-number-input {
+  width: 240.19px;
+  height: 50px;
+  padding-top: 13px;
+  padding-right: 16px;
+  padding-bottom: 14px;
+  padding-left: 16px;
+  box-sizing: border-box;
+}
+
+.department-error .department__control {
+  border: 1px solid #ef4444 !important;
+}
+
+.terms-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.terms-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrapper .hr-reg-input {
+  width: 100%;
+  padding-right: 45px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #6b7280;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.password-toggle:hover {
+  color: #3525cd;
+}
+
+.hr-reg-input[type="password"] {
+  font-family: Arial, sans-serif;
+}
+
+.hr-reg-textarea {
+  width: 618.66px;
+  height: 122px;
+  padding: 12px 16px 60px 16px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #c7c4d8;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px -1px rgba(79, 70, 229, 0.05);
+  resize: none;
+  outline: none;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #1f2937;
+}
+
+.hr-reg-textarea::placeholder {
+  color: #9ca3af;
+}
+
+.hr-reg-textarea:focus {
+  border-color: #6366f1;
+}
+
+.label-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.character-count {
+  width: 31.92px;
+  height: 16px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: #464555;
+}
+
+.blur-card-container-intern {
+  width: 432px;
+  height: 74px;
+
+  padding: 16px;
+
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  box-sizing: border-box;
+}
+
+.blur-card-1 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  width: 100%;
+  height: 100%;
+}
+
+.verify-icon {
+  width: 22px;
+  height: 21px;
+  object-fit: contain;
+  flex-shrink: 0; /* Prevent icon from shrinking */
+}
+.blur-card-container-intern {
+  width: 432px;
+  height: 74px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  margin-bottom: 24px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-sizing: border-box;
+}
+
+.blur-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.verify-icon {
+  width: 22px;
+  height: 21px;
+  flex-shrink: 0;
+}
+
+.blur-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  flex: 1;
+}
+
+.verify-badge-for-inter {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.7px;
+  color: #ffffff;
+}
+
+.intern-quotes {
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: rgba(218, 215, 255, 0.7);
+}
+
+.intern-quotes-2 {
+  width: 285.78px;
+  height: 40px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: rgba(218, 215, 255, 0.7);
+  opacity: 1;
+}
+
+.blur-card-container-intern-1 {
+  width: 432px;
+  height: 94px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  box-sizing: border-box;
+}
+
+.profile-and-quotes {
+  width: 432px;
+  height: 121px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  box-sizing: border-box;
+}
+
+.testimonial-quote {
+  width: 432px;
+  height: 40px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+
+  color: rgba(218, 215, 255, 0.6);
+}
+
+.testimonial-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.testimonial-profile-image {
+  width: 30px;
+  height: 30px;
+  border-radius: 9999px;
+  object-fit: cover;
+  display: block;
+  opacity: 1;
+}
+
+.testimonial-name {
+  width: 182.03px;
+  height: 16px;
+  margin: 0;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #ffffff;
+}
+
+.bottom-container-intern {
+  margin-top: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.hr-reg-input[type="date"]::-webkit-datetime-edit {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #111c2d;
+}
+
+.hr-reg-optional {
+  color: #6b7280;
+  font-weight: 400;
+}
+
+.resume-upload-box {
+  width: 284px;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px dashed #3525cd;
+  background: #4f46e50d;
+
+  padding: 12px 16px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  cursor: pointer;
+}
+
+.resume-upload-box img {
+  width: 16px;
+  height: 16px;
+}
+
+.resume-upload-box span {
+  width: 213.25px;
+  height: 24px;
+
+  font-family: "Hanken Grotesk";
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  color: #3525cd;
+}
+
+.resume-file-name {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #3525cd;
+}
+
+.resume-error {
+  border: 1px dashed #dc2626 !important;
+}
+
+.industry-error .department__control,
+.company-size-error .department__control {
+  border: 1px solid #ef4444 !important;
+  box-shadow: none !important;
+}
+
+.company-navbar {
+  width: 100%;
+  height: 64px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 411.84px;
+  align-items: center;
+  background: #fff;
+  padding: 21px 0;
+  border-bottom: 1px solid #c7c4d8;
+  box-sizing: border-box;
+}
+
+.company-navbar-logo {
+  margin-left: 40px;
+}
+
+.company-navbar-menu {
+  display: flex;
+  gap: 32px;
+}
+
+.company-navbar-login {
+  margin-left: 280px;
+}
+
+.logo-link-company {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #3525cd;
+  text-decoration: none;
+}
+
+.nav-link-company {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #111c2d;
+  text-decoration: none;
+}
+
+.login-link-company {
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #3525cd;
+  text-decoration: none;
+}
+
+.footer-company {
+  width: 100%;
+  height: 373px;
+  padding: 64px 40px;
+  box-sizing: border-box;
+  background: #dee8ff;
+  border-top: 1px solid #c7c4d8;
+  display: flex;
+  flex-direction: column;
+  opacity: 1;
+}
+
+.footer-company-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 260.77px;
+}
+
+.footer-company-brand {
+  max-width: 420px;
+}
+
+.footer-company-logo {
+  width: 68px;
+  height: 24px;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #3525cd;
+  opacity: 1;
+  margin-bottom: 16px;
+}
+
+.footer-company-description {
+  width: 301.03px;
+  height: 60px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #464555;
+  opacity: 1;
+}
+
+.footer-company-links {
+  display: flex;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.footer-company-column {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.footer-company-column h4 {
+  font-family: "Manrope", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 24px;
+  letter-spacing: 0;
+
+  color: #111c2d;
+
+  opacity: 1;
+  margin: 0;
+}
+
+.footer-company-column a {
+  text-decoration: none;
+  width: 214.4px;
+  height: 20px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #464555;
+  opacity: 1;
+  margin: 0;
+  transition: 0.3s ease;
+}
+
+.footer-company-column a:hover {
+  color: #4f8cff;
+}
+
+.footer-company-divider {
+  width: 100%;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 48px 0 24px;
+}
+
+.footer-company-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer-company-bottom p {
+  width: 1280px;
+  height: 57px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 36px;
+  padding-bottom: 48px;
+  border-top: 1px solid #c7c4d8;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .footer-company {
+    padding: 48px 24px;
+  }
+
+  .footer-company-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-company-links {
+    gap: 40px;
+  }
+
+  .footer-company-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.company-sec-1 {
+  width: 214.4px;
+  height: 20px;
+  opacity: 1;
+}
+
+.footer-company-social {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.footer-company-social a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+}
+
+#simle-bookmark {
+  width: 48.02px;
+  height: 24px;
+}
+
+.company-reserved {
+  width: 204.03px;
+  height: 16px;
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0;
+  color: #464555;
+  vertical-align: middle;
+  opacity: 1;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .page-nav-conatiner {
+    margin-left: 30px;
+    gap: 10px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .page-nav-conatiner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    margin-left: 16px;
+    margin-top: 12px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .page-nav-conatiner {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 16px;
+    gap: 6px;
+  }
+}
+
+/* ===========================
+   RESPONSIVE CSS
+=========================== */
+
+/* Laptop */
+@media (max-width: 1200px) {
+  .company-reg-page-container {
+    flex-direction: column;
+  }
+
+  .company-reg-left-container,
+  .company-reg-right-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .company-reg-right-container {
+    padding: 48px;
+  }
+
+  .company-reg-right-content-container {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    height: auto;
+  }
+
+  .company-reg-title,
+  .company-reg-subtitle,
+  .company-reg-description,
+  .company-reg-quotes,
+  .helper-text,
+  .terms-text,
+  .footer-company-description {
+    width: 100%;
+    height: auto;
+  }
+
+  .agreement-logo-container,
+  .blur-card-container-intern,
+  .blur-card-container-intern-1,
+  .profile-and-quotes,
+  .testimonial-quote {
+    width: 100%;
+    max-width: 432px;
+  }
+
+  .bottom-container-intern {
+    margin-top: 80px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .company-navbar {
+    padding: 16px 24px;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: auto;
+  }
+
+  .company-navbar-logo,
+  .company-navbar-login {
+    margin: 0;
+  }
+
+  .company-navbar-menu {
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .company-reg-left-container {
+    display: none;
+  }
+
+  .company-reg-right-container {
+    width: 100%;
+    padding: 40px 24px;
+  }
+
+  .company-reg-right-content-container {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hr-reg-form-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hr-reg-input,
+  .hr-reg-input-company,
+  .phone-number-input,
+  .country-code-box,
+  .department__control,
+  .resume-upload-box,
+  .hr-reg-textarea {
+    width: 100%;
+  }
+
+  .phone-wrapper {
+    flex-direction: column;
+  }
+
+  .footer-company {
+    height: auto;
+  }
+
+  .footer-company-content {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-company-links {
+    gap: 40px;
+  }
+
+  .footer-company-column a,
+  .company-sec-1 {
+    width: auto;
+  }
+
+  .footer-company-bottom {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .footer-company-bottom p {
+    width: 100%;
+    height: auto;
+    padding: 24px 0;
+  }
+
+  .footer-company-social {
+    justify-content: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .company-navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .company-navbar-menu {
+    justify-content: center;
+  }
+
+  .company-reg-right-container {
+    padding: 24px 16px;
+  }
+
+  .company-reg-title {
+    font-size: 28px;
+    line-height: 36px;
+  }
+
+  .company-reg-subtitle,
+  .reg-as-subtitle,
+  .company-reg-description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .hr-reg-input,
+  .hr-reg-input-company,
+  .phone-number-input,
+  .country-code-box,
+  .department__control,
+  .resume-upload-box,
+  .register-company-btn,
+  .hr-reg-textarea {
+    width: 100%;
+  }
+
+  .terms-container {
+    align-items: flex-start;
+  }
+
+  .terms-text {
+    width: 100%;
+  }
+
+  .footer-company {
+    padding: 32px 16px;
+  }
+
+  .footer-company-links {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .company-reg-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .company-reg-quotes {
+    font-size: 30px;
+    line-height: 38px;
+    width: 100%;
+  }
+
+  .company-reg-description,
+  .company-reg-subtitle {
+    font-size: 14px;
+  }
+
+  .footer-company-logo {
+    font-size: 18px;
+  }
+
+  .footer-company-social {
+    gap: 16px;
+  }
+
+  .social-icon {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .Register-Company-btn {
+    width: 100%;
+    max-width: 613px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .Register-Company-btn {
+    width: 100%;
+    height: 48px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .Register-Company-btn {
+    width: 100%;
+    height: 46px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+}

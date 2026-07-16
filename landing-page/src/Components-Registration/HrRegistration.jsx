@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import EyeOpen from "../assets/icons/eye-open.png";
 import EyeClose from "../assets/icons/eye-close.png";
 import Select from "react-select";
-import { NavLink } from "react-router-dom";
 import "../Components-Registration/HrRegistration.css";
 import HrIcon from "../assets/icons/human-icon.png";
 import Hr from "../assets/icons/hr.png";
