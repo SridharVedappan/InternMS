@@ -11,6 +11,7 @@ import { VerificationCode } from "./Components-LoginPage/VerificationCode";
 import { ForgotPasswordOTP } from "./Components-LoginPage/ForgotPasswordOTP";
 import { ResetPassword } from "./Components-LoginPage/ResetPassword";
 import { PasswordResetSuccess } from "./Components-LoginPage/PasswordResetSuccess";
+import { AdminRegistration } from "./Components-Registration/AdminRegistration.jsx";
 
 import "./App.css";
 
@@ -63,6 +64,10 @@ const router = createBrowserRouter([
   {
     path: "/password-reset-success",
     element: <PasswordResetSuccess />,
+  },
+  {
+    path: "/admin-registration",
+    element: <AdminRegistration />,
   },
 ]);
 

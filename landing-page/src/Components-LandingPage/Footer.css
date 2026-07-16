@@ -1,4 +1,4 @@
-.footer {
+.footer-landing {
   width: 100%;
   background: #0f172a;
   color: #ffffff;
@@ -6,7 +6,7 @@
   border-top: 1px solid #1f2937;
 }
 
-.footer-container {
+.footer-container-landing {
   max-width: 1280px;
   margin: 0 auto;
 
@@ -17,14 +17,14 @@
   gap: 60px;
 }
 
-.footer-section {
+.footer-section-landing {
   flex: 1 1 250px;
   min-width: 220px;
   display: flex;
   flex-direction: column;
 }
 
-.footer-section h3,
+.footer-section-landing h3,
 .logo-intern {
   margin-bottom: 20px;
 }
@@ -39,14 +39,14 @@
   max-width: 280px;
 }
 
-.footer-section ul {
+.footer-section-landing ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-.footer-section li,
-.company-link {
+.footer-section-landing li,
+.company-link-landing {
   margin-bottom: 14px;
   color: #9ca3af;
   font-size: 16px;
@@ -55,23 +55,23 @@
   transition: color 0.3s;
 }
 
-.footer-section li:hover,
-.company-link:hover {
+.footer-section-landing li:hover,
+.company-link-landing:hover {
   color: #ffffff;
 }
 
-.icon-wrapper {
+.icon-wrapper-landing {
   display: flex;
   gap: 16px;
   margin-top: 24px;
 }
 
-.dual-icon {
+.dual-icon-landing {
   width: 40px;
   height: 40px;
 }
 
-.footer-bottom {
+.footer-bottom-landing {
   max-width: 1280px;
   margin: 40px auto 0;
   padding-top: 24px;
@@ -85,12 +85,12 @@
 }
 
 @media (max-width: 768px) {
-  .footer-container {
+  .footer-container-landing {
     flex-direction: column;
     gap: 40px;
   }
 
-  .footer-bottom {
+  .footer-bottom-landing {
     flex-direction: column;
     text-align: center;
     gap: 10px;
