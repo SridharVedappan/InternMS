@@ -877,7 +877,9 @@ export const InternRegistration = () => {
             <div className="signin-container">
               <p className="signin-text">
                 Already have an account?{" "}
-                <span className="signin-link">Sign in</span>
+                <Link to="/login" className="signin-link-intern-1">
+                  Sign in
+                </Link>
               </p>
             </div>
           </div>

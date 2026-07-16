@@ -356,7 +356,7 @@ export const CompanyRegistration = () => {
                     <img
                       src={EfforlessHiring}
                       alt="Industry Impact"
-                      className="company-icon-effortless "
+                      className="company-icon-effortless"
                     />
                   </div>
 
@@ -370,11 +370,11 @@ export const CompanyRegistration = () => {
                 </div>
 
                 <div className="mentor-info-card">
-                  <div className="image-div-shield">
+                  <div className="image-div-com">
                     <img
                       src={VerifyShield}
                       alt="Mentor Growth"
-                      className="mentor-guard-shield-sub"
+                      className="company-guard-shield"
                     />
                   </div>
 
@@ -771,7 +771,9 @@ export const CompanyRegistration = () => {
               <div className="signin-container">
                 <p className="signin-text">
                   Already have an account?{" "}
-                  <span className="signin-link">Sign in</span>
+                  <Link to="/login" className="signin-link-company">
+                    Sign in
+                  </Link>
                 </p>
               </div>
             </div>

@@ -364,7 +364,7 @@
   width: 24px;
   height: 16px;
 }
-.mentor-guard-shield-sub {
+.company-guard-shield {
   width: 16px;
   height: 20px;
 }
@@ -630,7 +630,7 @@
   color: #464555;
 }
 
-.signin-link {
+.signin-link-company {
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -642,8 +642,8 @@
   text-decoration: none;
 }
 
-.signin-link:hover {
-  text-decoration: underline;
+.signin-link-company:hover {
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

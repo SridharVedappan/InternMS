@@ -184,10 +184,12 @@ export const Login = () => {
 
             <p className="signup-text fade-up delay-5">
               Don't have an account?
-              <span className="create-account">Create Account</span>
+              <Link to="/hr-registration" className="create-account-login ">
+                Create Account
+              </Link>
             </p>
 
-            <div className="footer-links fade-up delay-5">
+            <div className="footer-links-login fade-up delay-5">
               <span>Help</span>
               <span className="dot"></span>
               <span>Privacy</span>

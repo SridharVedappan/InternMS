@@ -661,7 +661,9 @@ export const HrRegistration = () => {
               <div className="signin-container">
                 <p className="signin-text">
                   Already have an account?{" "}
-                  <span className="signin-link">Sign in</span>
+                  <Link to="/login" className="signin-link-hr">
+                    Sign in
+                  </Link>
                 </p>
               </div>
             </form>

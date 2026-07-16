@@ -501,20 +501,21 @@ input::placeholder {
   gap: 4px;
 }
 
-.create-account {
+.create-account-login {
   color: #3525cd;
   cursor: pointer;
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 20px;
+  text-decoration: none;
 }
 
-.create-account:hover {
-  text-decoration: underline;
+.create-account-login :hover {
+  text-decoration: none;
 }
 
-.footer-links {
+.footer-links-login {
   width: 435px;
   height: 32px;
   display: flex;
@@ -591,12 +592,12 @@ input::placeholder {
 }
 
 .forgot-password,
-.create-account {
+.create-account-login {
   transition: all 0.3s ease;
 }
 
 .forgot-password:hover,
-.create-account:hover {
+.create-account-login:hover {
   opacity: 0.8;
 }
 
@@ -617,7 +618,7 @@ input::placeholder {
   .form-group input,
   .form-group label,
   .signup-text,
-  .footer-links,
+  .footer-links-login,
   .login-quotes {
     width: 100%;
   }
@@ -669,7 +670,7 @@ input::placeholder {
   .form-group label,
   .form-group input,
   .signup-text,
-  .footer-links,
+  .footer-links-login,
   .login-quotes {
     width: 100%;
   }
@@ -714,7 +715,7 @@ input::placeholder {
     width: 100%;
   }
 
-  .footer-links {
+  .footer-links-login {
     flex-wrap: wrap;
     gap: 10px;
   }

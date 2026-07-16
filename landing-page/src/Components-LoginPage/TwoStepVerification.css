@@ -329,10 +329,7 @@
   line-height: 20px;
   font-weight: 400;
   cursor: pointer;
-  transition: font-weight 0.2s ease;
-}
-.cs-blue:hover {
-  font-weight: 600;
+  text-decoration: none;
 }
 
 .back-to-login-wrapper {
@@ -354,27 +351,19 @@
   color: #3525cd;
   cursor: pointer;
   margin: 0;
-  transition:
-    color 0.3s ease,
-    transform 0.3s ease;
-}
-
-.back-to-login:hover {
-  text-decoration: underline;
-  color: #2c1fb0;
-  transform: translateX(-3px);
+  text-decoration: none;
 }
 
 .left-arrow-icon {
   width: 12px;
   height: 12px;
   display: block;
-  transition: transform 0.3s ease;
 }
 
-.back-to-login:hover .left-arrow-icon {
-  transform: translateX(-5px);
+.back-to-login-ts {
+  text-decoration: none;
 }
+
 .verify-description {
   width: 443px;
   height: 24px;

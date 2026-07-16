@@ -118,7 +118,6 @@ export const TwoStepVerification = () => {
             <img src={RidhtSideArrow} className="right-arrow-btn-icon" />
           </button>
 
-          <div className="parent-back-to-login "></div>
           <div className="back-to-login-wrapper">
             <Link to="/login" className="back-to-login">
               <img
@@ -126,7 +125,7 @@ export const TwoStepVerification = () => {
                 alt="left-arrow"
                 className="left-arrow-icon"
               />
-              <span>Back to Login</span>
+              <span className="back-to-login-ts">Back to Login</span>
             </Link>{" "}
           </div>
           <div className="para-container">

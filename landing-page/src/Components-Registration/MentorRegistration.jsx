@@ -778,19 +778,21 @@ export const MentorRegistration = () => {
             <div className="signin-container">
               <p className="signin-text">
                 Already have an account?{" "}
-                <span className="signin-link">Sign in</span>
+                <Link to="/login" className="signin-link-mentor">
+                  Sign in
+                </Link>
               </p>
             </div>
-            <div className="footer-bottom">
-              <p className="footer-copyright">
+            <div className="footer-bottom-mentor">
+              <p className="footer-copyright-mentor">
                 © 2024 InternHub. All rights reserved.
               </p>
 
-              <div className="footer-links">
-                <a href="#" className="footer-link">
+              <div className="footer-link-mentor">
+                <a href="#" className="footer-link-mentor">
                   Support
                 </a>
-                <a href="#" className="footer-link">
+                <a href="#" className="footer-link-mentor">
                   Contact Us
                 </a>
               </div>

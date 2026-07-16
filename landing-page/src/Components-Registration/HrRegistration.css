@@ -660,7 +660,7 @@
   color: #464555;
 }
 
-.signin-link {
+.signin-link-hr {
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -672,8 +672,8 @@
   text-decoration: none;
 }
 
-.signin-link:hover {
-  text-decoration: underline;
+.signin-link-hr :hover {
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {

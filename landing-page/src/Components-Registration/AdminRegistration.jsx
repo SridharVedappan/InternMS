@@ -665,11 +665,12 @@ export const AdminRegistration = () => {
 
                   <div className="line"></div>
                 </div>
-
                 <div className="signin-container">
                   <p className="signin-text">
                     Already have an account?{" "}
-                    <span className="signin-link">Sign in</span>
+                    <Link to="/login" className="signin-connect-admin">
+                      Sign in
+                    </Link>
                   </p>
                 </div>
               </div>

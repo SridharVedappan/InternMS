@@ -559,7 +559,7 @@
   color: #464555;
 }
 
-.signin-link {
+.signin-link-mentor {
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -571,8 +571,8 @@
   text-decoration: none;
 }
 
-.signin-link:hover {
-  text-decoration: underline;
+.signin-link-mentor:hover {
+  text-decoration: none;
 }
 
 @media (max-width: 768px) {
@@ -732,15 +732,18 @@
   opacity: 1;
 }
 
-.footer-bottom {
+.footer-bottom-mentor {
   width: 618.66px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   border-top: 1px solid #c7c4d8;
   box-sizing: border-box;
+  padding-top: 32px;
+  margin-top: 40px;
 }
 
-.footer-copyright {
+.footer-copyright-mentor {
   margin: 0;
   color: #777587;
   font-family: "Hanken Grotesk", sans-serif;
@@ -749,13 +752,13 @@
   white-space: nowrap;
 }
 
-.footer-links {
+.footer-link-mentor {
   display: flex;
   justify-content: end;
   gap: 23.99px;
 }
 
-.footer-link {
+.footer-link-mentor {
   text-decoration: none;
   color: #464555;
   font-family: "Hanken Grotesk", sans-serif;

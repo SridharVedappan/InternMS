@@ -543,7 +543,7 @@
   color: #464555;
 }
 
-.signin-link {
+.signin-connect-admin {
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -553,10 +553,6 @@
   color: #3525cd;
   cursor: pointer;
   text-decoration: none;
-}
-
-.signin-link:hover {
-  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
