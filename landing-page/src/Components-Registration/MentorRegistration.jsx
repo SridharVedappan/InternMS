@@ -742,7 +742,7 @@ export const MentorRegistration = () => {
               </div>
 
               {/* Terms */}
-              <div className="terms-container">
+              <div className="terms-container-mentor">
                 <input
                   type="checkbox"
                   id="terms"
@@ -767,36 +767,40 @@ export const MentorRegistration = () => {
                 Create Account
               </button>
             </form>
-            <div className="divider-line">
-              <div className="line"></div>
+            <footer className="mentor-registration-footer">
+              <div className="divider-line">
+                <div className="line"></div>
 
-              <span className="or-text-hr">OR</span>
+                <span className="or-text-hr">OR</span>
 
-              <div className="line"></div>
-            </div>
-
-            <div className="signin-container">
-              <p className="signin-text">
-                Already have an account?{" "}
-                <Link to="/login" className="signin-link-mentor">
-                  Sign in
-                </Link>
-              </p>
-            </div>
-            <div className="footer-bottom-mentor">
-              <p className="footer-copyright-mentor">
-                © 2024 InternHub. All rights reserved.
-              </p>
-
-              <div className="footer-link-mentor">
-                <a href="#" className="footer-link-mentor">
-                  Support
-                </a>
-                <a href="#" className="footer-link-mentor">
-                  Contact Us
-                </a>
+                <div className="line"></div>
               </div>
-            </div>
+
+              <div className="signin-container">
+                <p className="signin-text">
+                  Already have an account?{" "}
+                  <Link to="/login" className="signin-link-mentor">
+                    Sign in
+                  </Link>
+                </p>
+              </div>
+
+              <div className="footer-bottom-mentor">
+                <p className="footer-copyright-mentor">
+                  © 2024 InternHub. All rights reserved.
+                </p>
+
+                <div className="footer-link-mentor">
+                  <a href="#" className="footer-link-mentor">
+                    Support
+                  </a>
+
+                  <a href="#" className="footer-link-mentor">
+                    Contact Us
+                  </a>
+                </div>
+              </div>
+            </footer>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import "../Components-LandingPage/Stackholder.css";
 import Tick from "../assets/icons/tick.png";
-import OfficeWorkerImage from "../assets/images-1.png";
+import OfficeEnvStockImage from "../assets/Collaborative Modern Office.png";
 
 export const Stackholder = () => {
   return (
@@ -55,11 +55,15 @@ export const Stackholder = () => {
           </div>
         </div>
 
-        <img
-          src={OfficeWorkerImage}
-          alt="image-1.png"
-          className="office-image-card"
-        />
+        <div className="office-image-container">
+          <div className="office-image-shadow">
+            <img
+              src={OfficeEnvStockImage}
+              alt="Preview"
+              className="office-env-Stock-image"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

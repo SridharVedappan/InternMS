@@ -309,17 +309,19 @@ export const HrRegistration = () => {
               </div>
             </div>
           </div>
-          <div className="stats-container-hr">
-            <div className="stat-item-hr">
-              <span className="stat-number-hr">500+</span>
-              <span className="stat-label-hr">COMPANIES</span>
-            </div>
+          <footer className="stats-footer-hr">
+            <div className="stats-container-hr">
+              <div className="stat-item-hr">
+                <span className="stat-number-hr">500+</span>
+                <span className="stat-label-hr">COMPANIES</span>
+              </div>
 
-            <div className="stat-item-hr">
-              <span className="stat-number-hr">10k+</span>
-              <span className="stat-label-hr">STUDENTS</span>
+              <div className="stat-item-hr">
+                <span className="stat-number-hr">10k+</span>
+                <span className="stat-label-hr">STUDENTS</span>
+              </div>
             </div>
-          </div>
+          </footer>
         </div>
       </div>
       <div className="hr-reg-right-container">

@@ -10,6 +10,7 @@ import Shield from "../assets/icons/shield-icon.png";
 
 export const ForgotPasswordOTP = () => {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [otpError, setOtpError] = useState("");
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -62,18 +63,19 @@ export const ForgotPasswordOTP = () => {
     }
   };
 
-  const handleVerify = () => {
+  const handleVerifyOtp = (e) => {
+    e.preventDefault();
+
     const enteredOtp = otp.join("");
 
     if (enteredOtp.length !== 6) {
-      alert("Please enter a valid 6-digit OTP");
+      setOtpError("Please enter a valid 6-digit OTP.");
       return;
     }
 
+    setOtpError("");
+
     console.log("OTP:", enteredOtp);
-
-    alert("OTP Verified Successfully!");
-
     navigate("/reset-password");
   };
 
@@ -114,8 +116,9 @@ export const ForgotPasswordOTP = () => {
       </div>
 
       <div className="right-container-card">
-        <div className="right-content-container">
+        <form className="right-content-container" onSubmit={handleVerifyOtp}>
           <h1 className="verification-title">Enter Verification Code</h1>
+
           <p className="para-details-for-otp-1">
             We've sent a 6-digit code to your registered Email and phone number.
             The code will
@@ -139,25 +142,23 @@ export const ForgotPasswordOTP = () => {
             ))}
           </div>
 
-          <button className="verify-and-continue" onClick={handleVerify}>
+          {otpError && <p className="otp-error">{otpError}</p>}
+
+          <button type="submit" className="verify-and-continue">
             Verify and Continue
-            <span>
-              <img
-                src={RightArrowForButton}
-                alt="right-arrow"
-                className="Verify-and-continue-arrow"
-              />
-            </span>
+            <img
+              src={RightArrowForButton}
+              alt="right-arrow"
+              className="Verify-and-continue-arrow"
+            />
           </button>
 
-          <div>
-            <p className="otp-resend-text">
-              <span className="otp-message">
-                Didn't receive the code?
-                <span className="otp-resend-link"> Resend (in 00:55)</span>
-              </span>
-            </p>
-          </div>
+          <p className="otp-resend-text">
+            <span className="otp-message">
+              Didn't receive the code?
+              <span className="otp-resend-link"> Resend (in 00:55)</span>
+            </span>
+          </p>
 
           <div className="security-features">
             <div className="security-feature">
@@ -170,7 +171,7 @@ export const ForgotPasswordOTP = () => {
               <p className="security-text">SECURE HANDSHAKE</p>
             </div>
           </div>
-        </div>
+        </form>
       </div>
     </div>
   );

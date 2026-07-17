@@ -311,6 +311,14 @@
   height: 48px;
   line-height: 24px;
 }
+.otp-error-code {
+  color: #ef4444;
+  font-size: 14px;
+  font-family: "Inter", sans-serif;
+  text-align: left; /* or center */
+  width: 100%;
+  padding-bottom: 20px;
+}
 
 @media (max-width: 1024px) {
   .otp-wrapper {

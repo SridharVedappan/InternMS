@@ -423,11 +423,11 @@
   border-color: #3525cd;
 }
 
-.terms-container {
+.terms-container-mentor {
   display: flex;
   align-items: center;
   gap: 12px;
-  padding: 23.5px 0;
+  padding-bottom: 10px;
 }
 
 .terms-checkbox {
@@ -641,12 +641,6 @@
   flex-direction: column;
 }
 
-.terms-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
 .password-wrapper {
   position: relative;
   width: 100%;
@@ -730,6 +724,11 @@
   letter-spacing: 0;
   color: #6b7280;
   opacity: 1;
+}
+
+.mentor-registration-footer {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-bottom-mentor {

@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 
 export const VerificationCode = () => {
   const [otp, setOtp] = useState(["", "", "", "", "", ""]);
+  const [otpError, setOtpError] = useState("");
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -50,19 +51,20 @@ export const VerificationCode = () => {
     }
   };
 
-  const handleVerify = () => {
+  const handleVerifyCode = (e) => {
+    e.preventDefault();
+
     const enteredOtp = otp.join("");
 
     if (enteredOtp.length !== 6) {
-      alert("Please enter a valid 6-digit OTP");
+      setOtpError("Please enter a valid 6-digit OTP.");
       return;
     }
 
+    setOtpError("");
+
     console.log("OTP:", enteredOtp);
 
-    alert("OTP Verified Successfully!");
-
-    // Navigate to next page
     navigate("/xyz");
   };
 
@@ -108,8 +110,8 @@ export const VerificationCode = () => {
           </div>
         </div>
 
-        <div className="content-card-2 ">
-          <div className="right-content-container">
+        <div className="content-card-2">
+          <form className="right-content-container" onSubmit={handleVerifyCode}>
             <h1 className="enter-code-title">Enter Verification Code</h1>
 
             <p
@@ -128,7 +130,8 @@ export const VerificationCode = () => {
                   key={index}
                   ref={(ele) => (inputRefs.current[index] = ele)}
                   type="text"
-                  maxLength="1"
+                  inputMode="numeric"
+                  maxLength={1}
                   value={digit}
                   className="otp-boxs"
                   onChange={(e) => handleChange(index, e)}
@@ -136,25 +139,23 @@ export const VerificationCode = () => {
                 />
               ))}
             </div>
+            {otpError && <p className="otp-error-code">{otpError}</p>}
 
-            <button className="verify-identity" onClick={() => handleVerify()}>
+            <button type="submit" className="verify-identity">
               Verify Identity
-              <span>
-                <img
-                  src={RightArrowForButton}
-                  alt="right arrow"
-                  className="Verify-identity-btn"
-                />
-              </span>
+              <img
+                src={RightArrowForButton}
+                alt="right arrow"
+                className="Verify-identity-btn"
+              />
             </button>
 
             <div className="resend-container">
               <span className="resend-text">Didn't receive the code?</span>
-
               <span className="resend-label">Resend in</span>
-
-              <span className="resend-timer"> 00:58</span>
+              <span className="resend-timer">00:58</span>
             </div>
+
             <div className="verification-footer">
               <div className="back-to-verification">
                 <img
@@ -169,11 +170,12 @@ export const VerificationCode = () => {
                   Back to verification options
                 </p>
               </div>
+
               <p className="contact-support" onClick={handleContactSupport}>
                 Contact Support
               </p>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

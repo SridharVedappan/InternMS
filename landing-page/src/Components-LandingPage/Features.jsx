@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../Components-LandingPage/Features.css";
-import RightArrow from "../assets/icons/right-arrow.png";
+import RightArrow from "../assets/icons/right-blue-arrow.png";
 import BotIcon from "../assets/icons/bot.png";
 import SearchIcon from "../assets/icons/search.png";
 import SecureIcon from "../assets/icons/secure.png";
@@ -17,10 +18,16 @@ export const Features = () => {
           </p>
         </div>
 
-        <button className="features-btn">
-          Explore all features
-          <img className="arrow-icon" src={RightArrow} alt="right-arrow" />
-        </button>
+        <div className="button-container-for-landing">
+          <Link to="/features" className="features-btn-landing">
+            <span>Explore all features</span>
+            <img
+              className="arrow-icon-features"
+              src={RightArrow}
+              alt="Right Arrow"
+            />
+          </Link>
+        </div>
       </div>
 
       <div className="features-grid">

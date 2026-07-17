@@ -44,9 +44,9 @@ export const TwoStepVerification = () => {
           </div>
         </div>
 
-        <div className="cr-container">
+        <footer className="cr-footer">
           <p className="copyright-text">© 2024 InternMS</p>
-        </div>
+        </footer>
       </div>
 
       <div className="right-container">
@@ -117,7 +117,8 @@ export const TwoStepVerification = () => {
             Send Verification Code
             <img src={RidhtSideArrow} className="right-arrow-btn-icon" />
           </button>
-
+        </div>
+        <footer className="forgot-password-footer">
           <div className="back-to-login-wrapper">
             <Link to="/login" className="back-to-login">
               <img
@@ -126,8 +127,9 @@ export const TwoStepVerification = () => {
                 className="left-arrow-icon"
               />
               <span className="back-to-login-ts">Back to Login</span>
-            </Link>{" "}
+            </Link>
           </div>
+
           <div className="para-container">
             <p>
               Need help?{" "}
@@ -136,7 +138,7 @@ export const TwoStepVerification = () => {
               </Link>
             </p>
           </div>
-        </div>
+        </footer>
       </div>
     </div>
   );

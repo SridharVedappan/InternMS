@@ -21,7 +21,7 @@
   border-bottom-right-radius: 10px;
   display: flex;
   flex-direction: column;
-  padding: 206.38px 40px 40px;
+  padding: 150px 40px 40px;
 }
 
 .heading-title {
@@ -109,7 +109,7 @@
   min-height: 100vh;
   background: #ffffff;
   padding-left: 220px;
-  padding-top: 120px;
+  padding-top: 60px;
 }
 
 .verification-options {
@@ -310,7 +310,7 @@
   width: 443px;
   height: 53px;
   padding-top: 32px;
-  border-top: 2px solid #c7c4d8;
+  border-top: 1px solid #c7c4d8;
   margin-top: 16px;
 }
 .para-container p {

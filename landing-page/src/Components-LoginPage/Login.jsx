@@ -55,49 +55,46 @@ export const Login = () => {
   return (
     <div className="login-main-card">
       {/* Left Side */}
-      <div className="Leftside-card fade-left">
+      <div className="Leftside-card">
         <div className="inner-leftside-card">
-          <h2 className="login-logo fade-up">InternHub</h2>
+          <h2 className="login-logo">InternHub</h2>
 
-          <h2 className="login-heading fade-up delay-1">
+          <h2 className="login-heading">
             Your next big leap starts
             <br />
             here.
           </h2>
 
-          <p className="login-description fade-up delay-2">
+          <p className="login-description">
             Connect with industry leaders, manage your applications, and
             accelerate your career path with our comprehensive internship
             management platform.
           </p>
-
-          <div className="metrics-container fade-up delay-3">
-            <div className="metric">
-              <h3 className="metric-value">500+</h3>
-              <div className="metric-title">PARTNER COMPANIES</div>
+          <footer className="footer-login-1">
+            <div className="metrics-container">
+              <div className="metric">
+                <h3 className="metric-value">500+</h3>
+                <div className="metric-title">PARTNER COMPANIES</div>
+              </div>
+              <div className="metric">
+                <h3 className="metric-value">10k+</h3>
+                <div className="metric-title">SUCCESS STORIES</div>
+              </div>
             </div>
-
-            <div className="metric">
-              <h3 className="metric-value">10k+</h3>
-              <div className="metric-title">SUCCESS STORIES</div>
-            </div>
-          </div>
+            <p className="copyright-text">© 2024 InternMS</p>
+          </footer>
         </div>
-
-        <p className="copyright-text">© 2024 InternMS</p>
       </div>
 
       {/* Right Side */}
-      <div className="rightside-login-card fade-right">
+      <div className="rightside-login-card">
         <div className="inner-rightside-login-card">
-          <h1 className="login-title fade-up">Welcome Back</h1>
+          <h1 className="login-title">Welcome Back</h1>
 
-          <p className="login-quotes fade-up delay-1">
-            Manage your career journey.
-          </p>
+          <p className="login-quotes">Manage your career journey.</p>
 
           <form onSubmit={handleSubmit}>
-            <div className="form-group fade-up delay-2">
+            <div className="form-group">
               <label>Email Address</label>
 
               <div className="input-container">
@@ -116,7 +113,7 @@ export const Login = () => {
               {errors.email && <p className="error-message">{errors.email}</p>}
             </div>
 
-            <div className="form-group fade-up delay-3">
+            <div className="form-group">
               <div className="password-label-row">
                 <label>Password</label>
 
@@ -157,46 +154,47 @@ export const Login = () => {
               )}
             </div>
 
-            <div className="remember-me-container fade-up delay-4">
+            <div className="remember-me-container">
               <label className="remember-me-label">
                 <input type="checkbox" className="remember-me-checkbox" />
                 <span>Keep me signed in</span>
               </label>
             </div>
 
-            <button type="submit" className="login-btn fade-up delay-4">
+            <button type="submit" className="login-btn">
               Sign In
               <img src={Arrow2} alt="arrow" className="login-arrow" />
             </button>
+          </form>
+          <div className="divider-login">
+            <img src={ThinLine} alt="line" className="thin-line" />
+            <div className="or-text">OR CONTINUE WITH</div>
+            <img src={ThinLine} alt="line" className="thin-line" />
+          </div>
 
-            <div className="or-container fade-up delay-5">
-              <img src={ThinLine} alt="line" className="thin-line" />
-              <div className="or-text">OR CONTINUE WITH</div>
-              <img src={ThinLine} alt="line" className="thin-line" />
-            </div>
+          <div className="social-login">
+            <button className="google-btn">
+              <img src={GoogleBtn} alt="google" className="google-icon" />
+              Google
+            </button>
+          </div>
 
-            <div className="google-btn-wrapper fade-up delay-5">
-              <button className="google-btn">
-                <img src={GoogleBtn} alt="google" className="google-icon" />
-                Google
-              </button>
-            </div>
-
-            <p className="signup-text fade-up delay-5">
-              Don't have an account?
-              <Link to="/hr-registration" className="create-account-login ">
+          <footer className="login-footer fade-up delay-5">
+            <p className="signup-text">
+              Don't have an account?{" "}
+              <Link to="/hr-registration" className="create-account-login">
                 Create Account
               </Link>
             </p>
 
-            <div className="footer-links-login fade-up delay-5">
+            <div className="footer-links-login">
               <span>Help</span>
               <span className="dot"></span>
               <span>Privacy</span>
               <span className="dot"></span>
               <span>Terms</span>
             </div>
-          </form>
+          </footer>
         </div>
       </div>
     </div>

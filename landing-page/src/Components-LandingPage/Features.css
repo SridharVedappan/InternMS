@@ -27,27 +27,28 @@
   max-width: 612px;
 }
 
-.features-btn {
-  display: flex;
+.button-container-for-landing {
+  display: inline-flex;
+}
+
+.features-btn-landing {
+  display: inline-flex;
   align-items: center;
   gap: 8px;
-
-  border: none;
-  background: transparent;
-  cursor: pointer;
+  width: fit-content;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
   font-size: 16px;
-  font-weight: 600;
-  color: #2563eb;
-  transition: all 0.3s ease;
+  line-height: 24px;
+  letter-spacing: 0;
+  color: #0058be;
 }
 
-.features-btn:hover {
-  transform: translateX(5px);
-}
-
-.arrow-icon {
-  width: 16px;
-  height: 16px;
+.arrow-icon-features {
+  width: 9.33px;
+  height: 9.33px;
+  flex-shrink: 0;
 }
 
 .features-grid {

@@ -21,20 +21,16 @@ export const ResetPassword = () => {
   const showConfirmPasswordError =
     confirmPassword.length > 0 && !isPasswordMatch;
 
-  const handleUpdatePassword = () => {
-    if (!isLengthValid) {
-      alert("Password must contain at least 8 characters.");
+  const handleUpdatePassword = (e) => {
+    e.preventDefault();
+
+    if (!isLengthValid || !isPasswordMatch) {
       return;
     }
 
-    if (!isPasswordMatch) {
-      alert("Passwords do not match.");
-      return;
-    }
-
-    alert("Password Updated Successfully!");
     navigate("/password-reset-success");
   };
+
   return (
     <div className="rp-main-container">
       <div className="rp-leftside-container">
@@ -54,11 +50,11 @@ export const ResetPassword = () => {
             <img src={BlurShield} alt="blur-shield" className="shield-blur" />
           </div>
 
-          <div className="footer-text-1">
+          <footer className="footer-text-1">
             <span>© 2024 InternMS</span>
             <span className="footer-dot-1">•</span>
             <span>Privacy Policy</span>
-          </div>
+          </footer>
         </div>
       </div>
 
@@ -74,7 +70,7 @@ export const ResetPassword = () => {
             <p>Your new password must be different from previous passwords.</p>
           </div>
 
-          <div className="password-form">
+          <form className="password-form" onSubmit={handleUpdatePassword}>
             <div className="form-group">
               <label className="password-label">New Password</label>
 
@@ -138,8 +134,8 @@ export const ResetPassword = () => {
             </div>
 
             <button
+              type="submit"
               className="update-password-btn"
-              onClick={handleUpdatePassword}
               disabled={!isLengthValid || !isPasswordMatch}
             >
               <span>Update Password</span>
@@ -152,7 +148,7 @@ export const ResetPassword = () => {
             <div className="back-login">
               <a href="/login">Back to Login</a>
             </div>
-          </div>
+          </form>
         </div>
       </div>
     </div>

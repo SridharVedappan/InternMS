@@ -65,9 +65,10 @@ body {
   left: 40px;
   width: 122px;
   height: 24px;
+  display: flex;
   font-family: "Hanken Grotesk", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   color: rgba(255, 255, 255, 0.5);
   margin: 0;
@@ -96,13 +97,9 @@ body {
   line-height: 1.2;
   margin-bottom: 20px;
 }
-
-.inner-leftside-card p {
-  font-size: 18px;
-  line-height: 30px;
-  opacity: 0.9;
+.footer-login-1 {
+  width: 100%;
 }
-
 .stat-number {
   width: 208px;
   height: 32px;
@@ -425,7 +422,7 @@ input::placeholder {
   justify-content: center;
 }
 
-.or-container {
+.divider-login {
   width: 100%;
   height: 16px;
   margin-bottom: 32px;
@@ -457,7 +454,7 @@ input::placeholder {
   align-items: center;
 }
 
-.google-btn-wrapper {
+.social-login {
   display: flex;
   justify-content: center;
 }
@@ -485,6 +482,10 @@ input::placeholder {
 .google-icon {
   width: 20px;
   height: 20px;
+}
+.footer-links-login {
+  display: flex;
+  align-items: center;
 }
 
 .signup-text {

@@ -866,22 +866,24 @@ export const InternRegistration = () => {
                 Create Account
               </button>
             </form>
-            <div className="divider-line">
-              <div className="line"></div>
+            <footer className="registration-footer">
+              <div className="divider-line">
+                <div className="line"></div>
 
-              <span className="or-text-hr">OR</span>
+                <span className="or-text-hr">OR</span>
 
-              <div className="line"></div>
-            </div>
+                <div className="line"></div>
+              </div>
 
-            <div className="signin-container">
-              <p className="signin-text">
-                Already have an account?{" "}
-                <Link to="/login" className="signin-link-intern-1">
-                  Sign in
-                </Link>
-              </p>
-            </div>
+              <div className="signin-container">
+                <p className="signin-text">
+                  Already have an account?{" "}
+                  <Link to="/login" className="signin-link-intern-1">
+                    Sign in
+                  </Link>
+                </p>
+              </div>
+            </footer>
           </div>
         </div>
       </div>
