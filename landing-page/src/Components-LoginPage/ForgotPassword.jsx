@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../Components-LoginPage/ForgotPassword.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, NavLink } from "react-router-dom";
 import PasswordReset from "../assets/icons/password-reset.png";
 import RightSideArrow from "../assets/icons/right-arrow-1.png";
 import LeftArrow from "../assets/icons/left-side-bule-arrow.png";
@@ -38,21 +38,24 @@ export const ForgotPassword = () => {
             <br />
             opportunities worldwide.
           </p>
-          <div className="footer-text">
+          <footer className="footer-text">
             <span>© 2024 InternMS</span>
             <span>•</span>
             <span>Privacy Policy</span>
-          </div>
+          </footer>
         </div>
       </div>
 
       <div className="right-container-for-forgot-password">
-        <div className="top-right-links">
-          <span className="help-text">Help</span>
-          <Link to="/login" className="login-text">
+        <nav className="top-nav-links">
+          <NavLink to="/help" className="help-text">
+            Help
+          </NavLink>
+
+          <NavLink to="/login" className="login-text">
             Login
-          </Link>
-        </div>
+          </NavLink>
+        </nav>
         <div className="image-card">
           <img
             src={PasswordReset}
@@ -119,7 +122,6 @@ export const ForgotPassword = () => {
             />
           </span>
         </button>
-
         <div className="back-to-login-wrapper-1">
           <Link to="/login" className="back-to-login-1">
             <img
