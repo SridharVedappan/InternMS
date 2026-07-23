@@ -631,7 +631,6 @@
   line-height: 16px;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-
   color: #464555;
 }
 .signin-container {
@@ -674,13 +673,6 @@
 
 .signin-link-hr :hover {
   text-decoration: none;
-}
-
-@media (max-width: 768px) {
-  .hr-reg-form-row {
-    flex-direction: column;
-    gap: 20px;
-  }
 }
 
 .error-message {
