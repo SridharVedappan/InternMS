@@ -15,61 +15,66 @@ import { AdminRegistration } from "./Components-Registration/AdminRegistration.j
 
 import "./App.css";
 
-const router = createBrowserRouter([
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      element: <LandingPage />,
+    },
+    {
+      path: "/login",
+      element: <Login />,
+    },
+    {
+      path: "/hr-registration",
+      element: <HrRegistration />,
+    },
+    {
+      path: "/mentor-registration",
+      element: <MentorRegistration />,
+    },
+    {
+      path: "/intern-registration",
+      element: <InternRegistration />,
+    },
+    {
+      path: "/company-registration",
+      element: <CompanyRegistration />,
+    },
+    {
+      path: "/forgot-password",
+      element: <ForgotPassword />,
+    },
+    {
+      path: "/two-step-verification",
+      element: <TwoStepVerification />,
+    },
+    {
+      path: "/verification-code",
+      element: <VerificationCode />,
+    },
+    {
+      path: "/forgot-password-otp",
+      element: <ForgotPasswordOTP />,
+    },
+    {
+      path: "/reset-password",
+      element: <ResetPassword />,
+    },
+
+    {
+      path: "/password-reset-success",
+      element: <PasswordResetSuccess />,
+    },
+    {
+      path: "/admin-registration",
+      element: <AdminRegistration />,
+    },
+  ],
   {
-    path: "/",
-    element: <LandingPage />,
+    basename: import.meta.env.PROD ? "/InternMS" : "/",
   },
-  {
-    path: "/login",
-    element: <Login />,
-  },
-  {
-    path: "/hr-registration",
-    element: <HrRegistration />,
-  },
-  {
-    path: "/mentor-registration",
-    element: <MentorRegistration />,
-  },
-  {
-    path: "/intern-registration",
-    element: <InternRegistration />,
-  },
-  {
-    path: "/company-registration",
-    element: <CompanyRegistration />,
-  },
-  {
-    path: "/forgot-password",
-    element: <ForgotPassword />,
-  },
-  {
-    path: "/two-step-verification",
-    element: <TwoStepVerification />,
-  },
-  {
-    path: "/verification-code",
-    element: <VerificationCode />,
-  },
-  {
-    path: "/forgot-password-otp",
-    element: <ForgotPasswordOTP />,
-  },
-  {
-    path: "/reset-password",
-    element: <ResetPassword />,
-  },
-  ,
-  {
-    path: "/password-reset-success",
-    element: <PasswordResetSuccess />,
-  },
-  {
-    path: "/admin-registration",
-    element: <AdminRegistration />,
-  },
-]);
+);
 
 function App() {
   return <RouterProvider router={router} />;
