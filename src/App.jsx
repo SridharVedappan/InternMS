@@ -12,6 +12,7 @@ import { ForgotPasswordOTP } from "./Components-LoginPage/ForgotPasswordOTP";
 import { ResetPassword } from "./Components-LoginPage/ResetPassword";
 import { PasswordResetSuccess } from "./Components-LoginPage/PasswordResetSuccess";
 import { AdminRegistration } from "./Components-Registration/AdminRegistration.jsx";
+import InternDashboard from "./Components-InternDashBoard/InternDashboard.jsx";
 
 import "./App.css";
 
@@ -68,6 +69,10 @@ const router = createBrowserRouter([
   {
     path: "/admin-registration",
     element: <AdminRegistration />,
+  },
+  {
+    path: "/intern-dashboard",
+    element: <InternDashboard />,
   },
 ]);
 
