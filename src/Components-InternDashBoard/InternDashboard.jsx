@@ -203,7 +203,7 @@ const InternDashboard = () => {
         </div>
 
         <div className="task-list">
-          {tasksData.map((task) => (
+          {tasksData.slice(0, 4).map((task) => (
             <div key={task.id} className="task-item">
               <div className="task-left">
                 <div className="task-icon-container">
@@ -233,6 +233,7 @@ const InternDashboard = () => {
         </div>
       </div>
 
+      {/* Mentor Details */}
       <div className="Assigned-Mentor-card">
         <div className="assigned-mentor-header">
           <h2>Assigned Mentor</h2>
@@ -240,8 +241,6 @@ const InternDashboard = () => {
             View Profile
           </a>
         </div>
-
-        {/* Mentor Details */}
         <div className="mentor-profile">
           <div className="mentor-avatar">
             {mentor.avatarUrl ? (
@@ -367,7 +366,6 @@ const InternDashboard = () => {
 
                 <p>{notification.text}</p>
               </div>
-
               <span className="notification-time">{notification.time}</span>
             </div>
           ))}
@@ -421,6 +419,7 @@ const InternDashboard = () => {
           </div>
         </div>
       </div>
+
       <div className="certificate-card">Certificates</div>
     </div>
   );
