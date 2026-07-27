@@ -1,0 +1,137 @@
+.Content-nav-IDB{
+    border: 1px solid none;
+    width:1162px;
+    height:82px;
+    background-color: #C5DFFF;
+    box-sizing: border-box;
+    display: flex;
+
+    align-items: center;
+    padding: 0 25px;
+}
+
+.navbar-left-IDB {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.dashboard-text-IDB h3 {
+  margin: 0;
+  width: 162px;
+  height: 17px;
+  font-size: 14px;
+  color:#003073;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.dashboard-text-IDB p {
+  margin: 2px 0 0;
+  font-size: 10px;
+  width: 352px;
+  height: 12px;
+  font-weight: 400;
+  line-height: 100%;
+  color: #003073;
+}
+
+.navbar-right-IDB {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-box-IDB {
+  width: 316.63px;
+  height: 48px;
+  background:#FFFFFF;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  box-sizing: border-box;
+  margin-left: 25px;
+}
+
+.search-icon-IDB {
+  color: #B4B4B4;
+  margin-right: 8px;
+}
+
+.search-box-IDB input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.search-box-IDB input::placeholder {
+  color: #B4B4B4;
+  font-size: 14px;
+}
+.notification-icon-IDB {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+}
+.notification-icon-IDB img {
+  width: 16px;
+  height: 20px;
+}
+
+.notification-dot-IDB {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 8px;
+  height: 8px;
+  background: #BA1A1A;
+  border-radius: 50%;
+  border: 2px solid none;
+}
+
+.profile-section-IDB {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.profile-icon-IDB {
+  width: 32px;
+  height: 32px;
+  margin-left: 25px;
+  background: #FFF7ED;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+}
+.profile-text-IDB{
+    margin-left: 25px;
+}
+.profile-text-IDB h4 {
+  margin: 0;
+  font-size: 16px;
+  color: #002968;
+  font-weight: 600;
+}
+
+.profile-text-IDB p {
+  margin: 0;
+  font-size: 11px;
+  color: #002968;
+}
+
+.dropdown-icon-IDB img {
+  width:15.38px;
+  height:10.76px;
+  color: #002968;
+  margin-left: 50px;
+}
