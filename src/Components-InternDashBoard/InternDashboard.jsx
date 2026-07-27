@@ -1,4 +1,5 @@
 import React from "react";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import "../Components-InternDashBoard/InternDashboard.css";
 import completedIcon from "../assets/icons/completed.png";
 import pendingIcon from "../assets/icons/pending.png";
@@ -11,10 +12,11 @@ import activeIcon from "../assets/icons/active-Icon.png";
 import upcomingIcon from "../assets/icons/upcoming-Icon.png";
 import DownloadArrow from "../assets/icons/Download-arrow-icon.png";
 import greyDownloadIcon from "../assets/icons/grey-download.png";
-import reportIcon from "../assets/icons/report.png";
+import reportIcon from "../assets/icons/reportIcon.png";
 import PurpleTaskIcon from "../assets/icons/PurpleTaskIcon.png";
 import OrangeCalendarIcon from "../assets/icons/OrangeCalendarIcon.png";
 import awardIcon from "../assets/icons/awardIcon.png";
+import GoldenStar from "../assets/icons/GoldenStar.png";
 
 const InternDashboard = () => {
   const tasksData = [
@@ -44,7 +46,7 @@ const InternDashboard = () => {
     },
   ];
 
-  // Assigned Mentor Data {Dummy data}
+  // Assigned Mentor Data {Mock data}
   const mentor = {
     name: "Priya Mehta",
     role: "Senior UI/UX Designer",
@@ -52,7 +54,7 @@ const InternDashboard = () => {
     avatarUrl: "",
   };
 
-  //Application Status {Dummy DATA}
+  //Application Status {Mock data}
   const steps = [
     {
       label: "Application Submitted",
@@ -174,6 +176,24 @@ const InternDashboard = () => {
     },
   ];
 
+  const ratingValue = 4.5;
+  const maxRating = 5;
+
+  const chartData = [
+    { name: "Filled", value: ratingValue },
+    { name: "Remaining", value: maxRating - ratingValue },
+  ];
+
+  const COLORS = ["#0066FF", "#E5E7EB"];
+
+  const metrics = [
+    { label: "Quality of Work", score: "4.6" },
+    { label: "Timelines", score: "4.3" },
+    { label: "Communication", score: "4.4" },
+    { label: "Initiative", score: "4.7" },
+    { label: "Learning Ability", score: "4.5" },
+  ];
+
   return (
     <div className="dashboard-grid">
       <div className="task-card">
@@ -198,9 +218,7 @@ const InternDashboard = () => {
 
                 <span className="task-title">{task.title}</span>
               </div>
-
               <div className="task-date">Due: {task.dueDate}</div>
-
               <div className="task-right">
                 <span
                   className={`task-status ${task.status
@@ -254,7 +272,7 @@ const InternDashboard = () => {
         </div>
       </div>
 
-      {/* appliction status cards */}
+      {/* Application Status */}
       <div className="appliction-status-card">
         <div className="card-header">
           <h2 className="card-title">Application Status</h2>
@@ -291,6 +309,7 @@ const InternDashboard = () => {
         </div>
       </div>
 
+      {/* Weekly Reports*/}
       <section className="weekly-reports-card">
         <div className="weekly-reports-header">
           <h2>Weekly Reports</h2>
@@ -301,11 +320,8 @@ const InternDashboard = () => {
           {reports.slice(0, 4).map((report) => (
             <div className="report-card" key={report.id}>
               <h3 className="report-title">{report.title}</h3>
-
               <p className="report-date">{report.date || "-"}</p>
-
               {renderStatusBadge(report.status)}
-
               {report.status === "Pending" ? (
                 <button className="download-btn">
                   <img
@@ -330,6 +346,7 @@ const InternDashboard = () => {
         </div>
       </section>
 
+      {/* Notifications*/}
       <div className="notification-panel-card">
         <div className="notification-header">
           <h2>Notifications</h2>
@@ -341,7 +358,11 @@ const InternDashboard = () => {
             <div className="notification-item" key={notification.id}>
               <div className="notification-content">
                 <div className={`notification-icon ${notification.iconBg}`}>
-                  <img src={notification.icon} alt="notification icon" />
+                  <img
+                    src={notification.icon}
+                    alt="notification icon"
+                    style={{ width: "30px", height: "30px" }}
+                  />
                 </div>
 
                 <p>{notification.text}</p>
@@ -352,7 +373,54 @@ const InternDashboard = () => {
           ))}
         </div>
       </div>
-      <div className="dashboard-card">Performance Rating</div>
+
+      {/* Performance Dashboard */}
+      <div className="performance-dashboard">
+        <div className="performance-header">
+          <h3>Notifications</h3>
+          <button className="view-details-btn">View details</button>
+        </div>
+
+        <div className="performance-content">
+          <div className="chart-section">
+            <ResponsiveContainer width={131} height={133}>
+              <PieChart>
+                <Pie
+                  data={chartData}
+                  cx="50%"
+                  cy="50%"
+                  innerRadius={42}
+                  outerRadius={60}
+                  startAngle={90}
+                  endAngle={-270}
+                  paddingAngle={1.5}
+                  dataKey="value"
+                >
+                  {chartData.map((entry, index) => (
+                    <Cell key={index} fill={COLORS[index]} />
+                  ))}
+                </Pie>
+              </PieChart>
+            </ResponsiveContainer>
+            <div className="chart-center">
+              <span className="rating-value">{ratingValue.toFixed(1)}</span>
+              <span className="rating-label">Overall Rating</span>
+            </div>
+          </div>
+
+          <div className="metrics-section">
+            {metrics.map((item, index) => (
+              <div className="metric-row" key={index}>
+                <span className="metric-label">{item.label}</span>
+                <div className="metric-score">
+                  <span>{item.score}</span>
+                  <img src={GoldenStar} alt="Star" className="star-icon" />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
       <div className="certificate-card">Certificates</div>
     </div>
   );
