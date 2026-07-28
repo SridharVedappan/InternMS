@@ -1,18 +1,25 @@
+.dashboard-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  padding: 0 20px 20px;
+  align-items: flex-start;
+  width: 100%;
+}
+
 .dashboard-grid > * {
   box-sizing: border-box;
   min-width: 0;
+  flex-shrink: 0;
+  flex: 1 1 300px;
+  min-width: 280px;
+  box-sizing: border-box;
 }
 
-.dashboard-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    width: 100%;
-    padding: 20px;
-    align-items: start;
-}
 .task-card {
-  width: 420px;
+  flex: 1 1 380px;
+  min-width: 300px;
+  height: 266px;
   height: 266px;
   background: #ffffffc6;
   border: 2px solid #d5d5d559;
@@ -639,7 +646,6 @@
   font-size: 10px;
   font-weight: 700;
   font-style: normal;
-  line-height: 100%;
   letter-spacing: 0;
   color: #1262e4;
   background: transparent;
@@ -650,6 +656,11 @@
 .notification-list {
   margin-left: 12px;
   margin-right: 31px;
+  margin-bottom: 27px;
+}
+
+.notification-icon {
+  margin-right: 21px;
 }
 
 .notification-item {
@@ -664,13 +675,11 @@
 .notification-content {
   display: flex;
   align-items: center;
-  gap: 10px;
   flex: 1;
   min-width: 0;
 }
 
 .notification-content p {
-  max-width: 207px;
   width: 100%;
   height: auto;
   font-family: "Inter", sans-serif;
@@ -777,8 +786,6 @@
 }
 
 .rating-label {
-  width: 68px;
-  height: 12px;
   font-family: "Inter", sans-serif;
   font-size: 10px;
   font-weight: 600;
@@ -834,4 +841,20 @@
 .star-icon {
   width: 15px;
   height: 15px;
+}
+
+/* Keep card heights */
+.task-card {
+  height: 266px;
+}
+
+.Assigned-Mentor-card,
+.appliction-status-card {
+  height: 268px;
+}
+
+.weekly-reports-card,
+.notification-panel-card,
+.performance-dashboard {
+  height: 260px;
 }

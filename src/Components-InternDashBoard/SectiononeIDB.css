@@ -1,365 +1,364 @@
+.header2-Sectionone-IDB {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  margin-top: 20px;
+  align-items: flex-start;
+  width: 100%;
+}
 
-.header-Sectionone-IDB h2{
-    color:#003073;
-    height:19px;
-    font-size:16px;
-    font-weight:700;
-    line-height:100%;
-    font-style: bold;
-    margin-left: 30px;
+.header2-Sectionone-IDB > * {
+  flex: 1 1 250px;
+  min-width: 250px;
+  height: 174px;
+  box-sizing: border-box;
 }
-.mainhead-IDB{
-    display: flex;
-    gap: 15px;
-    align-items: center;
+
+.card-IDB-Curr,
+.Cardbox-IDB-Dur,
+.Cardbox-IDB-Overall,
+.Cardbox-IDB-Report {
+  height: 174px;
+  padding: 18px;
+  background: #ffffffc6;
+  border: 2px solid #d5d5d559;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
-.header-Sectionone-IDB img{
-    width: 24px;
-    height: 24px;
+
+.mainhead-IDB {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.header-Sectionone-IDB img {
+  width: 24px;
+  height: 24px;
 }
 .header-Sectionone-IDB p {
-    width:352px;
-    height:13px;
-    color:#003073;
-    font-size:11px;
-    font-weight:400;
-    line-height:100%;
-    margin-left: 30px;
+  width: 352px;
+  height: 13px;
+  color: #003073;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 100%;
+  margin-left: 30px;
 }
 .header2-Sectionone-IDB {
-    display: flex;
-    gap: 18px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    align-items: flex-start;
+  display: flex;
+  gap: 18px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
-.card-IDB-Curr{
-    width:282px;
-    height:174px;
-    background:#fff;
-    box-shadow:0 0 4px rgba(0,0,0,0.25);
-    border-radius:5px;
-    padding:18px;
-    display:flex;
-    gap:15px;
-    align-items:flex-start;
+.card-IDB-Curr {
+  height: 174px;
+  padding: 18px;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
 }
-.icon-IDB-Curr{
-    width:62px;
-    height:62px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-shrink:0;
-    margin-top: 20px;
-    margin-left: 5px;
+.icon-IDB-Curr {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 20px;
+  margin-left: 5px;
 }
 
-.icon-IDB-Curr img{
-    width:26.25px;
-    height:26.25px;
+.icon-IDB-Curr img {
+  width: 26.25px;
+  height: 26.25px;
 }
 
-.blue{
-    background:#E1EDFE;
+.blue {
+  background: #e1edfe;
 }
 
-.green{
-    background:#E1F7EB;
+.green {
+  background: #e1f7eb;
 }
 
-.purple{
-    background:#EBE3FD;
+.purple {
+  background: #ebe3fd;
 }
 
-.orange{
-    background:#FEEFE4;
+.orange {
+  background: #feefe4;
 }
 
-.card-Currcontent-IDB{
-    width:100%;
-    margin-top: 20px;
+.card-Currcontent-IDB {
+  width: 100%;
+  margin-top: 20px;
 }
 
-.card-Currtitle-IDB{
-    font-size:11px;
-    color:#34416D;
-    font-weight: 500;
-    line-height: 100%;
-    margin-top: 0px;;
+.card-Currtitle-IDB {
+  font-size: 11px;
+  color: #34416d;
+  font-weight: 500;
+  line-height: 100%;
+  margin-top: 0px;
 }
 
-.card-Currcontent-IDB h3{
-    width: 139px;
-    height: 17px;
-    margin:9px 0;
-    font-size:14px;
-    line-height: 100%;
-    font-weight: 600;
-    color:#000000;
+.card-Currcontent-IDB h3 {
+  width: 139px;
+  height: 17px;
+  margin: 9px 0;
+  font-size: 14px;
+  line-height: 100%;
+  font-weight: 600;
+  color: #000000;
 }
 
-.card-Currcontent-IDB span{
-    display:block;
-    font-size:11px;
-    font-weight: 500;
-    line-height: 100%;
-    color:#34416D;
-    margin-top:3px;
+.card-Currcontent-IDB span {
+  display: block;
+  font-size: 11px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #34416d;
+  margin-top: 3px;
 }
 
-.details-Currbtn-IDB{
-    margin-top:23px;
-    width: 112px;
-    height: 36px;
-    background:#F0F5FD;
-    color: #2675FA;
-    border:none;
-    border-radius:10px;
-    padding:8px 16px;
-    font-size:11px;
-    font-weight:600;
-    line-height: 100%;
-    cursor:pointer;
+.details-Currbtn-IDB {
+  margin-top: 23px;
+  width: 112px;
+  height: 36px;
+  background: #f0f5fd;
+  color: #2675fa;
+  border: none;
+  border-radius: 10px;
+  padding: 8px 16px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 100%;
+  cursor: pointer;
 }
 
-  /* Internship-Duration */
-  .Cardbox-IDB-Dur{
-    width:264px;
-    height:174px;
-    background:#FFFFFF;
-    border:1px solid none;
-    box-shadow: 0px 0px 4px 0px #00000040;
-    border-radius:5px;
-    padding:18px;
-  }
-  .card-IDB-Dur {
-    display:flex;
-    gap:15px;
-    box-sizing:border-box;
+/* Internship-Duration */
+.Cardbox-IDB-Dur {
+  height: 174px;
+  padding: 18px;
 }
-  .icon-IDB-Dur {
-    width:62px;
-    height:62px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-shrink:0;
-    margin-top: 20px;
+.card-IDB-Dur {
+  display: flex;
+  gap: 15px;
+  box-sizing: border-box;
+}
+.icon-IDB-Dur {
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 20px;
 }
 
-.card-Durtitle-IDB{
-    font-size:10px;
-    color:#000000;
-    font-weight: 500;
-    line-height: 100%;
-    margin-top: 20px;;
-    margin-left: 5px;
+.card-Durtitle-IDB {
+  font-size: 10px;
+  color: #000000;
+  font-weight: 500;
+  line-height: 100%;
+  margin-top: 20px;
+  margin-left: 5px;
 }
-.card-Durcontent-IDB h2{
-    margin:9px 0;
-    width:71px;
-    height:21px;
-    font-size:17px;
-    font-weight: 600;
-    color:#000000;
-    font-weight:700;
-    margin-left: 5px;
+.card-Durcontent-IDB h2 {
+  margin: 9px 0;
+  width: 71px;
+  height: 21px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+  font-weight: 700;
+  margin-left: 5px;
 }
 .card-Durcontent-IDB span {
-    display:block;
-    font-size:10px;
-    font-weight: 500;
-    line-height: 100%;
-    color:#000000;
-    margin-top:3px;
-    margin-left: 5px;
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #000000;
+  margin-top: 3px;
+  margin-left: 5px;
 }
-.progress-bar-DurIDB{
-    width:228px;
-    height:7px;
-    background:#F2F6FB;
-    border-radius:20px;
-    margin-top:30px;
-    overflow:hidden;
-    display:block;
-}
-
-.progress-fill-DurIDB{
-    height:100%;
-    display:block;
-    border-radius:10px;
-}
-.duration-fill-DurIDB{
-    width:98px;
-    background:#0E66F3;
+.progress-bar-DurIDB {
+  width: 228px;
+  height: 7px;
+  background: #f2f6fb;
+  border-radius: 20px;
+  margin-top: 30px;
+  overflow: hidden;
+  display: block;
 }
 
-.Cardbox-IDB-Dur small{
-    font-size:10px;
-    color:#6C7595;
-    line-height: 100%;
-    font-weight: 600;
-    margin-top:8px;
-    display:block;
+.progress-fill-DurIDB {
+  height: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.duration-fill-DurIDB {
+  width: 98px;
+  background: #0e66f3;
 }
 
- /* Overall Progress */
-
-  .Cardbox-IDB-Overall{
-    width:259px;
-    height:174px;
-    background:#FFFFFF;
-    border:1px solid none;
-    box-shadow: 0px 0px 4px 0px #00000040;
-    border-radius:5px;
-    padding:18px;
-  }
-  .card-IDB-Overall {
-    display:flex;
-    gap:15px;
-    box-sizing:border-box;
+.Cardbox-IDB-Dur small {
+  font-size: 10px;
+  color: #6c7595;
+  line-height: 100%;
+  font-weight: 600;
+  margin-top: 8px;
+  display: block;
 }
-  .icon-IDB-Overall {
-    width:61px;
-    height:61px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-shrink:0;
-    margin-top: 20px;
+
+/* Overall Progress */
+
+.Cardbox-IDB-Overall {
+  height: 174px;
+  padding: 18px;
+}
+.card-IDB-Overall {
+  display: flex;
+  gap: 15px;
+  box-sizing: border-box;
+}
+.icon-IDB-Overall {
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 20px;
 }
 
 .card-Overall-IDB p {
-    font-size:10px;
-    color:#5F6790;
-    font-weight: 500;
-    line-height: 100%;
-    margin-top: 20px;;
-    margin-left: 5px;
+  font-size: 10px;
+  color: #5f6790;
+  font-weight: 500;
+  line-height: 100%;
+  margin-top: 20px;
+  margin-left: 5px;
 }
-.card-Overall-IDB h2{
-    margin:9px 0;
-    width:71px;
-    height:21px;
-    font-size:20px;
-    font-weight: 600;
-    color:#000000;
-    font-weight:600;
-    margin-left: 5px;
+.card-Overall-IDB h2 {
+  margin: 9px 0;
+  width: 71px;
+  height: 21px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  font-weight: 600;
+  margin-left: 5px;
 }
 .card-Overall-IDB span {
-    display:block;
-    font-size:10px;
-    font-weight: 500;
-    line-height: 100%;
-    color:#5F6790;
-    margin-top:3px;
-    margin-left: 5px;
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #5f6790;
+  margin-top: 3px;
+  margin-left: 5px;
 }
-.progress-bar-OverallIDB{
-    width:225px;
-    height:7px;
-    background:#F2F6FB;
-    border-radius:20px;
-    margin-top:30px;
-    overflow:hidden;
-    display:block;
+.progress-bar-OverallIDB {
+  width: 225px;
+  height: 7px;
+  background: #f2f6fb;
+  border-radius: 20px;
+  margin-top: 30px;
+  overflow: hidden;
+  display: block;
 }
 
-.progress-fill-OverallIDB{
-    height:100%;
-    display:block;
-    border-radius:20px;
+.progress-fill-OverallIDB {
+  height: 100%;
+  display: block;
+  border-radius: 20px;
 }
-.duration-fill-OverallIDB{
-    width:98px;
-    background:#6E4EE4;
+.duration-fill-OverallIDB {
+  width: 98px;
+  background: #6e4ee4;
 }
- /* Reorts Submitted */
+/* Reorts Submitted */
 
-  .Cardbox-IDB-Report{
-    width:259px;
-    height:174px;
-    background:#FFFFFF;
-    border:1px solid none;
-    box-shadow: 0px 0px 4px 0px #00000040;
-    border-radius:5px;
-    padding:18px;
-  }
-  .card-IDB-Report {
-    display:flex;
-    gap:15px;
-    box-sizing:border-box;
+.Cardbox-IDB-Report {
+  height: 174px;
+  padding: 18px;
 }
-  .icon-IDB-Report {
-    width:61px;
-    height:61px;
-    border-radius:50%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-shrink:0;
-    margin-top: 20px;
+.card-IDB-Report {
+  display: flex;
+  gap: 15px;
+  box-sizing: border-box;
+}
+.icon-IDB-Report {
+  width: 61px;
+  height: 61px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  margin-top: 20px;
 }
 
 .card-Report-IDB p {
-    font-size:10px;
-    color:#6B7893;
-    font-weight: 500;
-    line-height: 100%;
-    margin-top: 20px;;
-    margin-left: 5px;
+  font-size: 10px;
+  color: #6b7893;
+  font-weight: 500;
+  line-height: 100%;
+  margin-top: 20px;
+  margin-left: 5px;
 }
 .Report-data-IDB {
-    display: flex;
-    margin:9px 0;
-    width:71px;
-    height:21px;
-    margin-left: 5px;
+  display: flex;
+  margin: 9px 0;
+  width: 71px;
+  height: 21px;
+  margin-left: 5px;
 }
-.Report-data-IDB h2{
-    display: flex;
-    font-size:20px;
-    font-weight: 700;
-    font-style: bold;
-    color:#000000;
+.Report-data-IDB h2 {
+  display: flex;
+  font-size: 20px;
+  font-weight: 700;
+  font-style: bold;
+  color: #000000;
 }
 .Report-data-IDB h2 span {
-    font-size: 14px;
-    margin-top: 6px;
-    color: #000000;
-    font-style: bold;
-    font-weight: 700;
+  font-size: 14px;
+  margin-top: 6px;
+  color: #000000;
+  font-style: bold;
+  font-weight: 700;
 }
 .card-Report-IDB span {
-    display:block;
-    font-size:10px;
-    font-weight: 500;
-    line-height: 100%;
-    color:#6B7893;
-    margin-top:3px;
-    margin-left: 5px;
+  display: block;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 100%;
+  color: #6b7893;
+  margin-top: 3px;
+  margin-left: 5px;
 }
-.progress-bar-ReportIDB{
-    width:211px;
-    height:7px;
-    background:#F2F6FB;
-    border-radius:20px;
-    margin-top:30px;
-    overflow:hidden;
-    display:block;
+.progress-bar-ReportIDB {
+  width: 211px;
+  height: 7px;
+  background: #f2f6fb;
+  border-radius: 20px;
+  margin-top: 30px;
+  overflow: hidden;
+  display: block;
 }
 
-.progress-fill-ReportIDB{
-    height:100%;
-    display:block;
-    border-radius:20px;
+.progress-fill-ReportIDB {
+  height: 100%;
+  display: block;
+  border-radius: 20px;
 }
-.duration-fill-ReportIDB{
-    width:30px;
-    background:#FDA048;
+.duration-fill-ReportIDB {
+  width: 30px;
+  background: #fda048;
 }

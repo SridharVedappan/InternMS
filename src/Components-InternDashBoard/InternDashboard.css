@@ -1,20 +1,18 @@
-.Content-IDB{
-    border: 1px solid rgb(242, 235, 235);
-    width: 1440px ;
-    height: 1024px ;
-    boxSizing: border-box ;
-    margin: 2px auto ;
-    display: flex ;
-    overflow: hidden ;
-    margin-top: 10px;
+.Content-IDB {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  overflow: hidden;
+  margin-right: 0;
 }
 
 .Main-IDB {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
 }
 
 .Section-IDB {
-    padding: 20px;
+  padding: 20px;
 }
