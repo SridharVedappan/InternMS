@@ -1,5 +1,5 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { LandingPage } from "./LandingPage";
+import { LandingPage } from "./Components-LandingPage/LandingPage.jsx";
 import { Login } from "./Components-LoginPage/Login";
 import { HrRegistration } from "./Components-Registration/HrRegistration";
 import { MentorRegistration } from "./Components-Registration/MentorRegistration";
