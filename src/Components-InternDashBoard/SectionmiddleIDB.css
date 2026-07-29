@@ -224,6 +224,8 @@
   letter-spacing: 0;
   color: #1262e4;
   text-decoration: none;
+  border: none;
+  background: none;
 }
 
 .mentor-profile {

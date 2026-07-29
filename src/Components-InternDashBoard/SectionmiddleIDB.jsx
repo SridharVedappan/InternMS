@@ -114,20 +114,14 @@ const SectionmiddleIDB = () => {
     },
   ];
 
-  const getTaskIcon = (status) => {
-    switch (status) {
-      case "Completed":
-        return completedIcon;
-      case "In Progress":
-        return inProgressIcon;
-      case "Pending":
-        return pendingIcon;
-      case "Not Started":
-        return notStartedIcon;
-      default:
-        return notStartedIcon;
-    }
+  const taskIcons = {
+    Completed: completedIcon,
+    "In Progress": inProgressIcon,
+    Pending: pendingIcon,
+    "Not Started": notStartedIcon,
   };
+
+  const getTaskIcon = (status) => taskIcons[status] || notStartedIcon;
 
   const renderStatusBadge = (status) => {
     switch (status) {
@@ -172,22 +166,29 @@ const SectionmiddleIDB = () => {
     },
   ];
 
+  const statusIcons = {
+    completed: checkedIcon,
+    active: activeIcon,
+    pending: greyDownloadIcon,
+    upcoming: upcomingIcon,
+  };
+
   const ratingValue = 4.5;
   const maxRating = 5;
 
   const chartData = [
-    { name: "Filled", value: ratingValue },
-    { name: "Remaining", value: maxRating - ratingValue },
+    { id: 1, name: "Filled", value: ratingValue },
+    { id: 2, name: "Remaining", value: maxRating - ratingValue },
   ];
 
-  const COLORS = ["#0066FF", "#E5E7EB"];
+  const chartColors = ["#0066FF", "#E5E7EB"];
 
   const metrics = [
-    { label: "Quality of Work", score: "4.6" },
-    { label: "Timelines", score: "4.3" },
-    { label: "Communication", score: "4.4" },
-    { label: "Initiative", score: "4.7" },
-    { label: "Learning Ability", score: "4.5" },
+    { id: 1, label: "Quality of Work", score: "4.6" },
+    { id: 2, label: "Timelines", score: "4.3" },
+    { id: 3, label: "Communication", score: "4.4" },
+    { id: 4, label: "Initiative", score: "4.7" },
+    { id: 5, label: "Learning Ability", score: "4.5" },
   ];
 
   return (
@@ -233,9 +234,9 @@ const SectionmiddleIDB = () => {
       <div className="Assigned-Mentor-card">
         <div className="assigned-mentor-header">
           <h2>Assigned Mentor</h2>
-          <a href="" className="view-profile">
+          <button type="button" className="view-profile">
             View Profile
-          </a>
+          </button>
         </div>
         <div className="mentor-profile">
           <div className="mentor-avatar">
@@ -280,15 +281,7 @@ const SectionmiddleIDB = () => {
               <div className="timeline-item" key={index}>
                 <div className="status-indicator">
                   <img
-                    src={
-                      step.status === "completed"
-                        ? checkedIcon
-                        : step.status === "active"
-                          ? activeIcon
-                          : step.status === "pending"
-                            ? greyDownloadIcon
-                            : upcomingIcon
-                    }
+                    src={statusIcons[step.status]}
                     alt={step.status}
                     className="status-icon"
                   />
@@ -329,7 +322,7 @@ const SectionmiddleIDB = () => {
                 <button className="download-btn">
                   <img
                     src={DownloadArrow}
-                    alt="Download"
+                    alt="Download Report"
                     className="download-icon"
                   />
                 </button>
@@ -372,7 +365,9 @@ const SectionmiddleIDB = () => {
       <div className="performance-dashboard">
         <div className="performance-header">
           <h3>Notifications</h3>
-          <button className="view-details-btn">View details</button>
+          <button type="button" className="view-details-btn">
+            View details
+          </button>
         </div>
 
         <div className="performance-content">
@@ -391,7 +386,7 @@ const SectionmiddleIDB = () => {
                   dataKey="value"
                 >
                   {chartData.map((entry, index) => (
-                    <Cell key={index} fill={COLORS[index]} />
+                    <Cell key={entry.id} fill={chartColors[index]} />
                   ))}
                 </Pie>
               </PieChart>
@@ -403,12 +398,16 @@ const SectionmiddleIDB = () => {
           </div>
 
           <div className="metrics-section">
-            {metrics.map((item, index) => (
-              <div className="metric-row" key={index}>
+            {metrics.map((item) => (
+              <div className="metric-row" key={item.id}>
                 <span className="metric-label">{item.label}</span>
                 <div className="metric-score">
                   <span>{item.score}</span>
-                  <img src={GoldenStar} alt="Star" className="star-icon" />
+                  <img
+                    src={GoldenStar}
+                    alt="Rating star"
+                    className="star-icon"
+                  />
                 </div>
               </div>
             ))}
