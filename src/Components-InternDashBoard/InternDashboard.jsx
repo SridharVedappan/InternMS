@@ -612,12 +612,12 @@ export default function Interndashboard() {
             </section>
 
             {/* Notifications*/}
-            <div className="notification-panel-card">
-              <div className="notification-header">
+            <div className="idb-notification-card">
+              <div className="idb-notification-header">
                 <h2>Notifications</h2>
                 <button>View all</button>
               </div>
-              <div className="notification-list">
+              <div className="idb-notification-list">
                 {notifications.slice(0, 4).map((notification) => (
                   <div className="notification-item-IDB" key={notification.id}>
                     <div className="notification-content-IDB">

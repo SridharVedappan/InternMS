@@ -1216,7 +1216,7 @@
   height: 29px;
 }
 
-.notification-panel-card {
+.idb-notification-card {
   width: 350px;
   height: 245px;
   background: #ffffff;
@@ -1225,7 +1225,7 @@
   opacity: 1;
 }
 
-.notification-header {
+.idb-notification-header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1235,7 +1235,7 @@
   margin-bottom: 31px;
 }
 
-.notification-header h2 {
+.idb-notification-header h2 {
   font-family: Inter, sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -1245,7 +1245,7 @@
   color: #000000;
 }
 
-.notification-header button {
+.idb-notification-headerbutton {
   font-family: Inter, sans-serif;
   font-size: 10px;
   font-weight: 700;
@@ -1257,7 +1257,7 @@
   cursor: pointer;
 }
 
-.notification-list {
+.idb-notification-list {
   margin-left: 12px;
   margin-right: 31px;
   margin-bottom: 27px;
@@ -1453,7 +1453,7 @@
 }
 
 .weekly-reports-card,
-.notification-panel-card,
+.idb-notification-card,
 .performance-dashboard {
   height: 260px;
 }
