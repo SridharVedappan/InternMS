@@ -16,20 +16,20 @@
 .Section-IDB {
   padding: 20px;
 }
-.Content-Sidebar-IDB {
+.Sidebar-Content {
   width: 278px;
   min-height: 100vh;
   background-color: #00328d;
   box-sizing: border-box;
   flex-shrink: 0;
 }
-.head1-Sidebar-IDB {
+.Sidebar-head1 {
   width: 220px;
   height: 90px;
   padding: 32px;
   padding-top: 29px;
 }
-.head1-Sidebar-IDB h2 {
+.Sidebar-head1 h2 {
   color: #ffffff;
   font-size: 24;
   font-weight: 700;
@@ -38,14 +38,14 @@
   letter-spacing: -0.24px;
   margin-bottom: 8px;
 }
-.head1-Sidebar-IDB p {
+.Sidebar-head1 p {
   width: 182.13px;
   color: #ffffff;
   font-size: 12px;
   font-weight: 500;
   line-height: 16px;
 }
-.head2-Sidebar-IDB {
+.Sidebar-head2 {
   border: 1px solid none;
   width: 239px;
   height: 37px;
@@ -56,30 +56,30 @@
   margin-top: 16px;
   background: rgba(255, 255, 255, 0.18);
 }
-.head2-Sidebar-IDB img {
+.Sidebar-head2 img {
   width: 20px;
   height: 17px;
   margin-left: 25px;
   margin-bottom: 5px;
 }
-.head2-Sidebar-IDB h4 {
+.Sidebar-head2 h4 {
   color: #ffffff;
   font-size: 15px;
   font-weight: 500;
   line-height: 100%;
   margin-left: 15px;
 }
-.Header-sidebar-IDB {
+.sidebar-Header {
   display: grid;
 }
-.header-sidebar-IDB {
+.sidebar-header {
   display: flex;
   padding-top: 30px;
   padding-left: 16px;
   align-items: start;
 }
 
-.header-sidebar-IDB span {
+.sidebar-header span {
   color: #ffffff;
   font-size: 15px;
   font-weight: 500;
@@ -88,7 +88,7 @@
   margin-left: 20px;
 }
 
-.Content-nav-IDB {
+.Content-nav {
   width: 100%;
   height: 82px;
   background-color: #c5dfff;
@@ -101,7 +101,7 @@
   overflow: hidden;
 }
 
-.navbar-left-IDB {
+.navbar-left {
   display: flex;
   align-items: center;
   gap: 15px;

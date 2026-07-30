@@ -216,17 +216,17 @@ export default function Interndashboard() {
 
   return (
     <div className="Content-IDB">
-      <div className="Content-Sidebar-IDB">
-        <div className="head1-Sidebar-IDB">
+      <div className="Sidebar-Content">
+        <div className="Sidebar-head1">
           <h2>InternMS</h2>
           <p>Intenship Management system</p>
         </div>
-        <div className="head2-Sidebar-IDB">
+        <div className="Sidebar-head2">
           <img src={HomeIDB} alt="Homeadmin" />
           <h4>Dashboard</h4>
         </div>
-        <div className="Header-sidbar-IDB">
-          <div className="header-sidebar-IDB">
+        <div className="sidebar-Header">
+          <div className="sidebar-header">
             <img
               src={Myinternship}
               alt="internshipimage"
@@ -234,7 +234,7 @@ export default function Interndashboard() {
             />
             <span>My Internships</span>
           </div>
-          <div className="header-sidebar-IDB">
+          <div className="sidebar-header">
             <img
               src={Applicationstatus}
               alt="Applicationstatus"
@@ -242,7 +242,7 @@ export default function Interndashboard() {
             />
             <span>Application Status</span>
           </div>
-          <div className="header-sidebar-IDB">
+          <div className="sidebar-header">
             <img
               src={Assignedmentor}
               alt="Assignedmentor"
@@ -250,7 +250,7 @@ export default function Interndashboard() {
             />
             <span>Assigned Mentor</span>
           </div>
-          <div className="header-sidebar-IDB">
+          <div className="sidebar-header">
             <img
               src={Progresstracking}
               alt="Progresstracking"
@@ -258,7 +258,7 @@ export default function Interndashboard() {
             />
             <span>Progress Tracking</span>
           </div>
-          <div className="header-sidebar-IDB">
+          <div className="sidebar-header">
             <img
               src={Weeklyreports}
               alt="Weeklyreports"
@@ -270,7 +270,7 @@ export default function Interndashboard() {
             />
             <span>Weekly Reports</span>
           </div>
-          <div className="header-sidebar-IDB">
+          <div className="sidebar-header">
             <img
               src={TasksIDB}
               alt="TaskIDB"
@@ -278,7 +278,7 @@ export default function Interndashboard() {
             />
             <span>Tasks & Deliverables</span>
           </div>
-          <div className="header-sidebar-IDB">
+          <div className="sidebar-header">
             <img
               src={Notificationsidb}
               alt="Notification"
@@ -286,7 +286,7 @@ export default function Interndashboard() {
             />
             <span>Notifications</span>
           </div>
-          <div className="header-sidebar-IDB">
+          <div className="sidebar-header">
             <img
               src={Certificateidb}
               alt="Certificate"
@@ -294,7 +294,7 @@ export default function Interndashboard() {
             />
             <span>Certificates</span>
           </div>
-          <div className="header-sidebar-IDB">
+          <div className="sidebar-header">
             <img
               src={Performanceidb}
               alt="Performance"
@@ -307,9 +307,9 @@ export default function Interndashboard() {
 
       <div className="Main-IDB">
         {/* Navbar */}
-        <div className="Content-nav-IDB">
-          <div className="navbar-left-IDB">
-            <div className="menu-icon-IDB">
+        <div className="Content-nav">
+          <div className="navbar-left">
+            <div className="menu-icon">
               <img
                 src={IDBmore}
                 alt="abdmore"
