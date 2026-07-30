@@ -41,7 +41,7 @@ import CerificateLast from "../assets/icons/tabler_certificate.png";
 import DownloadIDB from "../assets/icons/DownloadIDB.png";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
-export default function Interndashboard() {
+export const Interndashboard = () => {
   const tasksData = [
     {
       id: 1,
@@ -724,4 +724,4 @@ export default function Interndashboard() {
       </div>
     </div>
   );
-}
+};
