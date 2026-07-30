@@ -1,6 +1,5 @@
 import React from "react";
 import "../Components-InternDashBoard/Interndashboard.css";
-import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import IDBmore from "../assets/icons/ADBmore.png";
 import IDBsearch from "../assets/icons/ADBsearch.png";
 import IDBnotification from "../assets/icons/ADBnotification.png";
@@ -40,6 +39,7 @@ import awardIcon from "../assets/icons/awardIcon.png";
 import GoldenStar from "../assets/icons/GoldenStar.png";
 import CerificateLast from "../assets/icons/tabler_certificate.png";
 import DownloadIDB from "../assets/icons/DownloadIDB.png";
+import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
 export default function Interndashboard() {
   const tasksData = [
@@ -472,31 +472,31 @@ export default function Interndashboard() {
           </div>
 
           {/* Task & Deliverables */}
-          <div className="idb-dashboard-grid ">
-            <div className="idb-task-card">
-              <div className="idb-td-header">
-                <h2 className="td-left-tittle">Task & Deliverables</h2>
-                <button className="td-view-all-btn">View all</button>
+          <div className="dashboard-grid ">
+            <div className="task-card">
+              <div className="task-header ">
+                <h2 className="task-tittle">Task & Deliverables</h2>
+                <button className="view-all-btn">View all</button>
               </div>
-              <div className="idb-td-list">
+              <div className="task-list">
                 {tasksData.slice(0, 4).map((task) => (
-                  <div key={task.id} className="idb-td-item ">
-                    <div className="idb-td-left">
-                      <div className="idb-td-icon-container">
+                  <div key={task.id} className="task-item">
+                    <div className="leftside-task-container">
+                      <div className="icon-holder">
                         <img
                           src={getTaskIcon(task.status)}
                           alt={task.status}
-                          className={`idb-td-icon  ${task.status
+                          className={`tasks-icon ${task.status
                             .replace(/\s+/g, "-")
                             .toLowerCase()}`}
                         />
                       </div>
-                      <span className="idb-td-title">{task.title}</span>
+                      <span className="task-title">{task.title}</span>
                     </div>
-                    <div className="idb-td-date ">Due: {task.dueDate}</div>
-                    <div className="idb-td-right">
+                    <div className="task-date">Due: {task.dueDate}</div>
+                    <div className="task-right">
                       <span
-                        className={`idb-td-status ${task.status
+                        className={`task-status ${task.status
                           .replace(/\s+/g, "-")
                           .toLowerCase()}`}
                       >
@@ -509,65 +509,65 @@ export default function Interndashboard() {
             </div>
 
             {/* Mentor Details */}
-            <div className="IDB-Assigned-Mentor-card">
-              <div className="IDB-assigned-mentor-header">
+            <div className="Mentor-card">
+              <div className="mentor-header">
                 <h2>Assigned Mentor</h2>
-                <button type="button" className="idb-view-profile">
+                <button type="button" className="view-profile">
                   View Profile
                 </button>
               </div>
-              <div className="idb-mentor-profile ">
+              <div className="mentor-profile ">
                 <div>
                   {mentor.avatarUrl ? (
                     <img src={mentor.avatarUrl} alt={mentor.name} />
                   ) : (
-                    <div className="IDB-avatar-placeholder"></div>
+                    <div className="profile-placeholder"></div>
                   )}
                 </div>
-                <div className="IDB-mentor-details ">
-                  <h3 className="Idb-mentor-name">{mentor.name}</h3>
-                  <p className="Idb-mentor-role">{mentor.role}</p>
-                  <p className="Idb-mentor-company">{mentor.company}</p>
+                <div className="mentor-details ">
+                  <h3 className="mentor-name">{mentor.name}</h3>
+                  <p className="mentor-role">{mentor.role}</p>
+                  <p className="mentor-company">{mentor.company}</p>
                 </div>
               </div>
-              <div className="mentor-IDB-button-Conatiner">
-                <button className="idb-mentor-btn-1">
-                  <img src={messageIcon} alt="Message" className="btn-icon-1" />
-                  <span className="mentor-msg-btn">Message</span>
+
+              <div className="Buttons-Conatiner">
+                <button className="message-btn">
+                  <img src={messageIcon} alt="Message" className="msg-icon" />
+                  <span className="blue-text">Message</span>
                 </button>
 
-                <button className="idb-mentor-btn-2">
+                <button className="schedule-btn">
                   <img
                     src={calendarIcon}
                     alt="Calendar"
-                    className="btn-icon-2"
+                    className="calendar-Icon"
                   />
-                  <span className="mentor-msg-btn">Schedule Meeting</span>
+                  <span className="blue-text">Schedule Meeting</span>
                 </button>
               </div>
             </div>
 
             {/* Application Status */}
             <div className="appliction-status-card">
-              <div className="AS-card-header">
-                <h2 className="AS-card-title">Application Status</h2>
+              <div className="AS-header">
+                <h2 className="AS-title">Application Status</h2>
                 <button className="view-all-btn">View all</button>
               </div>
-
-              <div className="status-tracker-container-AS ">
-                <div className="AS-status-tracking-steps">
+              <div className="tracker-container">
+                <div className="progress-steps">
                   {steps.map((step, index) => (
-                    <div className="AS-status-tracking-item" key={index}>
-                      <div className="status-indicator">
+                    <div className="progress-item" key={index}>
+                      <div className="status-icon-wrapper">
                         <img
                           src={statusIcons[step.status]}
                           alt={step.status}
                           className="idb-status-icon"
                         />
                       </div>
-                      <div className="IDB-step-content">
-                        <p className="IDB-step-label">{step.label}</p>
-                        <p className="IDB-step-date">{step.date}</p>
+                      <div className="progress-content">
+                        <p className="progress-label">{step.label}</p>
+                        <p className="progress-date">{step.date}</p>
                       </div>
                     </div>
                   ))}
@@ -583,24 +583,24 @@ export default function Interndashboard() {
               </div>
               <div className="reports-details-primary">
                 {reports.slice(0, 4).map((report) => (
-                  <div className="idb-report-container " key={report.id}>
-                    <h3 className="idb-report-title">{report.title}</h3>
-                    <p className="idb-report-date">{report.date || "-"}</p>
+                  <div className="report-container" key={report.id}>
+                    <h3 className="report-title">{report.title}</h3>
+                    <p className="report-date">{report.date || "-"}</p>
                     {renderStatusBadge(report.status)}
                     {report.status === "Pending" ? (
-                      <button className="IDB-download-btn">
+                      <button className="download-btn">
                         <img
                           src={greyDownloadIcon}
                           alt="Pending"
-                          className="IDB-download-icon"
+                          className="report-download "
                         />
                       </button>
                     ) : report.downloadable ? (
-                      <button className="IDB-download-btn">
+                      <button className="download-btn">
                         <img
                           src={DownloadArrow}
                           alt="Download Report"
-                          className="IDB-download-icon"
+                          className="report-download "
                         />
                       </button>
                     ) : (
@@ -612,16 +612,16 @@ export default function Interndashboard() {
             </section>
 
             {/* Notifications*/}
-            <div className="idb-notification-card">
-              <div className="idb-notification-header">
+            <div className="notification-card">
+              <div className="notification-header">
                 <h2>Notifications</h2>
                 <button>View all</button>
               </div>
-              <div className="idb-notification-list">
+              <div className="notification-list-wrapper">
                 {notifications.slice(0, 4).map((notification) => (
-                  <div className="notification-item-IDB" key={notification.id}>
-                    <div className="notification-content-IDB">
-                      <div className="notification-icon-IDB">
+                  <div className="notification-item" key={notification.id}>
+                    <div className="notification-leftSide-content">
+                      <div className="notification-icon-wrapper">
                         <img
                           src={notification.icon}
                           alt="notification icon"
@@ -630,7 +630,7 @@ export default function Interndashboard() {
                       </div>
                       <p>{notification.text}</p>
                     </div>
-                    <span className="IDB-notification-time">
+                    <span className="Notification-Time">
                       {notification.time}
                     </span>
                   </div>
@@ -647,8 +647,8 @@ export default function Interndashboard() {
                 </button>
               </div>
 
-              <div className="performance-content-IDB">
-                <div className="IDB-chart-section">
+              <div className="performance-container">
+                <div className="chart-wrapper">
                   <ResponsiveContainer width={131} height={133}>
                     <PieChart>
                       <Pie
@@ -668,24 +668,24 @@ export default function Interndashboard() {
                       </Pie>
                     </PieChart>
                   </ResponsiveContainer>
-                  <div className="IDB-chart-center">
-                    <span className="rating-value-IDB">
+                  <div className="display-rating-wrapper">
+                    <span className="rating-score">
                       {ratingValue.toFixed(1)}
                     </span>
-                    <span className="rating-label-IDB">Overall Rating</span>
+                    <span className="Overall-Rating">Overall Rating</span>
                   </div>
                 </div>
 
-                <div className="IDB-rating-list">
+                <div className="rating-list">
                   {IDBratings.map((item) => (
-                    <div className="IDB-rating-item" key={item.id}>
-                      <span className="IDB-rating-label">{item.label}</span>
-                      <div className="IDB-rating-value">
+                    <div className="rating-item" key={item.id}>
+                      <span className="rating-label">{item.label}</span>
+                      <div className="rating-score">
                         <span>{item.score}</span>
                         <img
                           src={GoldenStar}
-                          alt="Rating star"
-                          className="IDB-rating-star"
+                          alt="Golden Rating star"
+                          className="Golden-star"
                         />
                       </div>
                     </div>
