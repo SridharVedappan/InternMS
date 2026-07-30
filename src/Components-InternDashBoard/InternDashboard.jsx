@@ -149,15 +149,13 @@ export default function Interndashboard() {
   const renderStatus = (status) => {
     switch (status) {
       case "Submitted":
-        return (
-          <span className="status-marker status-submitted">Submitted</span>
-        );
+        return <span className="status-submitted">Submitted</span>;
 
       case "Pending":
-        return <span className="status-marker status-pending ">Pending</span>;
+        return <span className="status-pending ">Pending</span>;
 
       case "Upcoming":
-        return <span className="status-marker status-upcoming">Upcoming</span>;
+        return <span className="status-upcoming">Upcoming</span>;
 
       default:
         return null;
@@ -324,15 +322,15 @@ export default function Interndashboard() {
               />
             </div>
 
-            <div className="dashboard-text-IDB">
+            <div className="dashboard-text">
               <h3>Welcome back, Intern</h3>
               <p>Here's Whats's happening with your internship program.</p>
             </div>
           </div>
 
-          <div className="navbar-right-IDB">
-            <div className="search-box-IDB">
-              <span className="search-icon-IDB">
+          <div className="navbar-right">
+            <div className="search-box">
+              <span className="search-icon">
                 <img
                   src={IDBsearch}
                   alt="abdsearch"
@@ -341,13 +339,13 @@ export default function Interndashboard() {
               </span>
               <input type="text" placeholder="Search anything....." />
             </div>
-            <div className="notification-icon-IDB">
+            <div className="notification-icon">
               <img
                 src={IDBnotification}
                 alt="abdnotification"
                 style={{ width: "16px", height: "20px" }}
               />
-              <span className="notification-dot-IDB"></span>
+              <span className="notification-dot"></span>
             </div>
             <div className="profile-section-IDB">
               <div className="profile-icon-IDB">
@@ -370,24 +368,24 @@ export default function Interndashboard() {
 
         {/* Main Content */}
         <div className="Section-IDB">
-          <div className="header-Sectionone-IDB">
-            <div className="mainhead-IDB">
+          <div className="header-Section">
+            <div className="main-head">
               <h2>Welcome Back, Rahul!</h2>
               <img src={WavinghandIDB} alt="wavinghand" />
             </div>
             <p>Here's an overview of your Intenship Journey.</p>
           </div>
-          <div className="header2-Sectionone-IDB">
+          <div className="header2-Section">
             {/* Current Internship */}
-            <div className="card-IDB-Curr internship-card-IDB">
-              <div className="icon-IDB-Curr blue">
+            <div className="card-Curr internship-card">
+              <div className="icon-Curr blue">
                 <img src={Currentinternships} alt="" />
               </div>
-              <div className="card-Currcontent-IDB">
-                <p className="card-Currtitle-IDB">Current Internship</p>
+              <div className="card-Curr-content">
+                <p className="card-Curr-title">Current Internship</p>
                 <h3>Tech Nova Solutions</h3>
                 <span>UI/UX Design Intern</span>
-                <button className="details-Currbtn-IDB">
+                <button className="details-Curr-btn">
                   View Details{" "}
                   <img
                     src={IDBsectiononearrow}
@@ -399,61 +397,61 @@ export default function Interndashboard() {
             </div>
 
             {/* Internship Duration */}
-            <div className="Cardbox-IDB-Dur">
-              <div className="card-IDB-Dur">
-                <div className="icon-IDB-Dur green">
+            <div className="Cardbox-Dur">
+              <div className="card-Dur">
+                <div className="icon-Dur green">
                   <img
                     src={InternshipduratoinIDB}
                     alt=""
                     style={{ width: "26px", height: "26px" }}
                   />
                 </div>
-                <div className="card-Durcontent-IDB">
-                  <p className="card-Durtitle-IDB">Internship Duration</p>
+                <div className="card-Dur-content">
+                  <p className="card-Dur-title">Internship Duration</p>
                   <h2>8 Weeks</h2>
                   <span>May 10, 2026 - Jul 05, 2026</span>
                 </div>
               </div>
-              <div className="progress-bar-DurIDB">
-                <div className="progress-fill-DurIDB duration-fill-DurIDB"></div>
+              <div className="progress-bar-Dur">
+                <div className="progress-fill-Dur duration-fill-Dur"></div>
               </div>
               <small>Week 3 of 8</small>
             </div>
 
             {/* Overall Progress */}
-            <div className="Cardbox-IDB-Overall">
-              <div className="card-IDB-Overall">
-                <div className="icon-IDB-Overall purple">
+            <div className="Cardbox-Overall">
+              <div className="card-Overall-container">
+                <div className="icon-Overall purple">
                   <img
                     src={Overallprogress}
                     alt=""
                     style={{ width: "60px", height: "60px", color: "#623FCE" }}
                   />
                 </div>
-                <div className="card-Overall-IDB">
+                <div className="card-Overall">
                   <p>Overall Progress</p>
                   <h2>42%</h2>
                   <span>Keep Going! You're doing great.</span>
                 </div>
               </div>
-              <div className="progress-bar-OverallIDB">
-                <div className="progress-fill-OverallIDB duration-fill-OverallIDB"></div>
+              <div className="progress-bar-Overall">
+                <div className="progress-fill-Overall duration-fill-Overall"></div>
               </div>
             </div>
 
             {/* Reports Submitted */}
-            <div className="report-submit-card">
-              <div className="report-content">
-                <div className="img-report-wrapper orange">
+            <div className="Report-card">
+              <div className="Report-box">
+                <div className="file-container orange">
                   <img
                     src={Reportsubmitted}
                     alt=""
                     style={{ width: "20px", height: "25px" }}
                   />
                 </div>
-                <div className="card-Report-IDB">
+                <div className="card-Report">
                   <p>Reports Submitted</p>
-                  <div className="Report-data-IDB">
+                  <div className="Report-data">
                     <h2>
                       1 <span>/ 8</span>
                     </h2>
@@ -461,8 +459,8 @@ export default function Interndashboard() {
                   <span>Keep Going! You're doing great.</span>
                 </div>
               </div>
-              <div className="progress-bar-ReportIDB">
-                <div className="progress-fill-ReportIDB duration-fill-ReportIDB"></div>
+              <div className="progress-bar-Report">
+                <div className="progress-fill-Report duration-fill-Report"></div>
               </div>
             </div>
           </div>

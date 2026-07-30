@@ -108,14 +108,14 @@
   flex-shrink: 0;
 }
 
-.navbar-right-IDB {
+.navbar-right {
   display: flex;
   align-items: center;
   gap: 20px;
   margin-left: auto;
 }
 
-.dashboard-text-IDB h3 {
+.dashboard-text h3 {
   margin: 0;
   width: 162px;
   height: 17px;
@@ -125,7 +125,7 @@
   line-height: 100%;
 }
 
-.dashboard-text-IDB p {
+.dashboard-text p {
   margin: 2px 0 0;
   font-size: 10px;
   width: 352px;
@@ -135,7 +135,7 @@
   color: #003073;
 }
 
-.search-box-IDB {
+.search-box {
   width: 316.63px;
   height: 48px;
   background: #ffffff;
@@ -147,12 +147,12 @@
   margin-left: 25px;
 }
 
-.search-icon-IDB {
+.search-icon {
   color: #b4b4b4;
   margin-right: 8px;
 }
 
-.search-box-IDB input {
+.search-box input {
   border: none;
   outline: none;
   width: 100%;
@@ -160,7 +160,7 @@
   color: #ffffff;
 }
 
-.search-box-IDB input::placeholder {
+.search-box input::placeholder {
   color: #b4b4b4;
   font-size: 14px;
 }
@@ -174,8 +174,11 @@
   width: 16px;
   height: 20px;
 }
-
-.notification-dot-IDB {
+.notification-icon {
+  position: relative;
+  display: inline-block;
+}
+.notification-dot {
   position: absolute;
   top: -4px;
   right: -4px;
@@ -234,7 +237,7 @@
   object-fit: contain;
 }
 
-.header2-Sectionone-IDB {
+.header2-Section {
   display: flex;
   flex-wrap: wrap;
   gap: 18px;
@@ -243,17 +246,17 @@
   width: 100%;
 }
 
-.header2-Sectionone-IDB > * {
+.header2-Section > * {
   flex: 1 1 250px;
   min-width: 250px;
   height: 174px;
   box-sizing: border-box;
 }
 
-.card-IDB-Curr,
-.Cardbox-IDB-Dur,
-.Cardbox-IDB-Overall,
-.report-submit-card {
+.card-Curr,
+.Cardbox-Dur,
+.Cardbox-Overall,
+.Report-card {
   height: 174px;
   padding: 18px;
   background: #ffffffc6;
@@ -262,16 +265,16 @@
   box-sizing: border-box;
 }
 
-.mainhead-IDB {
+.main-head {
   display: flex;
   gap: 15px;
   align-items: center;
 }
-.header-Sectionone-IDB img {
+.header-Section img {
   width: 24px;
   height: 24px;
 }
-.header-Sectionone-IDB p {
+.header-Section p {
   width: 352px;
   height: 13px;
   color: #003073;
@@ -280,21 +283,21 @@
   line-height: 100%;
   margin-left: 30px;
 }
-.header2-Sectionone-IDB {
+.header2-Section {
   display: flex;
   gap: 18px;
   margin-top: 20px;
   flex-wrap: wrap;
   align-items: flex-start;
 }
-.card-IDB-Curr {
+.card-Curr {
   height: 174px;
   padding: 18px;
   display: flex;
   gap: 15px;
   align-items: flex-start;
 }
-.icon-IDB-Curr {
+.icon-Curr {
   width: 62px;
   height: 62px;
   border-radius: 50%;
@@ -306,7 +309,7 @@
   margin-left: 5px;
 }
 
-.icon-IDB-Curr img {
+.icon-Curr img {
   width: 26.25px;
   height: 26.25px;
 }
@@ -327,12 +330,12 @@
   background: #feefe4;
 }
 
-.card-Currcontent-IDB {
+.card-Curr-content {
   width: 100%;
   margin-top: 20px;
 }
 
-.card-Currtitle-IDB {
+.card-Curr-title {
   font-size: 11px;
   color: #34416d;
   font-weight: 500;
@@ -340,7 +343,7 @@
   margin-top: 0px;
 }
 
-.card-Currcontent-IDB h3 {
+.card-Curr-content h3 {
   width: 139px;
   height: 17px;
   margin: 9px 0;
@@ -350,7 +353,7 @@
   color: #000000;
 }
 
-.card-Currcontent-IDB span {
+.card-Curr-content span {
   display: block;
   font-size: 11px;
   font-weight: 500;
@@ -359,7 +362,7 @@
   margin-top: 3px;
 }
 
-.details-Currbtn-IDB {
+.details-Curr-btn {
   margin-top: 23px;
   width: 112px;
   height: 36px;
@@ -375,16 +378,16 @@
 }
 
 /* Internship-Duration */
-.Cardbox-IDB-Dur {
+.Cardbox-Dur {
   height: 174px;
   padding: 18px;
 }
-.card-IDB-Dur {
+.card-Dur {
   display: flex;
   gap: 15px;
   box-sizing: border-box;
 }
-.icon-IDB-Dur {
+.icon-Dur {
   width: 62px;
   height: 62px;
   border-radius: 50%;
@@ -395,7 +398,7 @@
   margin-top: 20px;
 }
 
-.card-Durtitle-IDB {
+.card-Dur-title {
   font-size: 10px;
   color: #000000;
   font-weight: 500;
@@ -403,7 +406,7 @@
   margin-top: 20px;
   margin-left: 5px;
 }
-.card-Durcontent-IDB h2 {
+.card-Dur-content h2 {
   margin: 9px 0;
   width: 71px;
   height: 21px;
@@ -413,7 +416,7 @@
   font-weight: 700;
   margin-left: 5px;
 }
-.card-Durcontent-IDB span {
+.card-Dur-content span {
   display: block;
   font-size: 10px;
   font-weight: 500;
@@ -422,7 +425,7 @@
   margin-top: 3px;
   margin-left: 5px;
 }
-.progress-bar-DurIDB {
+.progress-bar-Dur {
   width: 228px;
   height: 7px;
   background: #f2f6fb;
@@ -432,17 +435,17 @@
   display: block;
 }
 
-.progress-fill-DurIDB {
+.progress-fill-Dur {
   height: 100%;
   display: block;
   border-radius: 10px;
 }
-.duration-fill-DurIDB {
+.duration-fill-Dur {
   width: 98px;
   background: #0e66f3;
 }
 
-.Cardbox-IDB-Dur small {
+.Cardbox-Dur small {
   font-size: 10px;
   color: #6c7595;
   line-height: 100%;
@@ -453,16 +456,16 @@
 
 /* Overall Progress */
 
-.Cardbox-IDB-Overall {
+.Cardbox-Overall {
   height: 174px;
   padding: 18px;
 }
-.card-IDB-Overall {
+.card-Overall-container {
   display: flex;
   gap: 15px;
   box-sizing: border-box;
 }
-.icon-IDB-Overall {
+.icon-Overall {
   width: 61px;
   height: 61px;
   border-radius: 50%;
@@ -473,7 +476,7 @@
   margin-top: 20px;
 }
 
-.card-Overall-IDB p {
+.card-Overall p {
   font-size: 10px;
   color: #5f6790;
   font-weight: 500;
@@ -481,7 +484,7 @@
   margin-top: 20px;
   margin-left: 5px;
 }
-.card-Overall-IDB h2 {
+.card-Overall h2 {
   margin: 9px 0;
   width: 71px;
   height: 21px;
@@ -491,7 +494,7 @@
   font-weight: 600;
   margin-left: 5px;
 }
-.card-Overall-IDB span {
+.card-Overall span {
   display: block;
   font-size: 10px;
   font-weight: 500;
@@ -500,7 +503,7 @@
   margin-top: 3px;
   margin-left: 5px;
 }
-.progress-bar-OverallIDB {
+.progress-bar-Overall {
   width: 225px;
   height: 7px;
   background: #f2f6fb;
@@ -510,27 +513,27 @@
   display: block;
 }
 
-.progress-fill-OverallIDB {
+.progress-fill-Overall {
   height: 100%;
   display: block;
   border-radius: 20px;
 }
-.duration-fill-OverallIDB {
+.duration-fill-Overall {
   width: 98px;
   background: #6e4ee4;
 }
 /* Reorts Submitted */
 
-.report-submit-card {
+.Report-card {
   height: 174px;
   padding: 18px;
 }
-.report-content {
+.Report-box {
   display: flex;
   gap: 15px;
   box-sizing: border-box;
 }
-.img-report-wrapper {
+.file-container {
   width: 61px;
   height: 61px;
   border-radius: 50%;
@@ -541,7 +544,7 @@
   margin-top: 20px;
 }
 
-.card-Report-IDB p {
+.card-Report p {
   font-size: 10px;
   color: #6b7893;
   font-weight: 500;
@@ -549,28 +552,28 @@
   margin-top: 20px;
   margin-left: 5px;
 }
-.Report-data-IDB {
+.Report-data {
   display: flex;
   margin: 9px 0;
   width: 71px;
   height: 21px;
   margin-left: 5px;
 }
-.Report-data-IDB h2 {
+.Report-data h2 {
   display: flex;
   font-size: 20px;
   font-weight: 700;
   font-style: bold;
   color: #000000;
 }
-.Report-data-IDB h2 span {
+.Report-data h2 span {
   font-size: 14px;
   margin-top: 6px;
   color: #000000;
   font-style: bold;
   font-weight: 700;
 }
-.card-Report-IDB span {
+.card-Report span {
   display: block;
   font-size: 10px;
   font-weight: 500;
@@ -579,7 +582,7 @@
   margin-top: 3px;
   margin-left: 5px;
 }
-.progress-bar-ReportIDB {
+.progress-bar-Report {
   width: 211px;
   height: 7px;
   background: #f2f6fb;
@@ -589,12 +592,12 @@
   display: block;
 }
 
-.progress-fill-ReportIDB {
+.progress-fill-Report {
   height: 100%;
   display: block;
   border-radius: 20px;
 }
-.duration-fill-ReportIDB {
+.duration-fill-Report {
   width: 30px;
   background: #fda048;
 }
@@ -1129,7 +1132,9 @@
   opacity: 0.8;
 }
 
-.status-marker {
+.status-submitted {
+  background-color: #e6f8f0;
+  color: #37a56d;
   width: 67px;
   height: 24px;
   border-radius: 5px;
@@ -1143,19 +1148,36 @@
   letter-spacing: 0;
 }
 
-.status-submitted {
-  background-color: #e6f8f0;
-  color: #37a56d;
-}
-
 .status-pending {
   background-color: #e3effd;
   color: #226bf1;
+  width: 67px;
+  height: 24px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0;
 }
 
 .status-upcoming {
   background-color: #f4f7fb;
   color: #384b72;
+  width: 67px;
+  height: 24px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-size: 8px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 0;
 }
 
 .report-download {
