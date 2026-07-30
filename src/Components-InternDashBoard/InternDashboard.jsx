@@ -146,22 +146,18 @@ export default function Interndashboard() {
 
   const getTaskIcon = (status) => taskIcons[status] || notStartedIcon;
 
-  const renderStatusBadge = (status) => {
+  const renderStatus = (status) => {
     switch (status) {
       case "Submitted":
         return (
-          <span className="IDB-status-bg IDB-status-submitted">Submitted</span>
+          <span className="status-marker status-submitted">Submitted</span>
         );
 
       case "Pending":
-        return (
-          <span className="IDB-status-bg IDB-status-pending ">Pending</span>
-        );
+        return <span className="status-marker status-pending ">Pending</span>;
 
       case "Upcoming":
-        return (
-          <span className="IDB-status-bg IDB-status-upcoming">Upcoming</span>
-        );
+        return <span className="status-marker status-upcoming">Upcoming</span>;
 
       default:
         return null;
@@ -446,9 +442,9 @@ export default function Interndashboard() {
             </div>
 
             {/* Reports Submitted */}
-            <div className="Cardbox-IDB-Report">
-              <div className="card-IDB-Report">
-                <div className="icon-IDB-Report orange">
+            <div className="report-submit-card">
+              <div className="report-content">
+                <div className="img-report-wrapper orange">
                   <img
                     src={Reportsubmitted}
                     alt=""
@@ -478,15 +474,22 @@ export default function Interndashboard() {
                 <h2 className="task-tittle">Task & Deliverables</h2>
                 <button className="view-all-btn">View all</button>
               </div>
+
               <div className="task-list">
                 {tasksData.slice(0, 4).map((task) => (
                   <div key={task.id} className="task-item">
                     <div className="leftside-task-container">
-                      <div className="icon-holder">
+                      <div
+                        className={`icon-holder ${task.status
+                          .trim()
+                          .replace(/\s+/g, "-")
+                          .toLowerCase()}`}
+                      >
                         <img
                           src={getTaskIcon(task.status)}
                           alt={task.status}
                           className={`tasks-icon ${task.status
+                            .trim()
                             .replace(/\s+/g, "-")
                             .toLowerCase()}`}
                         />
@@ -497,6 +500,7 @@ export default function Interndashboard() {
                     <div className="task-right">
                       <span
                         className={`task-status ${task.status
+                          .trim()
                           .replace(/\s+/g, "-")
                           .toLowerCase()}`}
                       >
@@ -586,7 +590,7 @@ export default function Interndashboard() {
                   <div className="report-container" key={report.id}>
                     <h3 className="report-title">{report.title}</h3>
                     <p className="report-date">{report.date || "-"}</p>
-                    {renderStatusBadge(report.status)}
+                    {renderStatus(report.status)}
                     {report.status === "Pending" ? (
                       <button className="download-btn">
                         <img
@@ -697,23 +701,23 @@ export default function Interndashboard() {
         </div>
 
         {/* Certificate Section */}
-        <div className="Content-Cer-IDB">
-          <div className="Certi-IDB">
+        <div className="certificate-card">
+          <div className="certificate-header">
             <img
               src={CerificateLast}
-              alt=""
+              alt="Certificate"
               style={{ width: "40px", height: "40px" }}
             />
             <h2>Certificates</h2>
           </div>
-          <div className="Fund-IDB">
+          <div className="certificate-details">
             <h3>UI/UX Design Fundamentals</h3>
             <p>Issued on May 20,2025</p>
           </div>
-          <div className="Down-IDB">
+          <div className="Download-certificate">
             <img
               src={DownloadIDB}
-              alt=""
+              alt="Download certificate"
               style={{ width: "13.33px", height: "13.33px" }}
             />
             <h3>View Certificate</h3>

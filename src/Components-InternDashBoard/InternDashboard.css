@@ -169,7 +169,6 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  margin-left: 25px;
 }
 .notification-icon-wrapper img {
   width: 16px;
@@ -254,7 +253,7 @@
 .card-IDB-Curr,
 .Cardbox-IDB-Dur,
 .Cardbox-IDB-Overall,
-.Cardbox-IDB-Report {
+.report-submit-card {
   height: 174px;
   padding: 18px;
   background: #ffffffc6;
@@ -522,16 +521,16 @@
 }
 /* Reorts Submitted */
 
-.Cardbox-IDB-Report {
+.report-submit-card {
   height: 174px;
   padding: 18px;
 }
-.card-IDB-Report {
+.report-content {
   display: flex;
   gap: 15px;
   box-sizing: border-box;
 }
-.icon-IDB-Report {
+.img-report-wrapper {
   width: 61px;
   height: 61px;
   border-radius: 50%;
@@ -689,7 +688,6 @@
 .icon-holder {
   width: 32px;
   height: 32px;
-  background: #e9f9f1;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -761,6 +759,21 @@
   line-height: 100%;
 }
 
+.icon-holder.completed {
+  background: #e6f8f0;
+}
+
+.icon-holder.in-progress {
+  background: #e3effd;
+}
+
+.icon-holder.pending {
+  background: #fff3db;
+}
+
+.icon-holder.not-started {
+  background: #f0f3f9;
+}
 .task-status.completed {
   background: #e6f8f0;
   border: none;
@@ -784,7 +797,6 @@
   border: none;
   color: #637194;
 }
-
 .Mentor-card {
   width: 318px;
   height: 268px;
@@ -1117,7 +1129,7 @@
   opacity: 0.8;
 }
 
-.IDB-status-bg {
+.status-marker {
   width: 67px;
   height: 24px;
   border-radius: 5px;
@@ -1131,17 +1143,17 @@
   letter-spacing: 0;
 }
 
-.IDB-status-submitted {
+.status-submitted {
   background-color: #e6f8f0;
   color: #37a56d;
 }
 
-.IDB-status-pending {
+.status-pending {
   background-color: #e3effd;
   color: #226bf1;
 }
 
-.IDB-status-upcoming {
+.status-upcoming {
   background-color: #f4f7fb;
   color: #384b72;
 }
@@ -1448,7 +1460,7 @@
   height: 260px;
 }
 
-.Content-Cer-IDB {
+.certificate-card {
   margin-top: 0px;
   margin-left: 20px;
   margin-right: 20px;
@@ -1462,12 +1474,12 @@
   box-sizing: border-box;
 }
 
-.Certi-IDB {
+.certificate-header {
   display: flex;
   align-items: center;
   margin-left: 28px;
 }
-.Certi-IDB h2 {
+.certificate-header h2 {
   color: #000000;
   width: 83px;
   height: 17px;
@@ -1476,7 +1488,7 @@
   line-height: 100%;
   margin-left: 16px;
 }
-.Fund-IDB h3 {
+.certificate-details h3 {
   margin-left: 20px;
   width: 149px;
   height: 13px;
@@ -1485,12 +1497,12 @@
   font-weight: 600;
   line-height: 100%;
 }
-.Fund-IDB p {
+.certificate-details p {
   font-size: 11px;
   font-weight: 400;
   margin-left: 20px;
 }
-.Down-IDB {
+.Download-certificate {
   border: 1px solid #7373734d;
   width: 153px;
   height: 36px;
@@ -1504,7 +1516,7 @@
   align-items: center;
   cursor: pointer;
 }
-.Down-IDB h3 {
+.Download-certificate h3 {
   color: #2675fa;
   font-size: 11px;
   font-weight: 600;

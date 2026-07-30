@@ -1,6 +1,6 @@
 import React from "react";
-import "./LandingPage.css";
 import { Link } from "react-router-dom";
+import "./LandingPage.css";
 import Icon from "../assets/icons/Icon.png";
 import Line from "../assets/line.png";
 import Right from "../assets/icons/right-arrow.png";
