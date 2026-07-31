@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "../Components-InternDashBoard/Interndashboard.css";
 import IDBmore from "../assets/icons/ADBmore.png";
 import IDBsearch from "../assets/icons/ADBsearch.png";
