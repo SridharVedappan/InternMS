@@ -704,6 +704,7 @@
   line-height: 100%;
   color: #1262e4;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .task-list {
@@ -1412,6 +1413,7 @@
   letter-spacing: 0%;
   color: #1262e4;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .performance-container {

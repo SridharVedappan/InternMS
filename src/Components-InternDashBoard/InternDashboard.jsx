@@ -325,7 +325,7 @@ export const InternDashboard = () => {
           <div className="sidebar-item-IDB">
             <img
               src={Performanceidb}
-              alt=""
+              alt="Performanceidb"
               style={{ width: "24px", height: "24px" }}
             />
             {!Show && <span>Performance Metrics</span>}
@@ -498,7 +498,9 @@ export const InternDashboard = () => {
             <div className="task-card">
               <div className="task-header ">
                 <h2 className="task-tittle">Task & Deliverables</h2>
-                <button className="view-all-btn">View all</button>
+                <Link to="/task-deliverables" className="view-all-btn">
+                  View all
+                </Link>
               </div>
 
               <div className="task-list">
@@ -542,9 +544,9 @@ export const InternDashboard = () => {
             <div className="Mentor-card">
               <div className="mentor-header">
                 <h2>Assigned Mentor</h2>
-                <button type="button" className="view-profile">
+                <Link to="/assigned-mentor" className="view-profile">
                   View Profile
-                </button>
+                </Link>
               </div>
               <div className="mentor-profile ">
                 <div>
@@ -582,8 +584,9 @@ export const InternDashboard = () => {
             <div className="appliction-status-card">
               <div className="AS-header">
                 <h2 className="AS-title">Application Status</h2>
-
-                <button className="view-all-btn">View all</button>
+                <Link to="/applications" className="view-all-btn">
+                  View all
+                </Link>
               </div>
 
               <div className="tracker-container">
@@ -613,7 +616,9 @@ export const InternDashboard = () => {
             <section className="weekly-reports-card">
               <div className="weekly-reports-header">
                 <h2>Weekly Reports</h2>
-                <button className="view-all-btn">View All</button>
+                <Link to="/weekly-reports" className="view-all-btn">
+                  View All
+                </Link>
               </div>
               <div className="reports-details-primary">
                 {reports.slice(0, 4).map((report) => (
@@ -649,7 +654,9 @@ export const InternDashboard = () => {
             <div className="notification-card">
               <div className="notification-header">
                 <h2>Notifications</h2>
-                <button>View all</button>
+                <Link to="/notifications" className="view-all-btn">
+                  View all
+                </Link>
               </div>
               <div className="notification-list-wrapper">
                 {notifications.slice(0, 4).map((notification) => (
@@ -676,9 +683,12 @@ export const InternDashboard = () => {
             <div className="performance-dashboard">
               <div className="performance-header">
                 <h3>Notifications</h3>
-                <button type="button" className="view-details-btn">
+                <Link
+                  to="/overall-rating-dashboard "
+                  className="view-details-btn"
+                >
                   View details
-                </button>
+                </Link>
               </div>
 
               <div className="performance-container">
