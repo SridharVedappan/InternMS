@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "../Components-InternDashBoard/Interndashboard.css";
+import "../Components-InternDashBoard/InternDashboard.css";
 import IDBmore from "../assets/icons/ADBmore.png";
 import IDBsearch from "../assets/icons/ADBsearch.png";
 import IDBnotification from "../assets/icons/ADBnotification.png";
@@ -42,7 +42,8 @@ import CerificateLast from "../assets/icons/tabler_certificate.png";
 import DownloadIDB from "../assets/icons/DownloadIDB.png";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 
-export const Interndashboard = () => {
+export const InternDashboard = () => {
+  const [Show, setShow] = useState(false);
   const tasksData = [
     {
       id: 1,
@@ -78,7 +79,7 @@ export const Interndashboard = () => {
     avatarUrl: "",
   };
 
-  // Application Status - Mock Data
+  //Application Status {Mock data}
   const steps = [
     {
       label: "Application Submitted",
@@ -232,94 +233,102 @@ export const Interndashboard = () => {
   ];
 
   return (
-    <div className="Content-IDB">
-      <div className="Sidebar-Content">
-        <div className="Sidebar-head1">
+    <div className={`Content-IDB ${Show ? "Show" : ""}`}>
+      <div className={`Sidebar-Content-IDB ${Show ? "Show" : ""}`}>
+        <div className="Sidebar-IDB-head1">
           <h2>InternMS</h2>
-          <p>Intenship Management system</p>
+          <p>Internship Management System</p>
         </div>
 
-        {/* sidenav */}
-        <div className="Sidebar-head2">
-          <img src={HomeIDB} alt="Homeadmin" />
-          <h4>Dashboard</h4>
-        </div>
-        <div className="sidebar-Header">
-          <div className="sidebar-header">
+        <div className="sidebar-menu-IDB">
+          <div className="sidebar-item-IDB active-IDB">
+            <img
+              src={HomeIDB}
+              alt="homeidb"
+              style={{ width: "20px", height: "17px" }}
+            />
+            {!Show && <span>Dashboard</span>}
+          </div>
+
+          <div className="sidebar-item-IDB">
             <img
               src={Myinternship}
-              alt="internshipimage"
-              style={{ width: "21px", height: "21px", marginLeft: "20px" }}
+              alt="myinternship"
+              style={{ width: "21px", height: "21px" }}
             />
-            <span>My Internships</span>
+            {!Show && <span>My Internships</span>}
           </div>
-          <div className="sidebar-header">
+
+          <div className="sidebar-item-IDB">
             <img
               src={Applicationstatus}
-              alt="Applicationstatus"
-              style={{ width: "16.9px", height: "21.54px", marginLeft: "20px" }}
+              alt="applicationstatus"
+              style={{ width: "16.9px", height: "21.54px" }}
             />
-            <span>Application Status</span>
+            {!Show && <span>Applications Status</span>}
           </div>
-          <div className="sidebar-header">
+
+          <div className="sidebar-item-IDB">
             <img
               src={Assignedmentor}
-              alt="Assignedmentor"
-              style={{ width: "18px", height: "18px", marginLeft: "20px" }}
+              alt="assignedmentor"
+              style={{ width: "18px", height: "18px" }}
             />
-            <span>Assigned Mentor</span>
+            {!Show && <span>Assigned Mentor</span>}
           </div>
-          <div className="sidebar-header">
+
+          <div className="sidebar-item-IDB">
             <img
               src={Progresstracking}
-              alt="Progresstracking"
-              style={{ width: "24px", height: "24px", marginLeft: "15px" }}
+              alt="progresstracking"
+              style={{ width: "18px", height: "20px" }}
             />
-            <span>Progress Tracking</span>
+            {!Show && <span>Progress Tracking</span>}
           </div>
-          <div className="sidebar-header">
+
+          <div className="sidebar-item-IDB">
             <img
               src={Weeklyreports}
-              alt="Weeklyreports"
-              style={{
-                width: "17.52px",
-                height: "21.60px",
-                marginLeft: "20px",
-              }}
+              alt="weeklyreports"
+              style={{ width: "17.52px", height: "21.6px" }}
             />
-            <span>Weekly Reports</span>
+            {!Show && <span>Weekly Reports</span>}
           </div>
-          <div className="sidebar-header">
+
+          <div className="sidebar-item-IDB">
             <img
               src={TasksIDB}
-              alt="TaskIDB"
-              style={{ width: "24px", height: "24px", marginLeft: "15px" }}
+              alt="tasksidb"
+              style={{ width: "18px", height: "20px" }}
             />
-            <span>Tasks & Deliverables</span>
+            {!Show && <span>Tasks & Deliverables</span>}
           </div>
-          <div className="sidebar-header">
+
+          <div className="sidebar-item-IDB">
             <img
               src={Notificationsidb}
-              alt="Notification"
-              style={{ width: "16px", height: "20px", marginLeft: "20px" }}
+              alt="notificationidb"
+              style={{ width: "16px", height: "20px" }}
             />
-            <span>Notifications</span>
+            {!Show && <span>Notifications</span>}
           </div>
-          <div className="sidebar-header">
+
+          <div className="sidebar-item-IDB">
             <img
               src={Certificateidb}
-              alt="Certificate"
-              style={{ width: "24px", height: "24px", marginLeft: "15px" }}
+              alt="certificateidb"
+              style={{ width: "18px", height: "17px" }}
             />
-            <span>Certificates</span>
+            {!Show && <span>Certificates</span>}
           </div>
-          <div className="sidebar-header">
+
+          <div className="sidebar-item-IDB">
             <img
               src={Performanceidb}
-              alt="Performance"
-              style={{ width: "24px", height: "24px", marginLeft: "15px" }}
+              alt=""
+              style={{ width: "24px", height: "24px" }}
             />
-            <span>Performance Metrics</span>
+            {!Show && <span>Performance Metrics</span>}
           </div>
         </div>
       </div>
@@ -328,7 +337,7 @@ export const Interndashboard = () => {
         {/* Navbar */}
         <div className="Content-nav">
           <div className="navbar-left">
-            <div className="menu-icon">
+            <div className="menu-icon" onClick={() => setShow(!Show)}>
               <img
                 src={IDBmore}
                 alt="abdmore"

@@ -12,7 +12,7 @@ import { ForgotPasswordOTP } from "./Components-LoginPage/ForgotPasswordOTP";
 import { ResetPassword } from "./Components-LoginPage/ResetPassword";
 import { PasswordResetSuccess } from "./Components-LoginPage/PasswordResetSuccess";
 import { AdminRegistration } from "./Components-Registration/AdminRegistration.jsx";
-import { Interndashboard } from "./Components-InternDashBoard/Interndashboard.jsx";
+import { InternDashboard } from "./Components-InternDashBoard/InternDashboard.jsx";
 
 import "./App.css";
 
@@ -72,7 +72,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/intern-dashboard",
-    element: <Interndashboard />,
+    element: <InternDashboard />,
   },
 ]);
 
