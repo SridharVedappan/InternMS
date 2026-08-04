@@ -78,7 +78,7 @@ export const Interndashboard = () => {
     avatarUrl: "",
   };
 
-  //Application Status {Mock data}
+  // Application Status - Mock Data
   const steps = [
     {
       label: "Application Submitted",
@@ -106,6 +106,22 @@ export const Interndashboard = () => {
       status: "upcoming",
     },
   ];
+
+  // used for application status workflow order
+  const workflowOrder = [
+    "Application Submitted",
+    "Application Reviewed",
+    "Shortlisted",
+    "Offer Accepted",
+    "Onboarding",
+  ];
+
+  // Keep steps in the correct workflow order
+  const orderedSteps = [...steps]
+    .sort(
+      (a, b) => workflowOrder.indexOf(a.label) - workflowOrder.indexOf(b.label),
+    )
+    .slice(0, 5);
 
   const reports = [
     {
@@ -222,6 +238,8 @@ export const Interndashboard = () => {
           <h2>InternMS</h2>
           <p>Intenship Management system</p>
         </div>
+
+        {/* sidenav */}
         <div className="Sidebar-head2">
           <img src={HomeIDB} alt="Homeadmin" />
           <h4>Dashboard</h4>
@@ -555,12 +573,14 @@ export const Interndashboard = () => {
             <div className="appliction-status-card">
               <div className="AS-header">
                 <h2 className="AS-title">Application Status</h2>
+
                 <button className="view-all-btn">View all</button>
               </div>
+
               <div className="tracker-container">
                 <div className="progress-steps">
-                  {steps.map((step, index) => (
-                    <div className="progress-item" key={index}>
+                  {orderedSteps.map((step, index) => (
+                    <div className={`progress-item ${step.status}`} key={index}>
                       <div className="status-icon-wrapper">
                         <img
                           src={statusIcons[step.status]}
@@ -568,8 +588,10 @@ export const Interndashboard = () => {
                           className="idb-status-icon"
                         />
                       </div>
+
                       <div className="progress-content">
                         <p className="progress-label">{step.label}</p>
+
                         <p className="progress-date">{step.date}</p>
                       </div>
                     </div>
