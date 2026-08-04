@@ -117,8 +117,13 @@ export const InternDashboard = () => {
     "Onboarding",
   ];
 
+  // Keep only one step for each label
+  const uniqueSteps = Array.from(
+    new Map(steps.map((step) => [step.label, step])).values(),
+  );
+
   // Keep steps in the correct workflow order
-  const orderedSteps = [...steps]
+  const orderedSteps = [...uniqueSteps]
     .sort(
       (a, b) => workflowOrder.indexOf(a.label) - workflowOrder.indexOf(b.label),
     )
