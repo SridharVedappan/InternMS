@@ -1,6 +1,7 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LandingPage } from "./Components-LandingPage/LandingPage.jsx";
 import { InternLogin } from "./Components-LoginPage/InternLogin.jsx";
+import { CompanyLogin } from "./Components-LoginPage/CompanyLogin.jsx";
 import { HrRegistration } from "./Components-Registration/HrRegistration";
 import { MentorRegistration } from "./Components-Registration/MentorRegistration";
 import { InternRegistration } from "./Components-Registration/InternRegistration";
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/intern-login",
     element: <InternLogin />,
+  },
+  {
+    path: "/company-login",
+    element: <CompanyLogin />,
   },
   {
     path: "/hr-registration",

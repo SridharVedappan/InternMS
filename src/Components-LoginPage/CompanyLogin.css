@@ -1,0 +1,428 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+.company-login-page {
+  width: 1280px;
+  height: 1039px;
+
+  display: flex;
+}
+
+/* LEFT SIDE */
+
+.company-login-left {
+  width: 640px;
+  height: 1039px;
+  background-color: #2212bb;
+  background-image:
+    linear-gradient(
+      135deg,
+      rgba(34, 18, 187, 0.6) 0%,
+      rgba(22, 3, 190, 0.69) 100%
+    ),
+    url("../assets/HRandCompanyimageBackground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  padding: 63px 64px 64px 64px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+}
+
+.company-login-portal-title {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 31.2px;
+  letter-spacing: -0.6px;
+  color: rgba(255, 255, 255, 1);
+  vertical-align: middle;
+}
+
+.company-login-main-heading {
+  width: 448px;
+  height: 240px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -1.2px;
+  color: #ffffff;
+}
+
+.company-login-description {
+  width: 448px;
+  height: 87px;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 28.8px;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+  margin: 0;
+}
+.company-login-stats {
+  margin-top: 27px;
+  padding-top: 47px;
+  display: flex;
+  gap: 24px;
+  padding-top: 47px;
+  padding-bottom: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  opacity: 1;
+}
+
+.company-login-stat {
+  width: 244px;
+}
+
+.company-login-stat h3 {
+  width: 244px;
+  height: 32px;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 31.2px;
+  letter-spacing: 0;
+
+  color: rgba(255, 255, 255, 1);
+}
+
+.company-login-stat p {
+  width: 244px;
+  height: 17px;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16.8px;
+  letter-spacing: 1.2px;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+}
+
+.company-login-copyright {
+  width: 512px;
+  height: 17px;
+  opacity: 1;
+  margin-top: 79px;
+}
+
+.company-login-copyright p {
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 16.8px;
+  letter-spacing: 0;
+
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.company-login-left-content {
+  display: flex;
+  flex-direction: column;
+  gap: 156px;
+}
+
+.company-login-text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 22.77px;
+}
+.eye-icon-HRandCompany {
+  position: absolute;
+  right: 21px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 25px;
+  height: 16px;
+
+  cursor: pointer;
+  object-fit: contain;
+  z-index: 2;
+}
+
+.Right-panel-HRandCompany {
+  width: 640px;
+  height: 1039pxpx;
+  flex: 1;
+  display: flex;
+  background: #ffffff;
+}
+.right-content-HRandCompany {
+  border: 1px solid none;
+  width: 440px;
+  height: 878.21px;
+  margin-left: 96px;
+  margin-top: 80px;
+  box-sizing: border-box;
+}
+.login-box-HRandCompany {
+  width: 100%;
+  max-width: 430px;
+}
+.head-HRandCompany {
+  border: 1px solid none;
+  width: 440px;
+  height: 77px;
+  display: grid;
+  gap: 12px;
+  margin-bottom: 73px;
+}
+.head-HRandCompany h1 {
+  width: 440px;
+  height: 39px;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 38.4px;
+  letter-spacing: -0.32px;
+  color: #191c1e;
+  margin: 0;
+  opacity: 1;
+}
+.head-HRandCompany p {
+  width: 440px;
+  height: 26px;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 25.6px;
+  letter-spacing: 0;
+  color: #464555;
+  margin: 0;
+  opacity: 1;
+}
+
+.Form-HRandCompany {
+  border: 1px solid none;
+  width: 440px;
+  height: 309.6px;
+  box-sizing: border-box;
+}
+
+label {
+  display: block;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 19.6px;
+  color: #191c1e;
+}
+
+.input-box-HRandCompany {
+  width: 448px;
+  height: 46px;
+
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+  border: 1px solid #c7c4d7;
+  border-radius: 8px;
+
+  box-sizing: border-box;
+  position: relative;
+
+  padding: 0 16px;
+
+  transition: 0.3s;
+}
+.input-box-HRandCompany:focus-within {
+  border-color: #4f46e5;
+}
+
+.input-box-HRandCompany svg {
+  color: #777;
+  font-size: 18px;
+}
+
+.input-box-HRandCompany input {
+  flex: 1;
+  width: 100px;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding-left: 12px;
+  background: transparent;
+}
+
+.eye-icon-HRandCompany {
+  cursor: pointer;
+}
+.eye-icon-HRandCompany {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.label-row-HRandCompany {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remember-HRandCompany {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.remember-HRandCompany input {
+  border-color: #c7c4d8;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+}
+
+.signin-HRandCompany {
+  width: 100%;
+  height: 56px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2212bb;
+  color: #ffffff;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31.2px;
+  letter-spacing: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 12.01px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.signin-HRandCompany:hover {
+  background: #3525cd;
+}
+
+.divider-HRandCompany {
+  display: flex;
+  align-items: center;
+  margin: 73px 0;
+  color: #c7c4d7;
+  font-size: 12px;
+}
+
+.divider-HRandCompany::before,
+.divider-HRandCompany::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.divider-HRandCompany span {
+  padding: 0 15px;
+}
+
+.google-HRandCompany {
+  width: 440px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #c7c4d7;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  color: #191c1e;
+  transition: 0.3s;
+}
+
+.signup-HRandCompany {
+  text-align: center;
+  color: #464555;
+  margin: 72px 0 15px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.company-login-forgot-password {
+  color: #2212bb;
+  text-decoration: none;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.company-login-keep-signed-in {
+  width: 122.03px;
+  height: 20px;
+
+  position: relative;
+
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 19.6px;
+  letter-spacing: 0;
+
+  color: #464555;
+
+  margin: 0;
+  opacity: 1;
+}
+
+.signup-HRandCompany a {
+  color: #2212bb;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-links-HRandCompany {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #c7c4d7;
+  margin-top: 40px;
+}
+
+.footer-links-HRandCompany a {
+  color: #464555;
+  text-decoration: none;
+}
+
+.footer-links-HRandCompany a:hover {
+  color: #4f46e5;
+}
+.Gicon-HRandCompany {
+  width: 20px;
+  height: 20px;
+}
+.eye-icon-HRandCompany {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
