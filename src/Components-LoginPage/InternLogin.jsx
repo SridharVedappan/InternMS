@@ -7,9 +7,9 @@ import { Link, useNavigate } from "react-router-dom";
 import ThinLine from "../assets/icons/horizontal-divider.png";
 import GoogleBtn from "../assets/icons/google.png";
 import Arrow2 from "../assets/icons/right-arrow.png";
-import "../Components-LoginPage/Login.css";
+import "../Components-LoginPage/InternLogin.css";
 
-export const Login = () => {
+export const InternLogin = () => {
   const [formData, setFormData] = useState({
     email: "",
     password: "",

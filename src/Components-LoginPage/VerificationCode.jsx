@@ -20,7 +20,7 @@ export const VerificationCode = () => {
 
   useEffect(() => {
     if (!location.state) {
-      navigate("/login");
+      navigate("/intern-login");
     }
   }, [location.state, navigate]);
 
@@ -141,7 +141,11 @@ export const VerificationCode = () => {
             </div>
             {otpError && <p className="otp-error-code">{otpError}</p>}
 
-            <button type="submit" className="verify-identity">
+            <button
+              type="button"
+              className="verify-identity"
+              onClick={() => navigate("/intern-dashboard")}
+            >
               Verify Identity
               <img
                 src={RightArrowForButton}

@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LandingPage } from "./Components-LandingPage/LandingPage.jsx";
-import { Login } from "./Components-LoginPage/Login";
+import { InternLogin } from "./Components-LoginPage/InternLogin.jsx";
 import { HrRegistration } from "./Components-Registration/HrRegistration";
 import { MentorRegistration } from "./Components-Registration/MentorRegistration";
 import { InternRegistration } from "./Components-Registration/InternRegistration";
@@ -22,8 +22,8 @@ const router = createBrowserRouter([
     element: <LandingPage />,
   },
   {
-    path: "/login",
-    element: <Login />,
+    path: "/intern-login",
+    element: <InternLogin />,
   },
   {
     path: "/hr-registration",

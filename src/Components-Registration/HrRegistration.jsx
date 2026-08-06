@@ -663,7 +663,7 @@ export const HrRegistration = () => {
               <div className="signin-container">
                 <p className="signin-text">
                   Already have an account?{" "}
-                  <Link to="/login" className="signin-link-hr">
+                  <Link to="/" className="signin-link-hr">
                     Sign in
                   </Link>
                 </p>

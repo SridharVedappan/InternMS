@@ -771,7 +771,7 @@ export const CompanyRegistration = () => {
               <div className="signin-container">
                 <p className="signin-text">
                   Already have an account?{" "}
-                  <Link to="/login" className="signin-link-company">
+                  <Link to="/" className="signin-link-company">
                     Sign in
                   </Link>
                 </p>
