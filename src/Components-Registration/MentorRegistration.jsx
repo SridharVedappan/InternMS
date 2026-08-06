@@ -779,7 +779,7 @@ export const MentorRegistration = () => {
               <div className="signin-container">
                 <p className="signin-text">
                   Already have an account?{" "}
-                  <Link to="/" className="signin-link-mentor">
+                  <Link to="/intern-login" className="signin-link-mentor">
                     Sign in
                   </Link>
                 </p>

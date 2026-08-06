@@ -21,7 +21,7 @@ export const ForgotPasswordOTP = () => {
 
   useEffect(() => {
     if (!location.state) {
-      navigate("/login");
+      navigate("/intern-login");
       return;
     }
 

@@ -23,7 +23,7 @@ export const LandingPage = () => {
         </div>
 
         <div className="btn-container">
-          <Link to="/login">
+          <Link to="/intern-login">
             <button className="nav-login-btn">Login</button>
           </Link>
 

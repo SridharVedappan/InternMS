@@ -146,7 +146,7 @@ export const ResetPassword = () => {
               />
             </button>
             <div className="back-login">
-              <a href="/login">Back to Login</a>
+              <a href="/intern-login">Back to Login</a>
             </div>
           </form>
         </div>

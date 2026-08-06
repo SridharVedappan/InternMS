@@ -668,7 +668,7 @@ export const AdminRegistration = () => {
                 <div className="signin-container">
                   <p className="signin-text">
                     Already have an account?{" "}
-                    <Link to="/" className="signin-connect-admin">
+                    <Link to="/intern-login" className="signin-connect-admin">
                       Sign in
                     </Link>
                   </p>

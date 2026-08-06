@@ -126,7 +126,7 @@ export const CompanyLogin = () => {
                 <div className="input-box-HRandCompany">
                   <img
                     src={LockIcon}
-                    alt=""
+                    alt="LockIcon"
                     style={{ width: "16px", height: "21px", color: "#777586" }}
                   />
                   <input

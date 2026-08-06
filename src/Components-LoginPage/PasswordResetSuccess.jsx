@@ -38,7 +38,7 @@ export const PasswordResetSuccess = () => {
           </p>
           <button
             className="back-to-login-btn"
-            onClick={() => navigate("/login")}
+            onClick={() => navigate("/intern-login")}
           >
             Back to Login
           </button>
