@@ -36,21 +36,25 @@
 
 .hr-reg-page-container {
   width: 100%;
-  min-height: 1054px;
+  min-height: 1200px;
   max-width: 1280px;
   margin: 0;
   display: flex;
 }
 
 .hr-reg-left-container {
-  width: 1280px;
-  height: 1120px;
+  width: 50%;
+  min-height: 100vh;
+  box-sizing: border-box;
+
   display: flex;
-  align-items: stretch;
   flex-direction: column;
+
   padding: 64px;
+
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+
   background: linear-gradient(165.73deg, #3571ca 2.49%, #29436b 100%);
 }
 
@@ -257,7 +261,7 @@
   display: flex;
   align-items: center;
   gap: 48px;
-  margin-top: 160.5px;
+  margin-top: 270.5px;
 }
 
 .stat-item-hr {
@@ -384,7 +388,6 @@
   display: flex;
   flex-direction: row;
   gap: 12px;
-  margin-left: 59.7px;
   margin-top: 16px;
 }
 

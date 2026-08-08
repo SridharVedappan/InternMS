@@ -9,6 +9,7 @@ import Hr from "../assets/icons/hr.png";
 import Mentor from "../assets/icons/mentor.png";
 import Intern from "../assets/icons/intern.png";
 import Company from "../assets/icons/company.png";
+import AdminIcon from "../assets/icons/admin-icon.png";
 import VerifiedIcon from "../assets/icons/verified-icon.png";
 import DashboardIcon from "../assets/icons/dashboard-icon.png";
 import ProfileImage from "../assets/icons/Profile-icon-intern.png";
@@ -475,6 +476,27 @@ export const CompanyRegistration = () => {
                       </span>
                     </div>
                     <p className="hr-text">Company</p>
+                  </div>
+                </NavLink>
+
+                <NavLink
+                  to="/admin-registration"
+                  className={({ isActive }) =>
+                    isActive ? "reg-card-link active" : "reg-card-link"
+                  }
+                >
+                  <div className="reg-card">
+                    <div className="icon-wrapper">
+                      <span id="white-circle">
+                        <img
+                          src={AdminIcon}
+                          alt="admin-icon"
+                          id="hr-page-icon"
+                        />
+                      </span>
+                    </div>
+
+                    <p className="admin-title">Admin</p>
                   </div>
                 </NavLink>
               </div>

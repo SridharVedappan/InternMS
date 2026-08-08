@@ -6,7 +6,7 @@
   display: flex;
 }
 
-.mentor-reg-left-container {
+.admin-reg-left-container {
   width: 512px;
   height: 1345px;
   background: linear-gradient(180deg, #2560cd 0%, #102b5c 100%);
@@ -271,7 +271,6 @@
   display: flex;
   flex-direction: row;
   gap: 12px;
-  margin-left: 59.7px;
   margin-top: 16px;
 }
 

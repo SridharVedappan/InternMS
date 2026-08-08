@@ -1,18 +1,17 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { LandingPage } from "./Components-LandingPage/LandingPage.jsx";
 import { InternLogin } from "./Components-LoginPage/InternLogin.jsx";
-import { CompanyLogin } from "./Components-LoginPage/CompanyLogin.jsx";
 import { HrRegistration } from "./Components-Registration/HrRegistration";
 import { MentorRegistration } from "./Components-Registration/MentorRegistration";
 import { InternRegistration } from "./Components-Registration/InternRegistration";
 import { CompanyRegistration } from "./Components-Registration/CompanyRegistration";
+import { AdminRegistration } from "./Components-Registration/AdminRegistration.jsx";
 import { TwoStepVerification } from "./Components-LoginPage/TwoStepVerification";
 import { ForgotPassword } from "./Components-LoginPage/ForgotPassword";
 import { VerificationCode } from "./Components-LoginPage/VerificationCode";
 import { ForgotPasswordOTP } from "./Components-LoginPage/ForgotPasswordOTP";
 import { ResetPassword } from "./Components-LoginPage/ResetPassword";
 import { PasswordResetSuccess } from "./Components-LoginPage/PasswordResetSuccess";
-import { AdminRegistration } from "./Components-Registration/AdminRegistration.jsx";
 import { InternDashboard } from "./Components-InternDashBoard/InternDashboard.jsx";
 
 import "./App.css";
@@ -25,10 +24,6 @@ const router = createBrowserRouter([
   {
     path: "/intern-login",
     element: <InternLogin />,
-  },
-  {
-    path: "/company-login",
-    element: <CompanyLogin />,
   },
   {
     path: "/hr-registration",
@@ -45,6 +40,10 @@ const router = createBrowserRouter([
   {
     path: "/company-registration",
     element: <CompanyRegistration />,
+  },
+  {
+    path: "/admin-registration",
+    element: <AdminRegistration />,
   },
   {
     path: "/forgot-password",
@@ -70,10 +69,6 @@ const router = createBrowserRouter([
   {
     path: "/password-reset-success",
     element: <PasswordResetSuccess />,
-  },
-  {
-    path: "/admin-registration",
-    element: <AdminRegistration />,
   },
   {
     path: "/intern-dashboard",

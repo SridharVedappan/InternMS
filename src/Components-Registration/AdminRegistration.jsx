@@ -8,6 +8,10 @@ import ShieldBadge from "../assets/icons/security-mark.png";
 import SystemVector from "../assets/System-Admin.png";
 import WhiteShield from "../assets/icons/white-shield.png";
 import AdminIcon from "../assets/icons/admin-icon.png";
+import Hr from "../assets/icons/hr.png";
+import Mentor from "../assets/icons/mentor.png";
+import Intern from "../assets/icons/intern.png";
+import Company from "../assets/icons/company.png";
 
 export const AdminRegistration = () => {
   const [fullName, setFullName] = useState("");
@@ -303,7 +307,7 @@ export const AdminRegistration = () => {
   return (
     <div className="main-content-admin">
       <div className="mentor-reg-page-container">
-        <div className="mentor-reg-left-container">
+        <div className="admin-reg-left-container">
           <div className="mentor-reg-left-content-container">
             <h1 className="mentor-reg-logo">InterMS</h1>
             <div id="left-container-2-mentor">
@@ -375,18 +379,103 @@ export const AdminRegistration = () => {
                 <span className="reg-as-subtitle">
                   Registering as <span className="hr-reg-required">*</span>
                 </span>
-                <div className="admin-primary-container">
-                  <div className="admin-icon-wrapper">
-                    <div className="admin-icon-container">
-                      <img
-                        src={AdminIcon}
-                        alt="Admin-Icon"
-                        className="admin-icon"
-                      />
+                <div className="page-nav-conatiner">
+                  <NavLink
+                    to="/hr-registration"
+                    className={({ isActive }) =>
+                      isActive ? "reg-card-link active" : "reg-card-link"
+                    }
+                  >
+                    <div className="reg-card">
+                      <div className="icon-wrapper">
+                        <span id="white-circle">
+                          <img src={Hr} alt="hr-icon" id="hr-page-icon" />
+                        </span>
+                      </div>
+                      <p className="hr-text">HR</p>
                     </div>
+                  </NavLink>
 
-                    <p className="admin-title">Admin</p>
-                  </div>
+                  <NavLink
+                    to="/mentor-registration"
+                    className={({ isActive }) =>
+                      isActive ? "reg-card-link active" : "reg-card-link"
+                    }
+                  >
+                    <div className="reg-card">
+                      <div className="icon-wrapper">
+                        <span id="white-circle">
+                          <img
+                            src={Mentor}
+                            alt="mentor-icon"
+                            id="hr-page-icon"
+                          />
+                        </span>
+                      </div>
+                      <p className="hr-text">Mentor</p>
+                    </div>
+                  </NavLink>
+
+                  <NavLink
+                    to="/intern-registration"
+                    className={({ isActive }) =>
+                      isActive ? "reg-card-link active" : "reg-card-link"
+                    }
+                  >
+                    <div className="reg-card">
+                      <div className="icon-wrapper">
+                        <span id="white-circle">
+                          <img
+                            src={Intern}
+                            alt="intern-icon"
+                            id="hr-page-icon"
+                          />
+                        </span>
+                      </div>
+                      <p className="hr-text">Intern</p>
+                    </div>
+                  </NavLink>
+
+                  <NavLink
+                    to="/company-registration"
+                    className={({ isActive }) =>
+                      isActive ? "reg-card-link active" : "reg-card-link"
+                    }
+                  >
+                    <div className="reg-card">
+                      <div className="icon-wrapper">
+                        <span id="white-circle">
+                          <img
+                            src={Company}
+                            alt="company-icon"
+                            id="hr-page-icon"
+                          />
+                        </span>
+                      </div>
+                      <p className="hr-text">Company</p>
+                    </div>
+                  </NavLink>
+
+                  <NavLink
+                    to="/admin-registration"
+                    className={({ isActive }) =>
+                      isActive ? "reg-card-link active" : "reg-card-link"
+                    }
+                  >
+                    <div className="reg-card">
+                      <div className="icon-wrapper">
+                        <span id="white-circle">
+                          <img
+                            src={AdminIcon}
+                            alt="admin-icon"
+                            id="hr-page-icon"
+                          />
+                        </span>
+                      </div>
+
+                      <p className="admin-title">Admin</p>
+                    </div>
+                  </NavLink>
                 </div>
               </div>
               <div>

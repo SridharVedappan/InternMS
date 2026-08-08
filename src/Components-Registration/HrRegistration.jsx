@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import "../Components-Registration/HrRegistration.css";
 import EyeOpen from "../assets/icons/eye-open.png";
 import EyeClose from "../assets/icons/eye-close.png";
 import Select from "react-select";
-import "../Components-Registration/HrRegistration.css";
 import HrIcon from "../assets/icons/human-icon.png";
 import Hr from "../assets/icons/hr.png";
 import Mentor from "../assets/icons/mentor.png";
 import Intern from "../assets/icons/intern.png";
 import Company from "../assets/icons/company.png";
+import AdminIcon from "../assets/icons/admin-icon.png";
 import CompanyLogo from "../assets/icons/company-icon.png";
 import DownArrowSelect from "../assets/icons/down-arrow.png";
 
@@ -399,6 +400,23 @@ export const HrRegistration = () => {
                     </span>
                   </div>
                   <p className="hr-text">Company</p>
+                </div>
+              </NavLink>
+
+              <NavLink
+                to="/admin-registration"
+                className={({ isActive }) =>
+                  isActive ? "reg-card-link active" : "reg-card-link"
+                }
+              >
+                <div className="reg-card">
+                  <div className="icon-wrapper">
+                    <span id="white-circle">
+                      <img src={AdminIcon} alt="admin-icon" id="hr-page-icon" />
+                    </span>
+                  </div>
+
+                  <p className="admin-title">Admin</p>
                 </div>
               </NavLink>
             </div>
