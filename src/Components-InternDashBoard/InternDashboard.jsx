@@ -7,15 +7,17 @@ import IDBnotification from "../assets/icons/ADBnotification.png";
 import IDBaccount from "../assets/icons/ADBaccount.png";
 import IDBdownarrow from "../assets/icons/ADBdownaeeow.png";
 import HomeIDB from "../assets/icons/HomeAdmindash.png";
-import Myinternship from "../assets/icons/Myinternship.png";
-import Applicationstatus from "../assets/icons/Applicationstatus.png";
-import Assignedmentor from "../assets/icons/Assignedmentor.png";
-import Progresstracking from "../assets/icons/Progresstracking.png";
+import MyprofileIDB from "../assets/icons/MyprofileIDB.png";
+import InternshipIDB from "../assets/icons/Myinternship.png";
+import TasksIDB from "../assets/icons/TasksIDB.png";
+import AttendanceIDB from "../assets/icons/AttendanceIDB.png";
+import ProjectsIDB from "../assets/icons/ProjectsIDB.png";
 import Weeklyreports from "../assets/icons/Weeklyreports.png";
-import TasksIDB from "../assets/icons/IDBtasks.png";
-import Notificationsidb from "../assets/icons/Notificationidb.png";
+import MentorIDB from "../assets/icons/MentorIDB.png";
+import LearningIDB from "../assets/icons/LearningIDB.png";
+import ResourcesIDB from "../assets/icons/ResourcesIDB.png";
 import Certificateidb from "../assets/icons/Certificatesidb.png";
-import Performanceidb from "../assets/icons/Peromanceidb.png";
+import SettingsIDB from "../assets/icons/SettingsIDB.png";
 import Currentinternships from "../assets/icons/Currentinternship.png";
 import IDBsectiononearrow from "../assets/icons/IDBsectionarrow.png";
 import InternshipduratoinIDB from "../assets/icons/IntenshipdurationIDB.png";
@@ -240,11 +242,6 @@ export const InternDashboard = () => {
   return (
     <div className={`Content-IDB ${Show ? "Show" : ""}`}>
       <div className={`Sidebar-Content-IDB ${Show ? "Show" : ""}`}>
-        <div className="Sidebar-IDB-head1">
-          <h2>InternMS</h2>
-          <p>Internship Management System</p>
-        </div>
-
         <div className="sidebar-menu-IDB">
           <div className="sidebar-item-IDB active-IDB">
             <img
@@ -257,38 +254,38 @@ export const InternDashboard = () => {
 
           <div className="sidebar-item-IDB">
             <img
-              src={Myinternship}
-              alt="myinternship"
+              src={MyprofileIDB}
+              alt="myprofileidb"
+              style={{ width: "24px", height: "24px" }}
+            />
+            {!Show && <span>My Profile</span>}
+          </div>
+
+          <div className="sidebar-item-IDB">
+            <img
+              src={InternshipIDB}
+              alt="internshipidb"
               style={{ width: "21px", height: "21px" }}
             />
-            {!Show && <span>My Internships</span>}
+            {!Show && <span>Internship</span>}
           </div>
 
           <div className="sidebar-item-IDB">
             <img
-              src={Applicationstatus}
-              alt="applicationstatus"
-              style={{ width: "16.9px", height: "21.54px" }}
+              src={TasksIDB}
+              alt="tasksidb"
+              style={{ width: "15px", height: "20px" }}
             />
-            {!Show && <span>Applications Status</span>}
+            {!Show && <span>Tasks</span>}
           </div>
 
           <div className="sidebar-item-IDB">
             <img
-              src={Assignedmentor}
-              alt="assignedmentor"
-              style={{ width: "18px", height: "18px" }}
+              src={AttendanceIDB}
+              alt="Attendance"
+              style={{ width: "24px", height: "24px" }}
             />
-            {!Show && <span>Assigned Mentor</span>}
-          </div>
-
-          <div className="sidebar-item-IDB">
-            <img
-              src={Progresstracking}
-              alt="progresstracking"
-              style={{ width: "18px", height: "20px" }}
-            />
-            {!Show && <span>Progress Tracking</span>}
+            {!Show && <span>Attendance</span>}
           </div>
 
           <div className="sidebar-item-IDB">
@@ -297,25 +294,43 @@ export const InternDashboard = () => {
               alt="weeklyreports"
               style={{ width: "17.52px", height: "21.6px" }}
             />
-            {!Show && <span>Weekly Reports</span>}
+            {!Show && <span>Reports</span>}
           </div>
 
           <div className="sidebar-item-IDB">
             <img
-              src={TasksIDB}
-              alt="tasksidb"
-              style={{ width: "18px", height: "20px" }}
+              src={ProjectsIDB}
+              alt="projectsidb"
+              style={{ width: "24px", height: "24px" }}
             />
-            {!Show && <span>Tasks & Deliverables</span>}
+            {!Show && <span>Projects</span>}
           </div>
 
           <div className="sidebar-item-IDB">
             <img
-              src={Notificationsidb}
-              alt="notificationidb"
-              style={{ width: "16px", height: "20px" }}
+              src={MentorIDB}
+              alt="mentoridb"
+              style={{ width: "24px", height: "24px" }}
             />
-            {!Show && <span>Notifications</span>}
+            {!Show && <span>Mentor</span>}
+          </div>
+
+          <div className="sidebar-item-IDB">
+            <img
+              src={LearningIDB}
+              alt="Learningidb"
+              style={{ width: "24px", height: "24px" }}
+            />
+            {!Show && <span>Learning</span>}
+          </div>
+
+          <div className="sidebar-item-IDB">
+            <img
+              src={ResourcesIDB}
+              alt="Resourcesidb"
+              style={{ width: "24px", height: "24px" }}
+            />
+            {!Show && <span>Resources</span>}
           </div>
 
           <div className="sidebar-item-IDB">
@@ -329,11 +344,11 @@ export const InternDashboard = () => {
 
           <div className="sidebar-item-IDB">
             <img
-              src={Performanceidb}
-              alt="Performanceidb"
+              src={SettingsIDB}
+              alt="Settingsidb"
               style={{ width: "24px", height: "24px" }}
             />
-            {!Show && <span>Performance Metrics</span>}
+            {!Show && <span>Settings</span>}
           </div>
         </div>
       </div>
@@ -687,7 +702,7 @@ export const InternDashboard = () => {
             {/* Overall Rating Dashboard */}
             <div className="performance-dashboard">
               <div className="performance-header">
-                <h3>Notifications</h3>
+                <h3>Ratings</h3>
                 <Link
                   to="/overall-rating-dashboard "
                   className="view-details-btn"
