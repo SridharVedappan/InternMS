@@ -43,8 +43,10 @@ import GoldenStar from "../assets/icons/GoldenStar.png";
 import CerificateLast from "../assets/icons/tabler_certificate.png";
 import DownloadIDB from "../assets/icons/DownloadIDB.png";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
+import { DiVim } from "react-icons/di";
 
 export const InternDashboard = () => {
+  const [activeTab, setActiveTab] = useState("Dashboard");
   const [Show, setShow] = useState(false);
   const tasksData = [
     {
@@ -243,7 +245,14 @@ export const InternDashboard = () => {
     <div className={`Content-IDB ${Show ? "Show" : ""}`}>
       <div className={`Sidebar-Content-IDB ${Show ? "Show" : ""}`}>
         <div className="sidebar-menu-IDB">
-          <div className="sidebar-item-IDB active-IDB">
+          <div
+            onClick={() => setActiveTab("Dashboard")}
+            className={
+              activeTab === "Dashboard"
+                ? "sidebar-item-IDB active-IDB"
+                : "sidebar-item-IDB"
+            }
+          >
             <img
               src={HomeIDB}
               alt="homeidb"
@@ -252,7 +261,14 @@ export const InternDashboard = () => {
             {!Show && <span>Dashboard</span>}
           </div>
 
-          <div className="sidebar-item-IDB">
+          <div
+            onClick={() => setActiveTab("My Profile")}
+            className={
+              activeTab === "My Profile"
+                ? "sidebar-item-IDB active-IDB"
+                : "sidebar-item-IDB"
+            }
+          >
             <img
               src={MyprofileIDB}
               alt="myprofileidb"
@@ -261,7 +277,14 @@ export const InternDashboard = () => {
             {!Show && <span>My Profile</span>}
           </div>
 
-          <div className="sidebar-item-IDB">
+          <div
+            onClick={() => setActiveTab("Internship")}
+            className={
+              activeTab === "Internship"
+                ? "sidebar-item-IDB active-IDB"
+                : "sidebar-item-IDB"
+            }
+          >
             <img
               src={InternshipIDB}
               alt="internshipidb"
@@ -270,7 +293,14 @@ export const InternDashboard = () => {
             {!Show && <span>Internship</span>}
           </div>
 
-          <div className="sidebar-item-IDB">
+          <div
+            onClick={() => setActiveTab("Tasks")}
+            className={
+              activeTab === "Tasks"
+                ? "sidebar-item-IDB active-IDB"
+                : "sidebar-item-IDB"
+            }
+          >
             <img
               src={TasksIDB}
               alt="tasksidb"
@@ -279,7 +309,14 @@ export const InternDashboard = () => {
             {!Show && <span>Tasks</span>}
           </div>
 
-          <div className="sidebar-item-IDB">
+          <div
+            onClick={() => setActiveTab("Attendance")}
+            className={
+              activeTab === "Attendance"
+                ? "sidebar-item-IDB active-IDB"
+                : "sidebar-item-IDB"
+            }
+          >
             <img
               src={AttendanceIDB}
               alt="Attendance"
@@ -288,7 +325,14 @@ export const InternDashboard = () => {
             {!Show && <span>Attendance</span>}
           </div>
 
-          <div className="sidebar-item-IDB">
+          <div
+            onClick={() => setActiveTab("Reports")}
+            className={
+              activeTab === "Reports"
+                ? "sidebar-item-IDB active-IDB"
+                : "sidebar-item-IDB"
+            }
+          >
             <img
               src={Weeklyreports}
               alt="weeklyreports"
@@ -297,7 +341,14 @@ export const InternDashboard = () => {
             {!Show && <span>Reports</span>}
           </div>
 
-          <div className="sidebar-item-IDB">
+          <div
+            onClick={() => setActiveTab("Projects")}
+            className={
+              activeTab === "Projects"
+                ? "sidebar-item-IDB active-IDB"
+                : "sidebar-item-IDB"
+            }
+          >
             <img
               src={ProjectsIDB}
               alt="projectsidb"
@@ -306,7 +357,14 @@ export const InternDashboard = () => {
             {!Show && <span>Projects</span>}
           </div>
 
-          <div className="sidebar-item-IDB">
+          <div
+            onClick={() => setActiveTab("Mentor")}
+            className={
+              activeTab === "Mentor"
+                ? "sidebar-item-IDB active-IDB"
+                : "sidebar-item-IDB"
+            }
+          >
             <img
               src={MentorIDB}
               alt="mentoridb"
@@ -315,7 +373,14 @@ export const InternDashboard = () => {
             {!Show && <span>Mentor</span>}
           </div>
 
-          <div className="sidebar-item-IDB">
+          <div
+            onClick={() => setActiveTab("Learning")}
+            className={
+              activeTab === "Learning"
+                ? "sidebar-item-IDB active-IDB"
+                : "sidebar-item-IDB"
+            }
+          >
             <img
               src={LearningIDB}
               alt="Learningidb"
@@ -324,7 +389,14 @@ export const InternDashboard = () => {
             {!Show && <span>Learning</span>}
           </div>
 
-          <div className="sidebar-item-IDB">
+          <div
+            onClick={() => setActiveTab("Resources")}
+            className={
+              activeTab === "Resources"
+                ? "sidebar-item-IDB active-IDB"
+                : "sidebar-item-IDB"
+            }
+          >
             <img
               src={ResourcesIDB}
               alt="Resourcesidb"
@@ -333,7 +405,14 @@ export const InternDashboard = () => {
             {!Show && <span>Resources</span>}
           </div>
 
-          <div className="sidebar-item-IDB">
+          <div
+            onClick={() => setActiveTab("Certificates")}
+            className={
+              activeTab === "Certificates"
+                ? "sidebar-item-IDB active-IDB"
+                : "sidebar-item-IDB"
+            }
+          >
             <img
               src={Certificateidb}
               alt="certificateidb"
@@ -342,7 +421,14 @@ export const InternDashboard = () => {
             {!Show && <span>Certificates</span>}
           </div>
 
-          <div className="sidebar-item-IDB">
+          <div
+            onClick={() => setActiveTab("Settings")}
+            className={
+              activeTab === "Settings"
+                ? "sidebar-item-IDB active-IDB"
+                : "sidebar-item-IDB"
+            }
+          >
             <img
               src={SettingsIDB}
               alt="Settingsidb"
@@ -415,374 +501,400 @@ export const InternDashboard = () => {
         </div>
 
         {/* Main Content */}
-        <div className="Section-IDB">
-          <div className="header-Section">
-            <div className="main-head">
-              <h2>Welcome Back, Rahul!</h2>
-              <img src={WavinghandIDB} alt="wavinghand" />
-            </div>
-            <p>Here's an overview of your Intenship Journey.</p>
-          </div>
-          <div className="header2-Section">
-            {/* Current Internship */}
-            <div className="card-Curr internship-card">
-              <div className="icon-Curr blue">
-                <img src={Currentinternships} alt="" />
-              </div>
-              <div className="card-Curr-content">
-                <p className="card-Curr-title">Current Internship</p>
-                <h3>Tech Nova Solutions</h3>
-                <span>UI/UX Design Intern</span>
-                <button className="details-Curr-btn">
-                  View Details{" "}
-                  <img
-                    src={IDBsectiononearrow}
-                    alt="arrow"
-                    style={{ width: "11.25px", height: "8.75px" }}
-                  />
-                </button>
-              </div>
-            </div>
-
-            {/* Internship Duration */}
-            <div className="Cardbox-Dur">
-              <div className="card-Dur">
-                <div className="icon-Dur green">
-                  <img
-                    src={InternshipduratoinIDB}
-                    alt=""
-                    style={{ width: "26px", height: "26px" }}
-                  />
+        {activeTab === "Dashboard" && (
+          <div>
+            <div className="Section-IDB">
+              <div className="header-Section">
+                <div className="main-head">
+                  <h2>Welcome Back, Rahul!</h2>
+                  <img src={WavinghandIDB} alt="wavinghand" />
                 </div>
-                <div className="card-Dur-content">
-                  <p className="card-Dur-title">Internship Duration</p>
-                  <h2>8 Weeks</h2>
-                  <span>May 10, 2026 - Jul 05, 2026</span>
-                </div>
+                <p>Here's an overview of your Intenship Journey.</p>
               </div>
-              <div className="progress-bar-Dur">
-                <div className="progress-fill-Dur duration-fill-Dur"></div>
-              </div>
-              <small>Week 3 of 8</small>
-            </div>
-
-            {/* Overall Progress */}
-            <div className="Cardbox-Overall">
-              <div className="card-Overall-container">
-                <div className="icon-Overall purple">
-                  <img
-                    src={Overallprogress}
-                    alt=""
-                    style={{ width: "60px", height: "60px", color: "#623FCE" }}
-                  />
-                </div>
-                <div className="card-Overall">
-                  <p>Overall Progress</p>
-                  <h2>42%</h2>
-                  <span>Keep Going! You're doing great.</span>
-                </div>
-              </div>
-              <div className="progress-bar-Overall">
-                <div className="progress-fill-Overall duration-fill-Overall"></div>
-              </div>
-            </div>
-
-            {/* Reports Submitted */}
-            <div className="Report-card">
-              <div className="Report-box">
-                <div className="file-container orange">
-                  <img
-                    src={Reportsubmitted}
-                    alt=""
-                    style={{ width: "20px", height: "25px" }}
-                  />
-                </div>
-                <div className="card-Report">
-                  <p>Reports Submitted</p>
-                  <div className="Report-data">
-                    <h2>
-                      1 <span>/ 8</span>
-                    </h2>
+              <div className="header2-Section">
+                {/* Current Internship */}
+                <div className="card-Curr internship-card">
+                  <div className="icon-Curr blue">
+                    <img src={Currentinternships} alt="" />
                   </div>
-                  <span>Keep Going! You're doing great.</span>
-                </div>
-              </div>
-              <div className="progress-bar-Report">
-                <div className="progress-fill-Report duration-fill-Report"></div>
-              </div>
-            </div>
-          </div>
-
-          {/* Task & Deliverables */}
-          <div className="dashboard-grid ">
-            <div className="task-card">
-              <div className="task-header ">
-                <h2 className="task-tittle">Task & Deliverables</h2>
-                <Link to="/task-deliverables" className="view-all-btn">
-                  View all
-                </Link>
-              </div>
-
-              <div className="task-list">
-                {tasksData.slice(0, 4).map((task) => (
-                  <div key={task.id} className="task-item">
-                    <div className="leftside-task-container">
-                      <div
-                        className={`icon-holder ${task.status
-                          .trim()
-                          .replace(/\s+/g, "-")
-                          .toLowerCase()}`}
-                      >
-                        <img
-                          src={getTaskIcon(task.status)}
-                          alt={task.status}
-                          className={`tasks-icon ${task.status
-                            .trim()
-                            .replace(/\s+/g, "-")
-                            .toLowerCase()}`}
-                        />
-                      </div>
-                      <span className="task-title">{task.title}</span>
-                    </div>
-                    <div className="task-date">Due: {task.dueDate}</div>
-                    <div className="task-right">
-                      <span
-                        className={`task-status ${task.status
-                          .trim()
-                          .replace(/\s+/g, "-")
-                          .toLowerCase()}`}
-                      >
-                        {task.status}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Mentor Details */}
-            <div className="Mentor-card">
-              <div className="mentor-header">
-                <h2>Assigned Mentor</h2>
-                <Link to="/assigned-mentor" className="view-profile">
-                  View Profile
-                </Link>
-              </div>
-              <div className="mentor-profile ">
-                <div>
-                  {mentor.avatarUrl ? (
-                    <img src={mentor.avatarUrl} alt={mentor.name} />
-                  ) : (
-                    <div className="profile-placeholder"></div>
-                  )}
-                </div>
-                <div className="mentor-details ">
-                  <h3 className="mentor-name">{mentor.name}</h3>
-                  <p className="mentor-role">{mentor.role}</p>
-                  <p className="mentor-company">{mentor.company}</p>
-                </div>
-              </div>
-
-              <div className="Buttons-Conatiner">
-                <button className="message-btn">
-                  <img src={messageIcon} alt="Message" className="msg-icon" />
-                  <span className="blue-text">Message</span>
-                </button>
-
-                <button className="schedule-btn">
-                  <img
-                    src={calendarIcon}
-                    alt="Calendar"
-                    className="calendar-Icon"
-                  />
-                  <span className="blue-text">Schedule Meeting</span>
-                </button>
-              </div>
-            </div>
-
-            {/* Application Status */}
-            <div className="appliction-status-card">
-              <div className="AS-header">
-                <h2 className="AS-title">Application Status</h2>
-                <Link to="/applications" className="view-all-btn">
-                  View all
-                </Link>
-              </div>
-
-              <div className="tracker-container">
-                <div className="progress-steps">
-                  {orderedSteps.map((step, index) => (
-                    <div className={`progress-item ${step.status}`} key={index}>
-                      <div className="status-icon-wrapper">
-                        <img
-                          src={statusIcons[step.status]}
-                          alt={step.status}
-                          className="idb-status-icon"
-                        />
-                      </div>
-
-                      <div className="progress-content">
-                        <p className="progress-label">{step.label}</p>
-
-                        <p className="progress-date">{step.date}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Weekly Reports*/}
-            <section className="weekly-reports-card">
-              <div className="weekly-reports-header">
-                <h2>Weekly Reports</h2>
-                <Link to="/weekly-reports" className="view-all-btn">
-                  View All
-                </Link>
-              </div>
-              <div className="reports-details-primary">
-                {reports.slice(0, 4).map((report) => (
-                  <div className="report-container" key={report.id}>
-                    <h3 className="report-title">{report.title}</h3>
-                    <p className="report-date">{report.date || "-"}</p>
-                    {renderStatus(report.status)}
-                    {report.status === "Pending" ? (
-                      <button className="download-btn">
-                        <img
-                          src={greyDownloadIcon}
-                          alt="Pending"
-                          className="report-download "
-                        />
-                      </button>
-                    ) : report.downloadable ? (
-                      <button className="download-btn">
-                        <img
-                          src={DownloadArrow}
-                          alt="Download Report"
-                          className="report-download "
-                        />
-                      </button>
-                    ) : (
-                      <div className="download-space"></div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Notifications*/}
-            <div className="notification-card">
-              <div className="notification-header">
-                <h2>Notifications</h2>
-                <Link to="/notifications" className="view-all-btn">
-                  View all
-                </Link>
-              </div>
-              <div className="notification-list-wrapper">
-                {notifications.slice(0, 4).map((notification) => (
-                  <div className="notification-item" key={notification.id}>
-                    <div className="notification-leftSide-content">
-                      <div className="notification-icon-wrapper">
-                        <img
-                          src={notification.icon}
-                          alt="notification icon"
-                          style={{ width: "30px", height: "30px" }}
-                        />
-                      </div>
-                      <p>{notification.text}</p>
-                    </div>
-                    <span className="Notification-Time">
-                      {notification.time}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Overall Rating Dashboard */}
-            <div className="performance-dashboard">
-              <div className="performance-header">
-                <h3>Ratings</h3>
-                <Link
-                  to="/overall-rating-dashboard "
-                  className="view-details-btn"
-                >
-                  View details
-                </Link>
-              </div>
-
-              <div className="performance-container">
-                <div className="chart-wrapper">
-                  <ResponsiveContainer width={131} height={133}>
-                    <PieChart>
-                      <Pie
-                        data={chartData}
-                        cx="50%"
-                        cy="50%"
-                        innerRadius={42}
-                        outerRadius={60}
-                        startAngle={90}
-                        endAngle={-270}
-                        paddingAngle={1.5}
-                        dataKey="value"
-                      >
-                        {chartData.map((entry, index) => (
-                          <Cell key={entry.id} fill={chartColors[index]} />
-                        ))}
-                      </Pie>
-                    </PieChart>
-                  </ResponsiveContainer>
-                  <div className="display-rating-wrapper">
-                    <span className="rating-score">
-                      {ratingValue.toFixed(1)}
-                    </span>
-                    <span className="Overall-Rating">Overall Rating</span>
+                  <div className="card-Curr-content">
+                    <p className="card-Curr-title">Current Internship</p>
+                    <h3>Tech Nova Solutions</h3>
+                    <span>UI/UX Design Intern</span>
+                    <button className="details-Curr-btn">
+                      View Details{" "}
+                      <img
+                        src={IDBsectiononearrow}
+                        alt="arrow"
+                        style={{ width: "11.25px", height: "8.75px" }}
+                      />
+                    </button>
                   </div>
                 </div>
 
-                <div className="rating-list">
-                  {IDBratings.map((item) => (
-                    <div className="rating-item" key={item.id}>
-                      <span className="rating-label">{item.label}</span>
-                      <div className="rating-score">
-                        <span>{item.score}</span>
-                        <img
-                          src={GoldenStar}
-                          alt="Golden Rating star"
-                          className="Golden-star"
-                        />
+                {/* Internship Duration */}
+                <div className="Cardbox-Dur">
+                  <div className="card-Dur">
+                    <div className="icon-Dur green">
+                      <img
+                        src={InternshipduratoinIDB}
+                        alt=""
+                        style={{ width: "26px", height: "26px" }}
+                      />
+                    </div>
+                    <div className="card-Dur-content">
+                      <p className="card-Dur-title">Internship Duration</p>
+                      <h2>8 Weeks</h2>
+                      <span>May 10, 2026 - Jul 05, 2026</span>
+                    </div>
+                  </div>
+                  <div className="progress-bar-Dur">
+                    <div className="progress-fill-Dur duration-fill-Dur"></div>
+                  </div>
+                  <small>Week 3 of 8</small>
+                </div>
+
+                {/* Overall Progress */}
+                <div className="Cardbox-Overall">
+                  <div className="card-Overall-container">
+                    <div className="icon-Overall purple">
+                      <img
+                        src={Overallprogress}
+                        alt=""
+                        style={{
+                          width: "60px",
+                          height: "60px",
+                          color: "#623FCE",
+                        }}
+                      />
+                    </div>
+                    <div className="card-Overall">
+                      <p>Overall Progress</p>
+                      <h2>42%</h2>
+                      <span>Keep Going! You're doing great.</span>
+                    </div>
+                  </div>
+                  <div className="progress-bar-Overall">
+                    <div className="progress-fill-Overall duration-fill-Overall"></div>
+                  </div>
+                </div>
+
+                {/* Reports Submitted */}
+                <div className="Report-card">
+                  <div className="Report-box">
+                    <div className="file-container orange">
+                      <img
+                        src={Reportsubmitted}
+                        alt=""
+                        style={{ width: "20px", height: "25px" }}
+                      />
+                    </div>
+                    <div className="card-Report">
+                      <p>Reports Submitted</p>
+                      <div className="Report-data">
+                        <h2>
+                          1 <span>/ 8</span>
+                        </h2>
+                      </div>
+                      <span>Keep Going! You're doing great.</span>
+                    </div>
+                  </div>
+                  <div className="progress-bar-Report">
+                    <div className="progress-fill-Report duration-fill-Report"></div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Task & Deliverables */}
+              <div className="dashboard-grid ">
+                <div className="task-card">
+                  <div className="task-header ">
+                    <h2 className="task-tittle">Task & Deliverables</h2>
+                    <Link to="/task-deliverables" className="view-all-btn">
+                      View all
+                    </Link>
+                  </div>
+
+                  <div className="task-list">
+                    {tasksData.slice(0, 4).map((task) => (
+                      <div key={task.id} className="task-item">
+                        <div className="leftside-task-container">
+                          <div
+                            className={`icon-holder ${task.status
+                              .trim()
+                              .replace(/\s+/g, "-")
+                              .toLowerCase()}`}
+                          >
+                            <img
+                              src={getTaskIcon(task.status)}
+                              alt={task.status}
+                              className={`tasks-icon ${task.status
+                                .trim()
+                                .replace(/\s+/g, "-")
+                                .toLowerCase()}`}
+                            />
+                          </div>
+                          <span className="task-title">{task.title}</span>
+                        </div>
+                        <div className="task-date">Due: {task.dueDate}</div>
+                        <div className="task-right">
+                          <span
+                            className={`task-status ${task.status
+                              .trim()
+                              .replace(/\s+/g, "-")
+                              .toLowerCase()}`}
+                          >
+                            {task.status}
+                          </span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Mentor Details */}
+                <div className="Mentor-card">
+                  <div className="mentor-header">
+                    <h2>Assigned Mentor</h2>
+                    <Link to="/assigned-mentor" className="view-profile">
+                      View Profile
+                    </Link>
+                  </div>
+                  <div className="mentor-profile ">
+                    <div>
+                      {mentor.avatarUrl ? (
+                        <img src={mentor.avatarUrl} alt={mentor.name} />
+                      ) : (
+                        <div className="profile-placeholder"></div>
+                      )}
+                    </div>
+                    <div className="mentor-details ">
+                      <h3 className="mentor-name">{mentor.name}</h3>
+                      <p className="mentor-role">{mentor.role}</p>
+                      <p className="mentor-company">{mentor.company}</p>
+                    </div>
+                  </div>
+
+                  <div className="Buttons-Conatiner">
+                    <button className="message-btn">
+                      <img
+                        src={messageIcon}
+                        alt="Message"
+                        className="msg-icon"
+                      />
+                      <span className="blue-text">Message</span>
+                    </button>
+
+                    <button className="schedule-btn">
+                      <img
+                        src={calendarIcon}
+                        alt="Calendar"
+                        className="calendar-Icon"
+                      />
+                      <span className="blue-text">Schedule Meeting</span>
+                    </button>
+                  </div>
+                </div>
+
+                {/* Application Status */}
+                <div className="appliction-status-card">
+                  <div className="AS-header">
+                    <h2 className="AS-title">Application Status</h2>
+                    <Link to="/applications" className="view-all-btn">
+                      View all
+                    </Link>
+                  </div>
+
+                  <div className="tracker-container">
+                    <div className="progress-steps">
+                      {orderedSteps.map((step, index) => (
+                        <div
+                          className={`progress-item ${step.status}`}
+                          key={index}
+                        >
+                          <div className="status-icon-wrapper">
+                            <img
+                              src={statusIcons[step.status]}
+                              alt={step.status}
+                              className="idb-status-icon"
+                            />
+                          </div>
+
+                          <div className="progress-content">
+                            <p className="progress-label">{step.label}</p>
+
+                            <p className="progress-date">{step.date}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+
+                {/* Weekly Reports*/}
+                <section className="weekly-reports-card">
+                  <div className="weekly-reports-header">
+                    <h2>Weekly Reports</h2>
+                    <Link to="/weekly-reports" className="view-all-btn">
+                      View All
+                    </Link>
+                  </div>
+                  <div className="reports-details-primary">
+                    {reports.slice(0, 4).map((report) => (
+                      <div className="report-container" key={report.id}>
+                        <h3 className="report-title">{report.title}</h3>
+                        <p className="report-date">{report.date || "-"}</p>
+                        {renderStatus(report.status)}
+                        {report.status === "Pending" ? (
+                          <button className="download-btn">
+                            <img
+                              src={greyDownloadIcon}
+                              alt="Pending"
+                              className="report-download "
+                            />
+                          </button>
+                        ) : report.downloadable ? (
+                          <button className="download-btn">
+                            <img
+                              src={DownloadArrow}
+                              alt="Download Report"
+                              className="report-download "
+                            />
+                          </button>
+                        ) : (
+                          <div className="download-space"></div>
+                        )}
+                      </div>
+                    ))}
+                  </div>
+                </section>
+
+                {/* Notifications*/}
+                <div className="notification-card">
+                  <div className="notification-header">
+                    <h2>Notifications</h2>
+                    <Link to="/notifications" className="view-all-btn">
+                      View all
+                    </Link>
+                  </div>
+                  <div className="notification-list-wrapper">
+                    {notifications.slice(0, 4).map((notification) => (
+                      <div className="notification-item" key={notification.id}>
+                        <div className="notification-leftSide-content">
+                          <div className="notification-icon-wrapper">
+                            <img
+                              src={notification.icon}
+                              alt="notification icon"
+                              style={{ width: "30px", height: "30px" }}
+                            />
+                          </div>
+                          <p>{notification.text}</p>
+                        </div>
+                        <span className="Notification-Time">
+                          {notification.time}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Overall Rating Dashboard */}
+                <div className="performance-dashboard">
+                  <div className="performance-header">
+                    <h3>Ratings</h3>
+                    <Link
+                      to="/overall-rating-dashboard "
+                      className="view-details-btn"
+                    >
+                      View details
+                    </Link>
+                  </div>
+
+                  <div className="performance-container">
+                    <div className="chart-wrapper">
+                      <ResponsiveContainer width={131} height={133}>
+                        <PieChart>
+                          <Pie
+                            data={chartData}
+                            cx="50%"
+                            cy="50%"
+                            innerRadius={42}
+                            outerRadius={60}
+                            startAngle={90}
+                            endAngle={-270}
+                            paddingAngle={1.5}
+                            dataKey="value"
+                          >
+                            {chartData.map((entry, index) => (
+                              <Cell key={entry.id} fill={chartColors[index]} />
+                            ))}
+                          </Pie>
+                        </PieChart>
+                      </ResponsiveContainer>
+                      <div className="display-rating-wrapper">
+                        <span className="rating-score">
+                          {ratingValue.toFixed(1)}
+                        </span>
+                        <span className="Overall-Rating">Overall Rating</span>
                       </div>
                     </div>
-                  ))}
+
+                    <div className="rating-list">
+                      {IDBratings.map((item) => (
+                        <div className="rating-item" key={item.id}>
+                          <span className="rating-label">{item.label}</span>
+                          <div className="rating-score">
+                            <span>{item.score}</span>
+                            <img
+                              src={GoldenStar}
+                              alt="Golden Rating star"
+                              className="Golden-star"
+                            />
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
+            {/* Certificate Section */}
+            <div className="certificate-card">
+              <div className="certificate-header">
+                <img
+                  src={CerificateLast}
+                  alt="Certificate"
+                  style={{ width: "40px", height: "40px" }}
+                />
+                <h2>Certificates</h2>
+              </div>
+              <div className="certificate-details">
+                <h3>UI/UX Design Fundamentals</h3>
+                <p>Issued on May 20,2025</p>
+              </div>
+              <div className="Download-certificate">
+                <img
+                  src={DownloadIDB}
+                  alt="Download certificate"
+                  style={{ width: "13.33px", height: "13.33px" }}
+                />
+                <h3>View Certificate</h3>
+              </div>
+            </div>
           </div>
-        </div>
+        )}
 
-        {/* Certificate Section */}
-        <div className="certificate-card">
-          <div className="certificate-header">
-            <img
-              src={CerificateLast}
-              alt="Certificate"
-              style={{ width: "40px", height: "40px" }}
-            />
-            <h2>Certificates</h2>
-          </div>
-          <div className="certificate-details">
-            <h3>UI/UX Design Fundamentals</h3>
-            <p>Issued on May 20,2025</p>
-          </div>
-          <div className="Download-certificate">
-            <img
-              src={DownloadIDB}
-              alt="Download certificate"
-              style={{ width: "13.33px", height: "13.33px" }}
-            />
-            <h3>View Certificate</h3>
-          </div>
-        </div>
+        {activeTab === "My Profile" && <h2>MyProfile</h2>}
+        {activeTab === "Internship" && <h2> Internship </h2>}
+        {activeTab === "Tasks" && <h2>Tasks </h2>}
+        {activeTab === "Attendance" && <h2>Attendance </h2>}
+        {activeTab === "Reports" && <h2>Reports</h2>}
+        {activeTab === "Projects" && <h2>Projects</h2>}
+        {activeTab === "Mentor" && <h2>Mentor</h2>}
+        {activeTab === "Learning" && <h2>Learning</h2>}
+        {activeTab === "Resources" && <h2>Resources</h2>}
+        {activeTab === "Certificates" && <h2>Certificates</h2>}
+        {activeTab === "Settings" && <h2>Settings</h2>}
       </div>
     </div>
   );
