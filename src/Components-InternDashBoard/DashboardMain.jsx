@@ -1,8 +1,8 @@
 import React from "react";
-import "../Components-InternDashBoard/DashboardIDB.css";
+import "../Components-InternDashBoard/DashboardMain.css";
 import { Link } from "react-router-dom";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import "../Components-InternDashBoard/DashboardIDB.jsx";
+import "../Components-InternDashBoard/DashboardMain.jsx";
 import Currentinternships from "../assets/icons/Currentinternship.png";
 import IDBsectiononearrow from "../assets/icons/IDBsectionarrow.png";
 import InternshipduratoinIDB from "../assets/icons/IntenshipdurationIDB.png";
@@ -28,7 +28,7 @@ import GoldenStar from "../assets/icons/GoldenStar.png";
 import CerificateLast from "../assets/icons/tabler_certificate.png";
 import DownloadIDB from "../assets/icons/DownloadIDB.png";
 
-export default function DashboardIDB() {
+export const DashboardMain = () => {
   const tasksData = [
     {
       id: 1,
@@ -592,4 +592,4 @@ export default function DashboardIDB() {
       </div>
     </div>
   );
-}
+};

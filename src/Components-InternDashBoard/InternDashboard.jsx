@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
-import DashboardIDB from "./DashboardIDB.jsx";
+import { DashboardMain } from "./DashboardMain.jsx";
 import { MyprofileIntern } from "./MyprofileIntern.jsx";
-import { Internship } from "./Internship.jsx";
+import { InternshipMain } from "./InternshipMain.jsx";
 import { TasksIntern } from "./TasksIntern.jsx";
 import { AttendanceIntern } from "./AttendanceIntern.jsx";
 import { ReportsIntern } from "./ReportsIntern.jsx";
@@ -37,6 +37,7 @@ export const InternDashboard = () => {
   const [Show, setShow] = useState(false);
 
   return (
+    // Sidebar
     <div className={`Content-IDB ${Show ? "Show" : ""}`}>
       <div className={`Sidebar-Content-IDB ${Show ? "Show" : ""}`}>
         <div className="sidebar-menu-IDB">
@@ -235,7 +236,7 @@ export const InternDashboard = () => {
       </div>
 
       <div className="Main-IDB">
-        {/* Navbar */}
+        {/* Top-Navbar */}
         <div className="Content-nav">
           <div className="navbar-left">
             <div className="menu-icon" onClick={() => setShow(!Show)}>
@@ -295,9 +296,9 @@ export const InternDashboard = () => {
           </div>
         </div>
 
-        {activeTab === "Dashboard" && <DashboardIDB />}
+        {activeTab === "Dashboard" && <DashboardMain />}
         {activeTab === "My Profile" && <MyprofileIntern />}
-        {activeTab === "Internship" && <Internship />}
+        {activeTab === "Internship" && <InternshipMain />}
         {activeTab === "Tasks" && <TasksIntern />}
         {activeTab === "Attendance" && <AttendanceIntern />}
         {activeTab === "Reports" && <ReportsIntern />}
