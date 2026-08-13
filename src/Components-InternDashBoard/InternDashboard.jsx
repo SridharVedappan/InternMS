@@ -2,6 +2,17 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
 import DashboardIDB from "./DashboardIDB.jsx";
+import { MyprofileIntern } from "./MyprofileIntern.jsx";
+import { Internship } from "./Internship.jsx";
+import { TasksIntern } from "./TasksIntern.jsx";
+import { AttendanceIntern } from "./AttendanceIntern.jsx";
+import { ReportsIntern } from "./ReportsIntern.jsx";
+import { ProjectsIntern } from "./ProjectsIntern.jsx";
+import { MentorIntern } from "./MentorIntern.jsx";
+import { LearningIntern } from "./LearningIntern.jsx";
+import { ResourcesIntern } from "./ResourcesIntern.jsx";
+import { CertificatesIntern } from "./CertificatesIntern.jsx";
+import { SettingsIntern } from "./SettingsIntern.jsx";
 import "../Components-InternDashBoard/InternDashboard.css";
 import IDBmore from "../assets/icons/ADBmore.png";
 import IDBsearch from "../assets/icons/ADBsearch.png";
@@ -285,17 +296,17 @@ export const InternDashboard = () => {
         </div>
 
         {activeTab === "Dashboard" && <DashboardIDB />}
-        {activeTab === "My Profile" && <h2>MyProfile</h2>}
-        {activeTab === "Internship" && <h2> Internship </h2>}
-        {activeTab === "Tasks" && <h2>Tasks </h2>}
-        {activeTab === "Attendance" && <h2>Attendance </h2>}
-        {activeTab === "Reports" && <h2>Reports</h2>}
-        {activeTab === "Projects" && <h2>Projects</h2>}
-        {activeTab === "Mentor" && <h2>Mentor</h2>}
-        {activeTab === "Learning" && <h2>Learning</h2>}
-        {activeTab === "Resources" && <h2>Resources</h2>}
-        {activeTab === "Certificates" && <h2>Certificates</h2>}
-        {activeTab === "Settings" && <h2>Settings</h2>}
+        {activeTab === "My Profile" && <MyprofileIntern />}
+        {activeTab === "Internship" && <Internship />}
+        {activeTab === "Tasks" && <TasksIntern />}
+        {activeTab === "Attendance" && <AttendanceIntern />}
+        {activeTab === "Reports" && <ReportsIntern />}
+        {activeTab === "Projects" && <ProjectsIntern />}
+        {activeTab === "Mentor" && <MentorIntern />}
+        {activeTab === "Learning" && <LearningIntern />}
+        {activeTab === "Resources" && <ResourcesIntern />}
+        {activeTab === "Certificates" && <CertificatesIntern />}
+        {activeTab === "Settings" && <SettingsIntern />}
       </div>
     </div>
   );
