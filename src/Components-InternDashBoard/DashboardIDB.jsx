@@ -2,6 +2,7 @@ import React from "react";
 import "../Components-InternDashBoard/DashboardIDB.css";
 import { Link } from "react-router-dom";
 import { PieChart, Pie, Cell, ResponsiveContainer } from "recharts";
+import "../Components-InternDashBoard/DashboardIDB.jsx";
 import Currentinternships from "../assets/icons/Currentinternship.png";
 import IDBsectiononearrow from "../assets/icons/IDBsectionarrow.png";
 import InternshipduratoinIDB from "../assets/icons/IntenshipdurationIDB.png";
