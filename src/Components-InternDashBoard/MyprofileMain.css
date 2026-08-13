@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Manrope:wght@200..800&family=Poppins:wght@100..900&display=swap");
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.personal-info-Header {
+  width: 746.67px;
+  height: 59px;
+  border-bottom: 1px solid #c4c6d3;
+  padding: 16px 32px;
+  margin-left: 5.37px;
+}
+
+.personal-info-Header h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+  text-align: center;
+  justify-content: center;
+  vertical-align: middle;
+  width: 103px;
+  height: 24px;
+  opacity: 1;
+  color: #002769;
+}
+
+.personl-info-details {
+  width: 711px;
+  height: 394px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, 1fr);
+  row-gap: 6px;
+  column-gap: 70px;
+  box-sizing: border-box;
+  margin-left: 22.38px;
+  margin-top: 10px;
+}
+
+.profile-field {
+  display: flex;
+  flex-direction: row;
+}
+
+.profile-field p {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 20px;
+  color: #575f6a;
+}
+
+.profile-field span {
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1a1b21;
+}
+.icon-container {
+  padding-top: 4px;
+  padding-right: 16px;
+}
+
+.profile-image {
+  width: 15px;
+  height: 14.62px;
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.email-address-icon {
+  width: 19px;
+  height: 15px;
+}
+
+.DOB-icon {
+  width: 17px;
+  height: 19px;
+}
+
+.Department-icon {
+  width: 19.27px;
+  height: 17.5px;
+}
+.University-icon {
+  width: 18.46px;
+  height: 18.94px;
+}
+
+.Internship-ID-icon {
+  width: 19px;
+  height: 19px;
+}
+
+.Phone-icon {
+  width: 17px;
+  height: 17px;
+}
+
+.Gender-icon {
+  width: 16.14px;
+  height: 19.22px;
+}
+
+.Course-icon {
+  width: 19.93px;
+  height: 16.27px;
+}
+
+.End-Date-icon {
+  width: 17px;
+  height: 19.12px;
+}
+
+.Start-Date-icon {
+  width: 17px;
+  height: 19.12px;
+}
+
+.Assigned-Mentor-icon {
+  width: 19.38px;
+  height: 14.62px;
+}
+
+.Emergency-Contact-icon {
+  width: 23px;
+  height: 16.62px;
+}
+
+.Address-icon {
+  width: 15.1px;
+  height: 19.01px;
+}
+
+.Languages-Known-icon {
+  width: 20.68px;
+  height: 18.62px;
+}
+
+.profile-main-container {
+  display: grid;
+  grid-template-columns: 746.67px 1fr;
+  column-gap: 24px;
+  align-items: start;
+  width: 100%;
+}
+
+.recent-activity h2 {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #1a1b21;
+}
+
+.recent-activity {
+  width: 361px;
+  height: 448px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 32px;
+  box-sizing: border-box;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  margin-top: 19px;
+}
+
+.myProfile-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.myProfile-footer {
+  margin-top: auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  width: 100%;
+  padding: 20px 30px;
+  box-sizing: border-box;
+}
+
+.myProfile-footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 24px;
+}
