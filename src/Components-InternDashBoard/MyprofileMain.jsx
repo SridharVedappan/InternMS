@@ -23,6 +23,7 @@ import Techflowcompanyicon from "../assets/icons/Technoflowsolutions.png";
 import Companydurationprofile from "../assets/icons/Companyduration.png";
 import Editprofileintern from "../assets/icons/Editprofileintern.png";
 import TasksIcon from "../assets/icons/Tasksdoneintern.png";
+import Designation from "../assets/icons/Designation.png";
 import TrainingIcon from "../assets/icons/Trainingmodules.png";
 import AssessmentIcon from "../assets/icons/Assesmentspassed.png";
 import CertificateIcon from "../assets/icons/Certificatesprofile.png";
@@ -133,7 +134,7 @@ export const MyprofileMain = () => {
               <span>ID: {ProfileData.employeeId}</span>
               <span className="Profile-department-Intern">Dept: {ProfileData.department}</span>
             </p>
-            
+
             <div className="Profile-company-duration">
               <span> <img src={ProfileData.companyicon} alt="Profile company duration" style={{ width: "14.45px", height: "13.12px" }} /> {ProfileData.company}</span>
               <span> <img src={Companydurationprofile} alt="company duration" className="Profile-durationimg-Intern"/> {ProfileData.duration}</span>
@@ -248,7 +249,7 @@ export const MyprofileMain = () => {
 
             <div className="personal-detail">
               <div className="icon-container">
-                <img src={fullName} alt="Profile" className="profile-image"/>
+                <img src={Designation} alt="Designation" className="Designation-icon"/>
               </div>
               <div className="profile-details">
                 <p>Designation</p>
@@ -314,7 +315,6 @@ export const MyprofileMain = () => {
 
             <div className="personal-detail">
               <div className="icon-container">
-                {" "}
                 <img src={Address} alt="Address " className="Address-icon" />
               </div>
 
@@ -385,7 +385,6 @@ export const MyprofileMain = () => {
       {/* FOOTER */}
       <footer className="myProfile-footer">
         <span>© 2026 InternFlow Management System</span>
-
         <div className="myProfile-footer-links">
           <Link to="/privacy-policy">Privacy Policy</Link>
           <Link to="/terms">Terms</Link>
