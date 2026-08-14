@@ -116,9 +116,7 @@ export const MyprofileMain = () => {
 
   return (
     <div className="myProfile-page">
-      {/* LEFT COLUMN */}
       <div className="Profile-content-Intern">
-        {/* Profile Section */}
         <div className="Profile-Section-Intern">
           <div className="Profile-info-Intern">
             <h2>{ProfileData.initials}</h2>
@@ -140,7 +138,7 @@ export const MyprofileMain = () => {
               <span>
                 <img
                   src={ProfileData.companyicon}
-                  alt=""
+                  alt="Profile company duration"
                   style={{ width: "14.45px", height: "13.12px" }}
                 />
                 {ProfileData.company}
@@ -186,7 +184,7 @@ export const MyprofileMain = () => {
         </div>
       </div>
 
-      {/* RIGHT COLUMN */}
+      {/* right column */}
       <div className="profile-main-container">
         <div className="personalInfo-container">
           <div className="personal-info-Header">
