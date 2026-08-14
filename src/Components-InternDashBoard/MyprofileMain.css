@@ -231,14 +231,14 @@
   margin-top: 10px;
 }
 
-.profile-field {
+.personal-detail {
   display: flex;
   flex-direction: row;
 
   min-width: 0;
 }
 
-.profile-field p {
+.personal-detail p {
   margin: 0;
   font-family: "Inter", sans-serif;
   font-weight: 500;
@@ -248,7 +248,7 @@
   color: #575f6a;
 }
 
-.profile-field span {
+.personal-detail span {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-style: normal;

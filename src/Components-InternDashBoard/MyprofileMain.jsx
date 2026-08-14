@@ -135,31 +135,13 @@ export const MyprofileMain = () => {
               Dept: {ProfileData.department}
             </p>
             <div className="Profile-company-duration">
-              <span>
-                <img
-                  src={ProfileData.companyicon}
-                  alt="Profile company duration"
-                  style={{ width: "14.45px", height: "13.12px" }}
-                />
-                {ProfileData.company}
-              </span>
-              <span>
-                <img
-                  src={Companydurationprofile}
-                  alt="company duration"
-                  className="Profile-durationimg-Intern"
-                />
-                {ProfileData.duration}
-              </span>
+              <span> <img src={ProfileData.companyicon} alt="Profile company duration" style={{ width: "14.45px", height: "13.12px" }} /> {ProfileData.company}</span>
+              <span> <img src={Companydurationprofile} alt="company duration" className="Profile-durationimg-Intern"/> {ProfileData.duration}</span>
             </div>
           </div>
           <div className="Profile-btn-Intern">
             <button className="Editprofile-btn-Intern">
-              <img
-                src={Editprofileintern}
-                alt="Editprofileintern"
-                style={{ width: "17px", height: "17px" }}
-              />
+              <img src={Editprofileintern} alt="Editprofileintern" style={{ width: "17px", height: "17px" }} />
               Edit Profile
             </button>
           </div>
@@ -172,9 +154,7 @@ export const MyprofileMain = () => {
               <div className="Profile-staticon-Intern">
                 <img src={item.icon} alt={item.title} />
               </div>
-
               <div className="Profile-statcount-Intern">{item.count}</div>
-
               <div className="Profile-stattitle-Intern">
                 {item.title} <br />
                 {item.subtitle}
@@ -191,7 +171,7 @@ export const MyprofileMain = () => {
             <h1>Personal Info</h1>
           </div>
           <div className="personl-info-details">
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
                 <img src={fullName} alt="Profile" className="profile-image" />
               </div>
@@ -201,13 +181,9 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
-                <img
-                  src={InternshipID}
-                  alt="Internship-ID "
-                  className="Internship-ID-icon"
-                />
+                <img src={InternshipID} alt="Internship-ID " className="Internship-ID-icon" />
               </div>
               <div className="profile-details">
                 <p>Internship ID</p>
@@ -215,7 +191,7 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
                 <img src={Email} alt="mail" className="email-address-icon" />
               </div>
@@ -226,13 +202,9 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
-                <img
-                  src={PhoneNumber}
-                  alt="Phone Number"
-                  className="Phone-icon"
-                />
+                <img src={PhoneNumber} alt="Phone Number" className="Phone-icon" />
               </div>
 
               <div className="profile-details">
@@ -241,7 +213,7 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
                 <img src={DOB} alt="Date of Birth" className="DOB-icon" />
               </div>
@@ -252,7 +224,7 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
                 <img src={Gender} alt="Gender" className="Gender-icon" />
               </div>
@@ -263,13 +235,9 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
-                <img
-                  src={Department}
-                  alt="Department"
-                  className="Department-icon"
-                />
+                <img src={Department} alt="Department" className="Department-icon"/>
               </div>
 
               <div className="profile-details">
@@ -278,9 +246,9 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
-                <img src={fullName} alt="Profile" className="profile-image" />
+                <img src={fullName} alt="Profile" className="profile-image"/>
               </div>
               <div className="profile-details">
                 <p>Designation</p>
@@ -288,13 +256,9 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
-                <img
-                  src={University}
-                  alt="University"
-                  className="University-icon"
-                />
+                <img src={University} alt="University" className="University-icon"/>
               </div>
 
               <div className="profile-details">
@@ -303,7 +267,7 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
                 <img src={Course} alt="Course" className="Course-icon" />
               </div>
@@ -314,14 +278,10 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
                 {" "}
-                <img
-                  src={StartDate}
-                  alt="Start Date"
-                  className="Start-Date-icon"
-                />
+                <img src={StartDate} alt="Start Date" className="Start-Date-icon"/>
               </div>
 
               <div className="profile-details">
@@ -330,7 +290,7 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
                 <img src={EndDate} alt="End Date" className="End-Date-icon" />
               </div>
@@ -341,13 +301,9 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
-                <img
-                  src={AssignedMentor}
-                  alt="Assigned Mentor"
-                  className="Assigned-Mentor-icon"
-                />
+                <img src={AssignedMentor} alt="Assigned Mentor" className="Assigned-Mentor-icon"/>
               </div>
 
               <div className="profile-details">
@@ -356,7 +312,7 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
                 {" "}
                 <img src={Address} alt="Address " className="Address-icon" />
@@ -368,13 +324,9 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
-                <img
-                  src={EmergencyContact}
-                  alt="Emergency Contact"
-                  className="Emergency-Contact-icon"
-                />
+                <img src={EmergencyContact} alt="Emergency Contact" className="Emergency-Contact-icon"/>
               </div>
 
               <div className="profile-details">
@@ -383,13 +335,9 @@ export const MyprofileMain = () => {
               </div>
             </div>
 
-            <div className="profile-field">
+            <div className="personal-detail">
               <div className="icon-container">
-                <img
-                  src={LanguagesKnown}
-                  alt="Languages Known"
-                  className="Languages-Known-icon"
-                />
+                <img src={LanguagesKnown} alt="Languages Known" className="Languages-Known-icon"/>
               </div>
 
               <div className="profile-details">
@@ -417,18 +365,13 @@ export const MyprofileMain = () => {
                 {activities.map((activity) => (
                   <div key={activity.id} className="activity-item">
                     <div className="activity-icon-wrapper">
-                      <img
-                        src={activity.icon}
-                        alt={activity.alt}
-                        className="recent-activity-icon"
+                      <img src={activity.icon} alt={activity.alt} className="recent-activity-icon"
                       />
                     </div>
 
                     <div className="activity-content">
                       <h3 className="activity-title">{activity.title}</h3>
-
                       <p className="activity-subtitle">{activity.subtitle}</p>
-
                       <span className="activity-time">{activity.time}</span>
                     </div>
                   </div>
