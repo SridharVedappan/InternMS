@@ -86,12 +86,31 @@ body {
   text-transform: uppercase;
 }
 .Profile-ID-Intern {
+  display: flex;
+  align-items: center;
+  gap: 16px;
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
-  color: #575f6a;
+  color: #575F6A;
   margin: 8px 0 10px;
 }
+.Profile-department-Intern {
+  position: relative;
+}
+
+.Profile-department-Intern::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background-color: #575F6A;
+  border-radius: 50%;
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .Profile-company-duration {
   display: flex;
   align-items: center;
@@ -115,10 +134,12 @@ body {
   display: block;
 }
 .Profile-btn-Intern {
+  margin-left: auto;
   display: flex;
   align-items: center;
-  margin-left: 400px;
+  flex-shrink: 0;
 }
+
 .Editprofile-btn-Intern {
   width: 173.81px;
   height: 48px;

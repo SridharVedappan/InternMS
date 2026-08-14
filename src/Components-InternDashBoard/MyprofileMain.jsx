@@ -121,7 +121,7 @@ export const MyprofileMain = () => {
           <div className="Profile-info-Intern">
             <h2>{ProfileData.initials}</h2>
           </div>
-          <div className="Profile-deatils-Intern">
+          <div className='Profile-details-Intern'>
             <div className="Profile-name-row">
               <h2>{ProfileData.name}</h2>
               <span className="Profile-role-Intern">{ProfileData.role}</span>
@@ -130,10 +130,10 @@ export const MyprofileMain = () => {
               </span>
             </div>
             <p className="Profile-ID-Intern">
-              ID: {ProfileData.employeeId}
-              <span> . </span>
-              Dept: {ProfileData.department}
+              <span>ID: {ProfileData.employeeId}</span>
+              <span className="Profile-department-Intern">Dept: {ProfileData.department}</span>
             </p>
+            
             <div className="Profile-company-duration">
               <span> <img src={ProfileData.companyicon} alt="Profile company duration" style={{ width: "14.45px", height: "13.12px" }} /> {ProfileData.company}</span>
               <span> <img src={Companydurationprofile} alt="company duration" className="Profile-durationimg-Intern"/> {ProfileData.duration}</span>
