@@ -13,6 +13,7 @@ import { ForgotPasswordOTP } from "./Components-LoginPage/ForgotPasswordOTP";
 import { ResetPassword } from "./Components-LoginPage/ResetPassword";
 import { PasswordResetSuccess } from "./Components-LoginPage/PasswordResetSuccess";
 import { InternDashboard } from "./Components-InternDashBoard/InternDashboard.jsx";
+import { AdminProfile } from "./Componnets-AdminDashBoard/AdminProfile.jsx"
 
 import "./App.css";
 
@@ -73,7 +74,10 @@ const router = createBrowserRouter([
   {
     path: "/intern-dashboard",
     element: <InternDashboard />,
-  },
+  },{
+    path: "/admin-profile",
+    element: <AdminProfile />,
+  }
 ]);
 
 function App() {
