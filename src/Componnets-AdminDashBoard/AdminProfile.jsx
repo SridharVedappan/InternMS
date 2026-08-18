@@ -10,6 +10,7 @@ import usersIcon from "../assets/icons/users-icon.png";
 import fileIcon from "../assets/icons/files-icon.png";
 import calenderIcon from "../assets/icons/calender-icon.png";
 import TerminalIcon from "../assets/icons/terminal-icon.png";
+import ProfileIcon from "../assets/icons/black-profile-icon.png";
 
 export const AdminProfile = () => {
   const adminData = {
@@ -56,9 +57,24 @@ export const AdminProfile = () => {
     },
   ];
 
+  const AdminPersonalInfo = {
+    fullName: "Admin User",
+    email: "admin@internms.com",
+    phone: "+91 98765 43210",
+    role: "Administrator",
+    department: "System Administration",
+    location: "Bangalore, India",
+    dob: "Jan 15, 1988",
+    gender: "Male",
+    language: "English",
+    timeZone: "IST (UTC +5:30)",
+    aboutMe:
+      "Managing the platform and ensuring smooth operations. Dedicated to creating an efficient ecosystem for interns and mentors alike.",
+  };
+
   return (
     <div className="dashboard-container">
-      {/* Profile Section */}
+      {/*profile card */}
       <div className="top-section">
         <div className="admin-profile-card">
           <div className="admin-avatar">
@@ -107,7 +123,7 @@ export const AdminProfile = () => {
           </div>
         </div>
 
-        {/* Stats Cards */}
+        {/*Stats Cards */}
         <div className="admin-stats-cards">
           {adminStatCards.slice(0, 4).map((card, index) => (
             <div key={index} className="admin-stat-card">
@@ -124,6 +140,72 @@ export const AdminProfile = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/*persoanl Info */}
+        <div className="admin-personalInfo-card">
+          <div className="admin-personalInfo-container">
+            <div className="admin-personalInfo-heading">
+              <img src={ProfileIcon} alt="Profile Icon" />
+              <h2>Personal Information</h2>
+            </div>
+          </div>
+          <div className="admin-personalInfo-grid">
+            <div className="admin-personalInfo-row">
+              <span>Full Name</span>
+              <p>{adminData.fullName}</p>
+            </div>
+
+            <div className="admin-personalInfo-row">
+              <span>Date of Birth</span>
+              <p>{adminData.dateOfBirth}</p>
+            </div>
+
+            <div className="admin-personalInfo-row">
+              <span>Email</span>
+              <p>{adminData.email}</p>
+            </div>
+
+            <div className="admin-personalInfo-row">
+              <span>Gender</span>
+              <p>{adminData.gender}</p>
+            </div>
+
+            <div className="admin-personalInfo-row">
+              <span>Phone Number</span>
+              <p>{adminData.phoneNumber}</p>
+            </div>
+
+            <div className="admin-personalInfo-row">
+              <span>Language</span>
+              <p>{adminData.language}</p>
+            </div>
+
+            <div className="admin-personalInfo-row">
+              <span>Role</span>
+              <p>{adminData.role}</p>
+            </div>
+
+            <div className="admin-personalInfo-row">
+              <span>Time Zone</span>
+              <p>{adminData.timeZone}</p>
+            </div>
+
+            <div className="admin-personalInfo-row">
+              <span>Department</span>
+              <p>{adminData.department}</p>
+            </div>
+
+            <div className="admin-personalInfo-row admin-personalInfo-lastRow">
+              <span>About Me</span>
+              <p>{adminData.aboutMe}</p>
+            </div>
+
+            <div className="admin-personalInfo-row admin-personalInfo-lastRow">
+              <span>Location</span>
+              <p>{adminData.location}</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
