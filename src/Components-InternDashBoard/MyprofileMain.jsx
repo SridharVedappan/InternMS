@@ -1,32 +1,32 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../Components-InternDashBoard/MyprofileMain.css";
-import fullName from "../assets/icons/Full-Name.png";
-import Email from "../assets/icons/Email-Address.png";
-import DOB from "../assets/icons/Date-of-Birth.png";
-import Department from "../assets/icons/Department.png";
-import University from "../assets/icons/University.png";
-import InternshipID from "../assets/icons/Internship-ID.png";
-import PhoneNumber from "../assets/icons/Phone-Number.png";
-import Gender from "../assets/icons/Gender.png";
-import Course from "../assets/icons/Course.png";
-import EndDate from "../assets/icons/End-Date.png";
-import StartDate from "../assets/icons/Start-Date.png";
-import AssignedMentor from "../assets/icons/Assigned-Mentor.png";
-import EmergencyContact from "../assets/icons/Emergency-Contact.png";
-import Address from "../assets/icons/Address.png";
-import LanguagesKnown from "../assets/icons/Languages-Known.png";
-import ReceivedCertificate from "../assets/icons/Received-Certificate.png";
-import SubmittedTask from "../assets/icons/Submitted-Task.png";
-import CompletedAssessment from "../assets/icons/Completed-Assessment.png";
-import Techflowcompanyicon from "../assets/icons/Technoflowsolutions.png";
-import Companydurationprofile from "../assets/icons/Companyduration.png";
-import Editprofileintern from "../assets/icons/Editprofileintern.png";
-import TasksIcon from "../assets/icons/Tasksdoneintern.png";
-import Designation from "../assets/icons/Designation.png";
-import TrainingIcon from "../assets/icons/Trainingmodules.png";
-import AssessmentIcon from "../assets/icons/Assesmentspassed.png";
-import CertificateIcon from "../assets/icons/Certificatesprofile.png";
+import fullName from "../assets/intern/Full-Name.png";
+import Email from "../assets/intern/Email-Address.png";
+import DOB from "../assets/intern/Date-of-Birth.png";
+import Department from "../assets/intern/Department.png";
+import University from "../assets/intern/University.png";
+import InternshipID from "../assets/intern/Internship-ID.png";
+import PhoneNumber from "../assets/intern/Phone-Number.png";
+import Gender from "../assets/intern/Gender.png";
+import Course from "../assets/intern/Course.png";
+import EndDate from "../assets/intern/End-Date.png";
+import StartDate from "../assets/intern/Start-Date.png";
+import AssignedMentor from "../assets/intern/Assigned-Mentor.png";
+import EmergencyContact from "../assets/intern/Emergency-Contact.png";
+import Address from "../assets/intern/Address.png";
+import LanguagesKnown from "../assets/intern/Languages-Known.png";
+import ReceivedCertificate from "../assets/intern/Received-Certificate.png";
+import SubmittedTask from "../assets/intern/Submitted-Task.png";
+import CompletedAssessment from "../assets/intern/Completed-Assessment.png";
+import Techflowcompanyicon from "../assets/intern/Technoflowsolutions.png";
+import Companydurationprofile from "../assets/intern/Companyduration.png";
+import Editprofileintern from "../assets/intern/Editprofileintern.png";
+import TasksIcon from "../assets/intern/Tasksdoneintern.png";
+import Designation from "../assets/intern/Designation.png";
+import TrainingIcon from "../assets/intern/Trainingmodules.png";
+import AssessmentIcon from "../assets/intern/Assesmentspassed.png";
+import CertificateIcon from "../assets/intern/Certificatesprofile.png";
 
 export const MyprofileMain = () => {
   const ProfileData = {
@@ -126,45 +126,21 @@ export const MyprofileMain = () => {
             <div className="Profile-name-row">
               <h2>{ProfileData.name}</h2>
               <span className="Profile-role-Intern">{ProfileData.role}</span>
-              <span className="Profile-status-Intern">
-                {ProfileData.status}
-              </span>
+              <span className="Profile-status-Intern">{ProfileData.status}</span>
             </div>
             <p className="Profile-ID-Intern">
               <span>ID: {ProfileData.employeeId}</span>
-              <span className="Profile-department-Intern">
-                Dept: {ProfileData.department}
-              </span>
+              <span className="Profile-department-Intern"> Dept: {ProfileData.department}</span>
             </p>
 
             <div className="Profile-company-duration">
-              <span>
-                {" "}
-                <img
-                  src={ProfileData.companyicon}
-                  alt="Profile company duration"
-                  style={{ width: "14.45px", height: "13.12px" }}
-                />{" "}
-                {ProfileData.company}
-              </span>
-              <span>
-                {" "}
-                <img
-                  src={Companydurationprofile}
-                  alt="company duration"
-                  className="Profile-durationimg-Intern"
-                />{" "}
-                {ProfileData.duration}
-              </span>
+              <span><img src={ProfileData.companyicon} alt="Profile company duration" style={{ width: "14.45px", height: "13.12px" }}/>{ProfileData.company}</span>
+              <span><img src={Companydurationprofile} alt="company duration" className="Profile-durationimg-Intern"/>{ProfileData.duration}</span>
             </div>
           </div>
           <div className="Profile-btn-Intern">
             <button className="Editprofile-btn-Intern">
-              <img
-                src={Editprofileintern}
-                alt="Editprofileintern"
-                style={{ width: "17px", height: "17px" }}
-              />
+              <img src={Editprofileintern} alt="Editprofileintern" style={{ width: "17px", height: "17px" }}/>
               Edit Profile
             </button>
           </div>
@@ -178,10 +154,7 @@ export const MyprofileMain = () => {
                 <img src={item.icon} alt={item.title} />
               </div>
               <div className="Profile-statcount-Intern">{item.count}</div>
-              <div className="Profile-stattitle-Intern">
-                {item.title} <br />
-                {item.subtitle}
-              </div>
+              <div className="Profile-stattitle-Intern">{item.title} <br />{item.subtitle}</div>
             </div>
           ))}
         </div>
@@ -206,11 +179,7 @@ export const MyprofileMain = () => {
 
             <div className="profile-field">
               <div className="icon-container">
-                <img
-                  src={InternshipID}
-                  alt="Internship-ID "
-                  className="Internship-ID-icon"
-                />
+                <img src={InternshipID} alt="Internship-ID " className="Internship-ID-icon"/>
               </div>
               <div className="profile-details">
                 <p>Internship ID</p>
@@ -222,7 +191,6 @@ export const MyprofileMain = () => {
               <div className="icon-container">
                 <img src={Email} alt="mail" className="email-address-icon" />
               </div>
-
               <div className="profile-details">
                 <p>Email Address</p>
                 <span>{profileInfoMockData.email}</span>
@@ -231,13 +199,8 @@ export const MyprofileMain = () => {
 
             <div className="profile-field">
               <div className="icon-container">
-                <img
-                  src={PhoneNumber}
-                  alt="Phone Number"
-                  className="Phone-icon"
-                />
+                <img src={PhoneNumber} alt="Phone Number" className="Phone-icon"/>
               </div>
-
               <div className="profile-details">
                 <p>Phone Number</p>
                 <span>{profileInfoMockData.phoneNumber}</span>
@@ -248,7 +211,6 @@ export const MyprofileMain = () => {
               <div className="icon-container">
                 <img src={DOB} alt="Date of Birth" className="DOB-icon" />
               </div>
-
               <div className="profile-details">
                 <p>Date of Birth</p>
                 <span>{profileInfoMockData.dateOfBirth}</span>
@@ -259,7 +221,6 @@ export const MyprofileMain = () => {
               <div className="icon-container">
                 <img src={Gender} alt="Gender" className="Gender-icon" />
               </div>
-
               <div className="profile-details">
                 <p>Gender</p>
                 <span>{profileInfoMockData.gender}</span>
@@ -268,13 +229,8 @@ export const MyprofileMain = () => {
 
             <div className="profile-field">
               <div className="icon-container">
-                <img
-                  src={Department}
-                  alt="Department"
-                  className="Department-icon"
-                />
+                <img src={Department} alt="Department" className="Department-icon"/>
               </div>
-
               <div className="profile-details">
                 <p>Department</p>
                 <span>{profileInfoMockData.department}</span>
@@ -283,11 +239,7 @@ export const MyprofileMain = () => {
 
             <div className="profile-field">
               <div className="icon-container">
-                <img
-                  src={Designation}
-                  alt="Profile"
-                  className="profile-image"
-                />
+                <img src={Designation} alt="Profile" className="profile-image"/>
               </div>
               <div className="profile-details">
                 <p>Designation</p>
@@ -297,13 +249,8 @@ export const MyprofileMain = () => {
 
             <div className="profile-field">
               <div className="icon-container">
-                <img
-                  src={University}
-                  alt="University"
-                  className="University-icon"
-                />
+                <img src={University} alt="University" className="University-icon"/>
               </div>
-
               <div className="profile-details">
                 <p>University</p>
                 <span>{profileInfoMockData.university}</span>
@@ -314,7 +261,6 @@ export const MyprofileMain = () => {
               <div className="icon-container">
                 <img src={Course} alt="Course" className="Course-icon" />
               </div>
-
               <div className="profile-details">
                 <p>Course</p>
                 <span>{profileInfoMockData.course}</span>
@@ -323,14 +269,8 @@ export const MyprofileMain = () => {
 
             <div className="profile-field">
               <div className="icon-container">
-                {" "}
-                <img
-                  src={StartDate}
-                  alt="Start Date"
-                  className="Start-Date-icon"
-                />
+                <img src={StartDate} alt="Start Date" className="Start-Date-icon"/>
               </div>
-
               <div className="profile-details">
                 <p>Start Date</p>
                 <span>{profileInfoMockData.startDate}</span>
@@ -341,7 +281,6 @@ export const MyprofileMain = () => {
               <div className="icon-container">
                 <img src={EndDate} alt="End Date" className="End-Date-icon" />
               </div>
-
               <div className="profile-details">
                 <p>End Date</p>
                 <span>{profileInfoMockData.endDate}</span>
@@ -350,13 +289,8 @@ export const MyprofileMain = () => {
 
             <div className="profile-field">
               <div className="icon-container">
-                <img
-                  src={AssignedMentor}
-                  alt="Assigned Mentor"
-                  className="Assigned-Mentor-icon"
-                />
+                <img src={AssignedMentor} alt="Assigned Mentor" className="Assigned-Mentor-icon"/>
               </div>
-
               <div className="profile-details">
                 <p>Assigned Mentor</p>
                 <span>{profileInfoMockData.assignedMentor}</span>
@@ -365,10 +299,8 @@ export const MyprofileMain = () => {
 
             <div className="profile-field">
               <div className="icon-container">
-                {" "}
                 <img src={Address} alt="Address " className="Address-icon" />
               </div>
-
               <div className="profile-details">
                 <p>Address</p>
                 <span>{profileInfoMockData.address}</span>
@@ -377,13 +309,8 @@ export const MyprofileMain = () => {
 
             <div className="profile-field">
               <div className="icon-container">
-                <img
-                  src={EmergencyContact}
-                  alt="Emergency Contact"
-                  className="Emergency-Contact-icon"
-                />
+                <img src={EmergencyContact} alt="Emergency Contact" className="Emergency-Contact-icon"/>
               </div>
-
               <div className="profile-details">
                 <p>Emergency Contact</p>
                 <span>{profileInfoMockData.emergencyContact}</span>
@@ -392,13 +319,8 @@ export const MyprofileMain = () => {
 
             <div className="profile-field">
               <div className="icon-container">
-                <img
-                  src={LanguagesKnown}
-                  alt="Languages Known"
-                  className="Languages-Known-icon"
-                />
+                <img src={LanguagesKnown} alt="Languages Known" className="Languages-Known-icon"/>
               </div>
-
               <div className="profile-details">
                 <p>Languages Known</p>
                 <span>{profileInfoMockData.languagesKnown}</span>
@@ -411,7 +333,6 @@ export const MyprofileMain = () => {
           {/* Header */}
           <div className="recent-activity-header">
             <h2>Recent Activity</h2>
-
             <Link to="/view-all" className="recent-activity-btn">
               View All
             </Link>
@@ -419,18 +340,12 @@ export const MyprofileMain = () => {
           <div className="recent-activity-container">
             <div className="activity-timeline">
               <div className="activity-vertical-line"></div>
-
               <div className="activity-items">
                 {activities.map((activity) => (
                   <div key={activity.id} className="activity-item">
                     <div className="activity-icon-wrapper">
-                      <img
-                        src={activity.icon}
-                        alt={activity.alt}
-                        className="recent-activity-icon"
-                      />
+                      <img src={activity.icon} alt={activity.alt} className="recent-activity-icon"/>
                     </div>
-
                     <div className="activity-content">
                       <h3 className="activity-title">{activity.title}</h3>
                       <p className="activity-subtitle">{activity.subtitle}</p>
