@@ -272,10 +272,10 @@ export const InternMyprofile = () => {
 
       {/* FULL WIDTH FOOTER */}
       <footer className="myProfile-footer ">
-        <div className="footer-left">
+        <div className="intern-footer-left">
           <p>© 2024 Corporate Systems Inc. All rights reserved.</p>
         </div>
-        <div className="footer-right">
+        <div className="intern-footer-right">
           <Link to="/privacy" className="intern-footer-link">
             Privacy Policy
           </Link>

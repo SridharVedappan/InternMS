@@ -37,85 +37,85 @@ export const InternMainContent = () => {
   return (
     // Sidebar
     <div className={`intern-main-Content-container ${Show ? "Show" : ""}`}>
-      <div className={`Sidebar-Content-IDB ${Show ? "Show" : ""}`}>
-        <div className="sidebar-menu-IDB">
-          <div onClick={() => setActiveTab("Dashboard")} className={ activeTab === "Dashboard" ? "sidebar-item-IDB active-IDB" : "sidebar-item-IDB" }>
+      <div className={`intern-sidebar-container ${Show ? "Show" : ""}`}>
+        <div className="intern-sidebar-menu">
+          <div onClick={() => setActiveTab("Dashboard")} className={ activeTab === "Dashboard" ? "Intern-sidebar active-Nav" : "Intern-sidebar" }>
             <img src={Home} alt="home" style={{ width: "20px", height: "17px" }}/>
             {!Show && <span>Dashboard</span>}
           </div>
 
-          <div onClick={() => setActiveTab("My Profile")} className={ activeTab === "My Profile" ? "sidebar-item-IDB active-IDB" : "sidebar-item-IDB" }>
+          <div onClick={() => setActiveTab("My Profile")} className={ activeTab === "My Profile" ? "Intern-sidebar active-Nav" : "Intern-sidebar" }>
             <img src={Myprofile} alt="myprofile" style={{ width: "24px", height: "24px" }}/>
             {!Show && <span>My Profile</span>}
           </div>
 
-          <div onClick={() => setActiveTab("Internship")} className={ activeTab === "Internship" ? "sidebar-item-IDB active-IDB" : "sidebar-item-IDB" }>
+          <div onClick={() => setActiveTab("Internship")} className={ activeTab === "Internship" ? "Intern-sidebar active-Nav" : "Intern-sidebar" }>
             <img src={Internship} alt="internship" style={{ width: "21px", height: "21px" }}/>
             {!Show && <span>Internship</span>}
           </div>
 
-          <div onClick={() => setActiveTab("Tasks")} className={ activeTab === "Tasks" ? "sidebar-item-IDB active-IDB" : "sidebar-item-IDB" }>
+          <div onClick={() => setActiveTab("Tasks")} className={ activeTab === "Tasks" ? "Intern-sidebar active-Nav" : "Intern-sidebar" }>
             <img src={Tasks} alt="tasksi" style={{ width: "15px", height: "20px" }}/>
             {!Show && <span>Tasks</span>}
           </div>
 
-          <div onClick={() => setActiveTab("Attendance")} className={ activeTab === "Attendance" ? "sidebar-item-IDB active-IDB" : "sidebar-item-IDB"}>
+          <div onClick={() => setActiveTab("Attendance")} className={ activeTab === "Attendance" ? "Intern-sidebar active-Nav" : "Intern-sidebar"}>
             <img src={Attendance} alt="Attendance" style={{ width: "24px", height: "24px" }}/>
             {!Show && <span>Attendance</span>}
           </div>
 
-          <div onClick={() => setActiveTab("Reports")} className={ activeTab === "Reports" ? "sidebar-item-IDB active-IDB" : "sidebar-item-IDB" }>
+          <div onClick={() => setActiveTab("Reports")} className={ activeTab === "Reports" ? "Intern-sidebar active-Nav" : "Intern-sidebar" }>
             <img src={Weeklyreports} alt="weeklyreports" style={{ width: "17.52px", height: "21.6px" }}/>
             {!Show && <span>Reports</span>}
           </div>
 
-          <div onClick={() => setActiveTab("Projects")} className={ activeTab === "Projects" ? "sidebar-item-IDB active-IDB" : "sidebar-item-IDB"}>
+          <div onClick={() => setActiveTab("Projects")} className={ activeTab === "Projects" ? "Intern-sidebar active-Nav" : "Intern-sidebar"}>
             <img src={Projects} alt="projects" style={{ width: "24px", height: "24px" }}/>
             {!Show && <span>Projects</span>}
           </div>
 
-          <div onClick={() => setActiveTab("Mentor")} className={ activeTab === "Mentor" ? "sidebar-item-IDB active-IDB" : "sidebar-item-IDB"}>
+          <div onClick={() => setActiveTab("Mentor")} className={ activeTab === "Mentor" ? "Intern-sidebar active-Nav" : "Intern-sidebar"}>
             <img src={Mentor} alt="mentor" style={{ width: "24px", height: "24px" }}/>
             {!Show && <span>Mentor</span>}
           </div>
 
-          <div onClick={() => setActiveTab("Learning")} className={ activeTab === "Learning" ? "sidebar-item-IDB active-IDB" : "sidebar-item-IDB"}>
+          <div onClick={() => setActiveTab("Learning")} className={ activeTab === "Learning" ? "Intern-sidebar active-Nav" : "Intern-sidebar"}>
             <img src={Learning} alt="Learning" style={{ width: "24px", height: "24px" }}/>
             {!Show && <span>Learning</span>}
           </div>
 
-          <div onClick={() => setActiveTab("Resources")} className={ activeTab === "Resources" ? "sidebar-item-IDB active-IDB" : "sidebar-item-IDB"}>
+          <div onClick={() => setActiveTab("Resources")} className={ activeTab === "Resources" ? "Intern-sidebar active-Nav" : "Intern-sidebar"}>
             <img src={Resources} alt="Resourcesi" style={{ width: "24px", height: "24px" }}/>
             {!Show && <span>Resources</span>}
           </div>
 
-          <div onClick={() => setActiveTab("Certificates")} className={ activeTab === "Certificates" ? "sidebar-item-IDB active-IDB" : "sidebar-item-IDB"}>
+          <div onClick={() => setActiveTab("Certificates")} className={ activeTab === "Certificates" ? "Intern-sidebar active-Nav" : "Intern-sidebar"}>
             <img src={Certificate} alt="certificate" style={{ width: "18px", height: "17px" }}/>
             {!Show && <span>Certificates</span>}
           </div>
 
-          <div onClick={() => setActiveTab("Settings")} className={ activeTab === "Settings" ? "sidebar-item-IDB active-IDB" : "sidebar-item-IDB"}>
+          <div onClick={() => setActiveTab("Settings")} className={ activeTab === "Settings" ? "Intern-sidebar active-Nav" : "Intern-sidebar"}>
             <img src={Settings} alt="Settings" style={{ width: "24px", height: "24px" }}/>
             {!Show && <span>Settings</span>}
           </div>
         </div>
       </div>
 
-      <div className="Main-IDB">
+      <div className="intern-Main-container">
         {/* header */}
-        <div className="Content-nav">
-          <div className="navbar-left">
+        <div className="Intern-Header">
+          <div className="Intern-nav-leftSide">
             <div className="menu-icon" onClick={() => setShow(!Show)}>
               <img src={hamburgerMenu} alt="Hamburger Menu" style={{ width: "24.06px", height: "24.06px", color: "#003073", cursor: "pointer"}}/>
             </div>
 
-            <div className="dashboard-text">
+            <div className="Intern-nav-text-container">
               <h3>Welcome back, Intern</h3>
               <p>Here's Whats's happening with your internship program.</p>
             </div>
           </div>
 
-          <div className="rightSide-navbar">
+          <div className="Intern-navw-rightSide">
             <div className="intern-search-container">
               <span className="search-icon"><img src={Search} alt="search Icon" style={{ width: "25.06px", height: "25.06" }}/></span>
               <input type="text" placeholder="Search anything....." />
