@@ -152,6 +152,7 @@ export const InternMainContent = () => {
         {activeTab === "Resources" && (<ResourcesMain />)}
         {activeTab === "Certificates" && (<CertificatesMain />)}
         {activeTab === "Settings" && (<SettingsMain />)}
+        
       </div>
     </div>
   );

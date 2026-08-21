@@ -1,90 +1,359 @@
-.document-card-container{
+.myProfile-page {
   width: 100%;
-  max-width: 747.33px;
-  min-height: 225px;
-  border-radius: 12px;
-  gap: 20px;
-  padding-bottom: 20px;
-  background: #ffffff;
-  border: 1px solid #c4c5d5;
-  box-shadow: 0px 1px 2px 0px #0000000d;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: #f0f3ff;
+}
+
+.Profile-content-Intern {
+  width: 100%;
+  max-width: none;
+  margin: 5px 0 0 0;
+  padding: 0 15px;
   box-sizing: border-box;
 }
 
-.document-card-header{
+.Profile-Section-Intern {
+  width: 100%;
+  height: 108px;
+  padding: 20px 32px;
+  border: 1px solid #c4c5d5;
+  border-radius: 12px;
+  background-color: #ffffff;
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-bottom: 1px solid #C4C5D5;
+  align-items: center;
+  gap: 28px;
+  box-shadow: 0px 1px 2px 0px #0000000d;
+  margin: 15px 0;
+  box-sizing: border-box;
 }
 
-.document-card-header h1{
+.Profile-info-Intern {
+  width: 64px;
+  min-width: 64px;
+  height: 64px;
+  border: 1px solid #dce1ff;
+  border-radius: 50%;
+  background-color: #dce1ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Profile-info-Intern h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  font-style: bold;
+  color: #002576;
   font-family: "Inter", sans-serif;
+}
+
+.Profile-details-Intern {
+  flex: 1;
+  min-width: 0;
+}
+
+.Profile-name-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.Profile-name-row h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 28px;
+  color: #151c27;
+  font-family: "Inter", sans-serif;
+}
+
+.Profile-role-Intern {
+  min-width: 56px;
+  height: 19px;
+  padding: 2px 8px 2px 8px;
+  border-radius: 20px;
+  background-color: #0038a8;
+  color: #ffffff;
+  font-size: 10px;
   font-weight: 600;
-  font-style: normal;
-  font-size: 16px;
-  line-height: 24px;
-  letter-spacing: 0;
-  vertical-align: middle;
-  color: #0038A8;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  padding-left: 20px;
-}
-
-.document-card-header button{
+  line-height: 15px;
+  letter-spacing: 0.5px;
+  font-style: Semi Bold;
   font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 16px;
   text-align: center;
-  background: none;
-  color: #0038A8;
-  border: none;
-  cursor: pointer;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-right: 20px;
-  
+  text-transform: uppercase;
 }
 
-.intern-file-info{
+.Profile-content-Intern,
+.Profile-main-grid-Intern {
+  flex-shrink: 0;
+}
+
+.Profile-status-Intern {
+  min-width: 55.95px;
+  height: 19px;
+  padding: 2px 8px 2px 8px;
+  border-radius: 20px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.5px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.Profile-btn-Intern {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 50px;
+}
+
+.Editprofile-btn-Intern {
+  width: 124.34px;
+  height: 36px;
+  border: none;
+  border-radius: 8px;
+  background-color: #0038a8;
+  color: #ffffff;
+  box-shadow: 0px 1px 2px 0px #0000000d;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.Editprofile-btn-Intern img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+}
+
+.Profile-main-grid-Intern {
+  width: 100%;
+  padding: 0 15px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(290px, 0.95fr);
+  gap: 16px;
+  margin-top: 0;
+}
+
+.Profile-left-column-Intern,
+.Profile-right-column-Intern {
+  min-width: 0;
   display: flex;
   flex-direction: column;
-  width: 199.67px;
-  min-width: 0;
-  flex: 1;
+  gap: 16px;
 }
 
-.intern-document-card{
+.Profile-card-Intern {
+  width: 100%;
+  min-height: 295px;
+  background: #ffffff;
+  border: 1px solid #c4c5d5;
+  box-shadow: 0px 1px 2px 0px #0000000d;
+  border-radius: 12px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.Profile-card-header-Intern {
+  width: 100%;
+  min-height: 49px;
+  padding: 12px 20px 12px 20px;
+  border-bottom: 1px solid #c4c5d5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.Profile-card-header-Intern h3 {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+  color: #0038a8;
+}
+
+.Personal-info-card-Intern {
+  min-height: 238px;
+}
+
+.Personal-info-grid-Intern {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding: 18px 70px 20px;
+  box-sizing: border-box;
+}
+
+.Personal-info-item-Intern {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.Personal-info-item-Intern > img {
+  width: 14px;
+  height: 16px;
+  margin-top: 1px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.Personal-info-text-Intern {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.Personal-info-label-Intern {
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  line-height: 16.5px;
+  font-weight: 500;
+  color: #444653;
+  letter-spacing: 0.28px;
+}
+
+.Personal-info-value-Intern {
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  color: #151c27;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Documents-card-Intern {
+  width: 100%;
+  min-height: 225px;
+  padding: 0;
+}
+
+.document-card-container {
+  width: 100%;
+  max-width: none;
+  min-height: 225px;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.document-card-header {
+  width: 100%;
+  height: 49px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #c4c5d5;
+  box-sizing: border-box;
+}
+
+.document-card-header h1 {
+  margin: 0;
+  padding: 12px 20px;
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #0038a8;
+}
+
+.document-card-header button {
+  padding: 12px 20px;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+  background: none;
+  color: #0038a8;
+  border: none;
+  cursor: pointer;
+}
+
+.document-card-content {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.intern-document-card {
+  width: 100%;
+  min-width: 0;
+  height: 61px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid #c4c5d5;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.intern-file-info {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.intern-document-card {
   height: 61px;
   display: flex;
   flex-direction: row;
   gap: 12px;
-  border: 1px solid #C4C5D5;
+  border: 1px solid #c4c5d5;
   padding: 12px;
   border-radius: 8px;
   width: 100%;
   min-width: 0;
 }
 
-.intern-files-icons span img{
-  height:32px;
+.intern-files-icons span img {
+  height: 32px;
   width: 32px;
 }
 
-.intern-file-title{
+.intern-file-title {
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 14px;
   line-height: 20px;
-  color: #151C27;
+  color: #151c27;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.intern-file-meta{
+.intern-file-meta {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -95,12 +364,16 @@
   color: #444653;
 }
 
-.download-file-icon-containar img{
-    width: 12px;
-    height: 12px;
+.download-file-icon-containar {
+  flex-shrink: 0;
 }
 
-.document-card-content{
+.download-file-icon-containar img {
+  width: 12px;
+  height: 12px;
+}
+
+.document-card-content {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 293.67px));
   gap: 12px;
@@ -109,87 +382,205 @@
   padding-top: 20px;
 }
 
-.intern-skill-card {
+.Education-card-Intern {
+  min-height: 194.5px;
+  min-width: 366.86px;
+}
+
+.Education-content-Intern {
+  min-height: 103.5px;
+  padding: 16px 25px;
+  display: flex;
+  align-items: self-start;
+  justify-content: center;
+  min-width: 266.86px;
+  gap: 12px;
+  box-sizing: border-box;
+  margin: 10px;
+  margin-left: 25px;
+}
+
+.Education-icon-Intern img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.Education-details-Intern {
+  min-width: 0;
   display: flex;
   flex-direction: column;
+  gap: 3px;
+}
+
+.Education-details-Intern h4 {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #151c27;
+}
+
+.Education-details-Intern p {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #444653;
+}
+
+.Education-details-Intern img {
+  width: 10.5px;
+  height: 11.6px;
+}
+
+.Education-details-Intern > span > img {
+  width: 11.67px;
+  height: 11.08px;
+}
+.Education-details-Intern > span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-family: "Inter", sans-serif;
+  font-size: 11px;
+  line-height: 16.5px;
+  font-weight: 400;
+  color: #444653;
+}
+
+.Education-cgpa-Intern {
+  margin-top: 1px;
+}
+
+.Skills-card-Intern {
   width: 100%;
-  max-width: 363.67px;
-  height: auto;
   min-height: 339px;
-  border-radius: 12px;
-  background: #FFFFFF;
-  border: 1px solid #C4C5D5;
-  box-shadow: 0px 1px 2px 0px #0000000D;
+  padding: 0;
+}
+
+.intern-skill-card {
+  width: 100%;
+  max-width: none;
+  min-height: 339px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  background: #ffffff;
   box-sizing: border-box;
 }
 
-.skill-card-header h1{
+.skill-card-header {
+  width: 100%;
+  height: 49px;
+  border-bottom: 1px solid #c4c5d5;
+  box-sizing: border-box;
+}
+
+.skill-card-header h1 {
+  margin: 0;
+  padding: 12px 20px;
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0;
-  vertical-align: middle;
-  color: #0038A8;
-  padding-left: 20px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid #C4C5D5 
+  color: #0038a8;
+  box-sizing: border-box;
 }
-
-.skill-card-main-content h1{
-  font-family: "Inter", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 0.3px;
-  vertical-align: middle;
-  text-transform: uppercase;
-  color: #151C27;
-}
-
-.skill-card-main-content{
-    gap: 20px;
-}
-
 
 .skill-card-main-contents {
+  width: 100%;
+  max-width: none;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 100%;
-  max-width: 321.67px;
+  padding: 20px;
+  margin: 0;
   box-sizing: border-box;
-  padding: 0 20px;
-  margin-top: 20px;
 }
 
-.intern-skill-title{
-    padding-bottom: 8px;
+.skill-card-main-content {
+  width: 100%;
+}
+
+.skill-card-main-content h1 {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.3px;
+  color: #151c27;
+}
+
+.intern-skill-title {
+  padding-bottom: 8px;
 }
 
 .intern-skill-tags {
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 6px;
-  width: 100%;
-  min-width: 0;
+  box-sizing: border-box;
 }
 
 .skill-tag {
   max-width: 100%;
+  min-height: 26px;
   padding: 4px 10px;
   border-radius: 6px;
-  border: 1px solid #C4C5D54D;
-  background: #E7EEFE;
+  border: 1px solid #c4c5d54d;
+  background: #e7eefe;
   font-family: "Inter", sans-serif;
-  font-weight: 400;
   font-size: 12px;
   line-height: 16px;
-  color: #151C27;
-  min-height: 26px;
+  color: #151c27;
   box-sizing: border-box;
   white-space: normal;
   overflow-wrap: break-word;
+}
+
+.myProfile-footer {
+  width: 100%;
+  min-height: 72px;
+  padding: 0 40px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  position: relative;
+  z-index: 1003;
+}
+
+.footer-left p {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.6px;
+  vertical-align: middle;
+  color: #151c27;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.intern-footer-link {
+  color: #444651;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 14px;
+  text-decoration: none;
 }
