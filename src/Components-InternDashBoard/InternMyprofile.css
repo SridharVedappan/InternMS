@@ -560,7 +560,7 @@
   z-index: 1003;
 }
 
-.footer-left p {
+.intern-footer-left p {
   font-family: "Inter", sans-serif;
   font-weight: 600;
   font-size: 12px;
@@ -570,7 +570,7 @@
   color: #151c27;
 }
 
-.footer-right {
+.intern-footer-right {
   display: flex;
   align-items: center;
   gap: 28px;

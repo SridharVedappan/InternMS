@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Link } from "react-router-dom";
 import "./InternMyprofile.css";
 import Editprofileintern from "../assets/intern/Editprofileintern.png";
@@ -17,13 +17,6 @@ import pdf from "../assets/intern/pdf.png";
 import jpg from "../assets/intern/jpg.png";
 import doc from "../assets/intern/doc.png";
 import downloadFile from "../assets/intern/download-file-icon.png";
-
-const ProfileData = {
-  initials: "AU",
-  name: "Akshara",
-  role: "INTERN",
-  status: "ACTIVE",
-};
 
 const PersonalInfoData = [
   {
@@ -75,6 +68,20 @@ const PersonalInfoData = [
     icon: Designation,
   },
 ];
+
+export const InternMyprofile = () => {
+
+  const [isEdit, SetIsEdit] = useState(false);
+  const [profile, setProfile] = useState(PersonalInfoData);
+
+  const ProfileData = {
+  initials: "AU",
+  name: "Akshara",
+  role: "INTERN",
+  status: "ACTIVE",
+};
+
+
 
 const EducationData = {
   course: "Bachelor of Technology in Computer Science",
@@ -146,7 +153,14 @@ const documentIcons = (type) => {
   }
 };
 
-export const InternMyprofile = () => {
+  const hanadleSave = () => {
+    setIsEdit(false);
+  }
+
+   const hanadleCancel = () => {
+    setIsEdit(false);
+  }
+
   return (
     <div className="myProfile-page">
       <div className="Profile-content-Intern">
@@ -164,10 +178,16 @@ export const InternMyprofile = () => {
           </div>
 
           <div className="Profile-btn-Intern">
-            <button className="Editprofile-btn-Intern">
-              <img src={Editprofileintern} alt="Edit Profile" />
-              Edit Profile
-            </button>
+            {!isEdit ? (<button className="Editprofile-btn-Intern" onClick={() => setIsEdit(true)}>
+                <img src={Editprofileintern} alt="Edit Profile" />
+                Edit Profile
+              </button>
+              ) : (
+                <div className="intern-profile-edit-conatiner">
+                  <button className="admin-profile-cancel-btn" onClick={hanadleCancel}>Cancel</button>
+                  <button className="admin-save-changes-btn" onClick={hanadleSave}>Save Changes</button>
+                </div>
+              )}
           </div>
         </div>
       </div>
@@ -270,7 +290,7 @@ export const InternMyprofile = () => {
         </div>
       </div>
 
-      {/* FULL WIDTH FOOTER */}
+      {/* footer */}
       <footer className="myProfile-footer ">
         <div className="intern-footer-left">
           <p>© 2024 Corporate Systems Inc. All rights reserved.</p>
